@@ -45,9 +45,14 @@ const routes = [
     desc: 'Güneş ışığını filtreleyen, ısı yalıtımına ekstra katkı sağlayan ve hırsızlığa karşı koruyan motorlu panjur çözümleri.',
   },
   {
+    path: '/projeler',
+    title: 'Projelerimiz | O-PEN Pencere ve Kapı Sistemleri',
+    desc: 'Ege Bölgesi ve Türkiye genelinde imalat ve montajını üstlendiğimiz nitelikli villa, konut ve ticari doğrama projelerimiz.',
+  },
+  {
     path: '/referanslar',
-    title: 'Referanslarımız | O-PEN Projeleri',
-    desc: 'Ege Bölgesi ve Türkiye genelinde hayata geçirdiğimiz nitelikli villa, konut ve ticari doğrama projelerimiz.',
+    title: 'Projelerimiz | O-PEN Pencere ve Kapı Sistemleri',
+    desc: 'Ege Bölgesi ve Türkiye genelinde imalat ve montajını üstlendiğimiz nitelikli villa, konut ve ticari doğrama projelerimiz.',
   },
   {
     path: '/galeri',

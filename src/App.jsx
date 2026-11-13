@@ -41,6 +41,7 @@ export function App() {
           <Route path="kurumsal" element={<CorporatePage />} />
           <Route path="urunler" element={<ProductsPage />} />
           <Route path="urunler/:slug" element={<ProductDetailPage />} />
+          <Route path="projeler" element={<ReferencesPage />} />
           <Route path="referanslar" element={<ReferencesPage />} />
           <Route path="galeri" element={<GalleryPage />} />
           <Route path="teklif-al" element={<QuotePage />} />

@@ -70,8 +70,8 @@ export const navigation = {
       ],
     },
     {
-      label: 'Referanslar',
-      path: '/referanslar',
+      label: 'Projeler',
+      path: '/projeler',
     },
     {
       label: 'Galeri',
@@ -92,7 +92,7 @@ export const navigation = {
     quickLinks: [
       { label: 'Ana Sayfa', path: '/' },
       { label: 'Uygulama Galerisi', path: '/galeri' },
-      { label: 'Referans Projeler', path: '/referanslar' },
+      { label: 'Projelerimiz', path: '/projeler' },
       { label: 'Fiyat Teklifi Al', path: '/teklif-al' },
       { label: 'İletişim & Harita', path: '/iletisim' },
     ],
@@ -100,7 +100,7 @@ export const navigation = {
       { label: 'Hakkımızda', path: '/kurumsal' },
       { label: 'Vizyon & Misyon', path: '/kurumsal#vizyon' },
       { label: 'Neden O-PEN?', path: '/kurumsal#neden' },
-      { label: 'Referanslarımız', path: '/referanslar' },
+      { label: 'Projelerimiz', path: '/projeler' },
       { label: 'Uygulama Galerisi', path: '/galeri' },
     ],
     products: [

@@ -57,27 +57,27 @@ export const ReferencesPage = () => {
   return (
     <div className="open-references-page">
       <Helmet>
-        <title>Referanslarımız | {siteConfig.name} Projeleri</title>
+        <title>Projelerimiz | {siteConfig.name}</title>
         <meta
           name="description"
-          content="O-PEN Pencere ve Kapı Sistemleri referans projeleri; Kütahya, İzmir ve Aydın genelinde başarıyla teslim edilen konut ve villa montajları."
+          content="O-PEN Pencere ve Kapı Sistemleri devam eden ve tamamlanan projeleri; Kütahya, İzmir ve Aydın genelinde konut, site ve villa montajları."
         />
       </Helmet>
 
       <PageHero
-        title="Referans Projelerimiz"
-        subtitle="Kütahya ve Ege Bölgesi genelinde hayata geçirdiğimiz nitelikli toplu konut, site ve villa doğrama projelerimiz."
-        badge="BAŞARIYLA TESLİM EDİLEN YAPILAR"
-        breadcrumbs={[{ label: 'Referanslar' }]}
+        title="Projelerimiz"
+        subtitle="Kütahya ve Ege Bölgesi genelinde imalat ve montajını üstlendiğimiz nitelikli toplu konut, site ve villa projelerimiz."
+        badge="ŞANTİYE VE UYGULAMA SAHALARIMIZ"
+        breadcrumbs={[{ label: 'Projeler' }]}
         backgroundImage={referenceProjects[0]?.cover}
       />
 
       <section className="open-section">
         <Container>
           <SectionTitle
-            badge="TAMAMLANAN YAPILAR"
-            title="Seçkin Referans Projelerimiz"
-            subtitle="Doğru mühendislik, kaliteli malzeme ve zamanında teslimat prensibimizle tamamlanan işlerimiz."
+            badge="SAHA VE ŞANTİYE UYGULAMALARI"
+            title="Projelerimiz"
+            subtitle="Doğru mühendislik, kaliteli malzeme ve uzman montaj işçiliğiyle sürdürdüğümüz ve teslim ettiğimiz işlerimiz."
           />
 
           {/* Bölge Filtreleri */}
