@@ -180,46 +180,6 @@ export const products = [
         a: 'Manuel redüktörlü motor opsiyonumuz sayesinde elektrik kesintilerinde özel kol yardımıyla panjurunuzu kolayca açıp kapatabilirsiniz.',
       },
     ],
-    relatedSlugs: ['pvc-pencere-sistemleri', 'kapi-sistemleri', 'sineklik-aksesuar-sistemleri'],
-  },
-  {
-    id: 'sineklik-aksesuar',
-    slug: 'sineklik-aksesuar-sistemleri',
-    title: 'Sineklik ve Donanım Aksesuarları',
-    category: 'Aksesuar',
-    badge: 'Konfor Detayları',
-    subtitle: 'Plise Sineklikler, Kaliteli Kollar ve Güvenlik Kilitleri',
-    shortDescription: 'Temiz hava sirkülasyonu sağlayan dayanıklı plise sineklikler ve A sınıfı pencere-kapı donanım aksesuarları.',
-    longDescription:
-      'O-PEN Sineklik ve Aksesuar Çözümleri, yaşam konforunuzu tamamlayan en kritik detaylardır. Yırtılmayan fiber tül yapısına sahip plise (akordeon) sineklikler, pencere ve sürme kapılarda yer kaplamadan haşereleri dışarıda tutar. Ayrıca birinci sınıf paslanmaz kollar, çocuk emniyet kilitleri ve vasistas makaslarıyla pencereleriniz yıllarca kusursuz çalışır.',
-    image: '/images/urunler/sineklik-aksesuar.jpg',
-    gallery: [
-      '/images/urunler/sineklik-aksesuar.jpg',
-      '/images/galeri/galeri-5.jpg',
-      '/images/galeri/galeri-7.jpg',
-      '/images/galeri/galeri-9.jpg',
-    ],
-    features: [
-      'Güneş ışığına dayanıklı, sarkma yapmayan fiberglass plise tül',
-      'İnce alüminyum çerçeve ile pencere rengine birebir uyum',
-      'Yatay ve dikey sürme kapı-pencere uygulama alanları',
-      'Çocuk emniyet kilidi ve anahtarlı pencere kolu seçenekleri',
-      'Roto ve Siegenia onaylı sağlam ispanyolet ve kilit karşılıkları',
-      'Kolay sökülüp takılabilen yıkanabilir çerçeve yapısı',
-    ],
-    technicalSpecs: [
-      { label: 'Tül Malzemesi', value: 'UV Korumalı Fiberglass (Cam Elyaf)' },
-      { label: 'Profil Alaşımı', value: 'Alüminyum 6063 Ekstrüzyon' },
-      { label: 'Kullanım Tipleri', value: 'Plise (Akordeon), Stor, Menteşeli' },
-      { label: 'İp Donanımı', value: 'Kopmayan Vectran Yüksek Mukavemetli İp' },
-      { label: 'Menteşe & Kol', value: 'Çinko Alaşımlı / Paslanmaz Çelik' },
-    ],
-    faq: [
-      {
-        q: 'Plise sineklik kışın sökülmeli midir?',
-        a: 'Gerek yoktur; plise tül kendi kasası içinde katlandığı için kış mevsiminde kapalı tutularak dış hava şartlarından korunabilir.',
-      },
-    ],
     relatedSlugs: ['pvc-pencere-sistemleri', 'aluminyum-dograma', 'kapi-sistemleri'],
   },
 ];

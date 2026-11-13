@@ -30,7 +30,6 @@ const productSlugs = [
   'aluminyum-dograma',
   'kapi-sistemleri',
   'panjur-kepenk-sistemleri',
-  'sineklik-aksesuar-sistemleri',
 ];
 
 const productRoutes = productSlugs.map((slug) => ({

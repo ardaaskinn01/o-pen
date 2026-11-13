@@ -81,7 +81,7 @@
   }
 }
 
-/* 3. FORM KARTI */
+/* 3. FORM KARTI & ELEMANLARI */
 .open-quote-form-card {
   background-color: var(--bg-surface);
   border: 1px solid var(--border-light);
@@ -112,7 +112,7 @@
 
 .open-quote-form-title {
   font-size: clamp(1.4rem, 2.5vw, 1.85rem);
-  font-weight: 900;
+  font-weight: 800;
   color: var(--color-dark);
   letter-spacing: -0.03em;
   margin-bottom: 0.5rem;
@@ -124,9 +124,124 @@
   line-height: 1.55;
 }
 
+/* Form Grid ve Elemanları */
+.open-quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.open-form-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .open-form-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.open-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.open-form-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.open-required {
+  color: #EF4444;
+}
+
+.open-form-input,
+.open-form-select,
+.open-form-textarea {
+  width: 100%;
+  padding: 0.85rem 1rem;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  font-size: 0.925rem;
+  font-family: inherit;
+  transition: all var(--transition-fast);
+  box-sizing: border-box;
+}
+
+.open-form-input:focus,
+.open-form-select:focus,
+.open-form-textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(255, 106, 0, 0.15);
+}
+
+.open-form-textarea {
+  resize: vertical;
+}
+
+/* Alert Durum Kutuları */
+.open-form-alert {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.open-form-alert--success {
+  background-color: #ECFDF5;
+  color: #065F46;
+  border: 1px solid #A7F3D0;
+}
+
+.open-form-alert--error {
+  background-color: #FEF2F2;
+  color: #991B1B;
+  border: 1px solid #FECACA;
+}
+
+.open-form-alert__icon {
+  flex-shrink: 0;
+}
+
+/* KVKK Checkbox */
+.open-form-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  line-height: 1.5;
+  margin-top: 0.25rem;
+}
+
+.open-form-checkbox {
+  margin-top: 0.2rem;
+  accent-color: var(--color-primary);
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.open-form-checkbox-label a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
 .open-quote-submit-btn {
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 0.75rem;
 }
 
 /* 4. SIDEBAR KARTLARI */

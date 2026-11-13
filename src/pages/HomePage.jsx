@@ -20,7 +20,6 @@ import {
 import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
 import SectionTitle from '../components/ui/SectionTitle';
-import Card from '../components/ui/Card';
 import Reveal from '../components/ui/Reveal';
 import SEO from '../components/common/SEO';
 import products from '../data/products';
@@ -54,7 +53,7 @@ const heroSlides = [
 const stats = [
   { value: '45+', label: 'Yıllık Sektör Tecrübesi', desc: '1977’den günümüze gelen ustalık' },
   { value: '18.000+', label: 'Montajı Yapılan Pencere & Kapı', desc: 'Binlerce mutlu hane ve ofis' },
-  { value: '5', label: 'Ana Sistem Kategorisi', desc: 'PVC, Alüminyum, Kapı, Panjur, Sineklik' },
+  { value: '4', label: 'Ana Sistem Kategorisi', desc: 'PVC Pencere, Alüminyum, Kapı, Panjur' },
   { value: '%99.4', label: 'Müşteri Memnuniyeti', desc: 'Zamanında teslimat ve garanti' },
 ];
 
@@ -346,7 +345,7 @@ export const HomePage = () => {
           <SectionTitle
             badge="ÇÖZÜM YELPAZESİ"
             title="Ürün Gruplarımız"
-            subtitle="Konut, villa, kış bahçesi ve ticari yapılar için yüksek standartlı PVC ve Alüminyum sistemler."
+            subtitle="Konut, villa ve ticari yapılar için yüksek standartlı PVC ve Alüminyum sistemler."
           />
 
           <div className="open-products-grid">
@@ -405,62 +404,129 @@ export const HomePage = () => {
       </section>
 
       {/* =========================================================================
-          5. NEDEN O-PEN (İkonlu Kurumsal Güç)
+          5. NEDEN O-PEN (İkonlu Kurumsal Güç - Modern Asimetrik Split Görsel Layout)
           ========================================================================= */}
       <section className="open-section open-advantages-section">
         <Container>
-          <SectionTitle
-            badge="KURUMSAL AVANTAJLARIMIZ"
-            title="Neden O-PEN Pencere Sistemleri?"
-            subtitle="Yüksek standartlı profil alaşımları, üstün conta kalitesi ve profesyonel montaj mimarisi."
-          />
-
-          <div className="open-advantages-grid">
-            {advantages.map((adv, idx) => {
-              const IconComp = adv.icon;
-              return (
-                <Reveal key={idx} delay={idx * 0.08}>
-                  <Card hoverEffect borderTopOrange className="open-advantage-card">
-                    <div className="open-advantage-icon-box">
-                      <IconComp size={28} />
+          <div className="open-split-section">
+            {/* SOL: Mimari Görsel Kutu (Karanlık Katman, Başlık & Rozetler) */}
+            <Reveal direction="left" className="open-split-visual-col">
+              <div className="open-split-hero-card">
+                <img
+                  src="/images/genel/about-showcase.jpg"
+                  alt="O-PEN Pencere ve Kapı Mühendislik Standartları"
+                  className="open-split-hero-img"
+                  loading="lazy"
+                />
+                <div className="open-split-hero-overlay">
+                  <div className="open-split-hero-badge">MÜHENDİSLİK & GÜVEN</div>
+                  <h3 className="open-split-hero-title">
+                    Neden O-PEN Pencere Sistemleri?
+                  </h3>
+                  <p className="open-split-hero-lead">
+                    Yüksek standartlı profil alaşımları, üstün conta kalitesi ve profesyonel montaj mimarisi.
+                  </p>
+                  <div className="open-split-hero-footer">
+                    <div className="open-split-hero-stat">
+                      <strong>%100</strong>
+                      <span>Orijinal Profil</span>
                     </div>
-                    <h3 className="open-advantage-title">{adv.title}</h3>
-                    <p className="open-advantage-desc">{adv.desc}</p>
-                  </Card>
-                </Reveal>
-              );
-            })}
+                    <div className="open-split-hero-stat">
+                      <strong>10 Yıl</strong>
+                      <span>Sistem Garantisi</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Reveal>
+
+            {/* SAĞ: Minimalist Özellik Listesi */}
+            <div className="open-split-content-col">
+              <div className="open-features-clean-list">
+                {advantages.map((adv, idx) => {
+                  const IconComp = adv.icon;
+                  return (
+                    <Reveal key={idx} delay={idx * 0.06}>
+                      <div className="open-clean-feature-row">
+                        <div className="open-clean-feature-icon">
+                          <IconComp size={20} />
+                        </div>
+                        <div className="open-clean-feature-body">
+                          <h4 className="open-clean-feature-title">{adv.title}</h4>
+                          <p className="open-clean-feature-desc">{adv.desc}</p>
+                        </div>
+                      </div>
+                    </Reveal>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </Container>
       </section>
 
       {/* =========================================================================
-          6. ÇALIŞMA SÜRECİMİZ (Adım Çizgisi)
+          6. ÇALIŞMA SÜRECİMİZ (Modern Asimetrik Split Görsel Layout)
           ========================================================================= */}
       <section className="open-section open-workflow-section">
         <Container>
-          <SectionTitle
-            badge="ADIM ADIM HİZMET"
-            title="Nasıl Çalışıyoruz?"
-            subtitle="İlk telefonunuzdan anahtar teslim montaja kadar şeffaf, hızlı ve hatasız iş akışı."
-          />
-
-          <div className="open-workflow-timeline">
-            {workflowSteps.map((step, idx) => {
-              const StepIcon = step.icon;
-              return (
-                <Reveal key={idx} delay={idx * 0.1}>
-                  <div className="open-workflow-step">
-                    <div className="open-workflow-num">{step.num}</div>
-                    <div className="open-workflow-icon-box">
-                      <StepIcon size={24} />
+          <div className="open-split-section open-split-section--reverse">
+            {/* SAĞ (Görsel SOLA geçecek flex-reverse): Atölye / Fabrika Üretim Görseli */}
+            <Reveal direction="right" className="open-split-visual-col">
+              <div className="open-split-hero-card">
+                <img
+                  src="/images/genel/factory-showroom.jpg"
+                  alt="O-PEN CNC Üretim ve Montaj Süreci"
+                  className="open-split-hero-img"
+                  loading="lazy"
+                />
+                <div className="open-split-hero-overlay">
+                  <div className="open-split-hero-badge">ŞEFFAF İŞ AKIŞI</div>
+                  <h3 className="open-split-hero-title">
+                    Nasıl Çalışıyoruz?
+                  </h3>
+                  <p className="open-split-hero-lead">
+                    İlk telefonunuzdan anahtar teslim montaja kadar şeffaf, hızlı ve hatasız iş akışı.
+                  </p>
+                  <div className="open-split-hero-footer">
+                    <div className="open-split-hero-stat">
+                      <strong>5 Adım</strong>
+                      <span>Hatasız Süreç</span>
                     </div>
-                    <h4 className="open-workflow-title">{step.title}</h4>
-                    <p className="open-workflow-desc">{step.desc}</p>
+                    <div className="open-split-hero-stat">
+                      <strong>24 Saat</strong>
+                      <span>Hızlı Keşif & Teklif</span>
+                    </div>
                   </div>
-                </Reveal>
-              );
-            })}
+                </div>
+              </div>
+            </Reveal>
+
+            {/* SOL (Liste SAĞA geçecek): Minimalist Numaralı Süreç Listesi */}
+            <div className="open-split-content-col">
+              <div className="open-workflow-clean-list">
+                {workflowSteps.map((step, idx) => {
+                  const StepIcon = step.icon;
+                  return (
+                    <Reveal key={idx} delay={idx * 0.08}>
+                      <div className="open-clean-step-row">
+                        <div className="open-clean-step-num-col">
+                          <span className="open-clean-step-num">{step.num}</span>
+                          <span className="open-clean-step-line" />
+                        </div>
+                        <div className="open-clean-step-body">
+                          <div className="open-clean-step-header">
+                            <StepIcon size={18} className="open-clean-step-icon" />
+                            <h4 className="open-clean-step-title">{step.title}</h4>
+                          </div>
+                          <p className="open-clean-step-desc">{step.desc}</p>
+                        </div>
+                      </div>
+                    </Reveal>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </Container>
       </section>

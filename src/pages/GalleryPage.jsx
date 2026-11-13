@@ -10,7 +10,7 @@ import images from '../data/images';
 import siteConfig from '../data/site';
 import './GalleryPage.css';
 
-const categories = ['Tümü', 'PVC Pencere', 'Alüminyum', 'Panjur', 'Kapı'];
+const categories = ['Tümü', 'Fabrika', 'PVC Pencere', 'Alüminyum', 'Panjur', 'Kapı'];
 
 export const GalleryPage = () => {
   const [selectedCat, setSelectedCat] = useState('Tümü');

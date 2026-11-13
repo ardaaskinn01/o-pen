@@ -269,7 +269,6 @@ export const QuotePage = () => {
                         <option value="Alüminyum Doğrama & Sürme">Alüminyum Doğrama & Sürme</option>
                         <option value="Giriş ve Dış Kapı Sistemleri">Giriş ve Dış Kapı Sistemleri</option>
                         <option value="Panjur ve Güvenlik Kepenk Sistemleri">Panjur ve Güvenlik Kepenk Sistemleri</option>
-                        <option value="Sineklik ve Donanım Aksesuarları">Sineklik ve Donanım Aksesuarları</option>
                         <option value="Komple Konut / Villa Projesi">Komple Konut / Villa Projesi</option>
                       </select>
                     </div>

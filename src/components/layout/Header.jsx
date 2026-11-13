@@ -354,9 +354,6 @@ export const Header = () => {
                     <Link to="/urunler/panjur-kepenk-sistemleri" className="open-mobile-accordion__sublink" onClick={() => setMobileOpen(false)}>
                       Panjur & Kepenk Çözümleri
                     </Link>
-                    <Link to="/urunler/sineklik-aksesuar-sistemleri" className="open-mobile-accordion__sublink" onClick={() => setMobileOpen(false)}>
-                      Sineklik & Aksesuar
-                    </Link>
                   </div>
                 )}
               </div>

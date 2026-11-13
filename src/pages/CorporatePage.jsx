@@ -114,25 +114,25 @@ export const CorporatePage = () => {
               </div>
             </Reveal>
 
-            {/* Sağ Blok Görselleri (Prompt 3 Pen & Üretim Fotoğrafları) */}
+            {/* Sağ Blok Görselleri: O-PEN Gerçek Fabrika ve Üretim Tesisimiz */}
             <Reveal direction="right" delay={0.15}>
               <div className="open-corp-images-stack">
                 <div className="open-corp-img-main">
                   <img
-                    src={images.production[0].src}
-                    alt={images.production[0].alt}
+                    src="/images/fabrika/0.jpg"
+                    alt="O-PEN modern fabrika üretim tesisi"
                     loading="lazy"
                     width="600"
                     height="420"
                   />
                   <div className="open-corp-img-caption">
-                    <span>Modern CNC Profil İşleme Parkuru</span>
+                    <span>O-PEN Entegre Üretim Tesisi</span>
                   </div>
                 </div>
                 <div className="open-corp-img-secondary">
                   <img
-                    src={images.production[2].src}
-                    alt={images.production[2].alt}
+                    src="/images/fabrika/1.jpg"
+                    alt="O-PEN CNC profil işleme tezgahı"
                     loading="lazy"
                     width="320"
                     height="220"
@@ -304,7 +304,55 @@ export const CorporatePage = () => {
       </section>
 
       {/* =========================================================================
-          BÖLÜM 4: KALİTE POLİTİKASI & ÜRETİM STANDARTLARI
+          BÖLÜM 4: FABRİKA & ÜRETİM SAHAMIZ (Gerçek Tesis Görselleri)
+          ========================================================================= */}
+      <section className="open-section open-corp-factory-gallery">
+        <Container>
+          <SectionTitle
+            badge="TESİSİMİZ"
+            title="Üretim Sahamız ve Teknolojimiz"
+            subtitle="Kütahya'daki modern tesisimizde milimetrik hassasiyetle imal edilen sistemlerimiz."
+          />
+
+          <div className="open-corp-factory-grid">
+            <Reveal delay={0.05}>
+              <div className="open-corp-factory-item">
+                <img src="/images/fabrika/0.jpg" alt="O-PEN fabrika üretim sahası" loading="lazy" />
+                <div className="open-corp-factory-overlay">
+                  <span>Entegre İmalat Tesisi</span>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <div className="open-corp-factory-item">
+                <img src="/images/fabrika/1.jpg" alt="O-PEN profil kesim hattı" loading="lazy" />
+                <div className="open-corp-factory-overlay">
+                  <span>CNC Profil Kesim & Hazırlık</span>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal delay={0.15}>
+              <div className="open-corp-factory-item">
+                <img src="/images/fabrika/11.jpg" alt="O-PEN doğrama montaj tezgahı" loading="lazy" />
+                <div className="open-corp-factory-overlay">
+                  <span>Hassas Profil Birleştirme</span>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <div className="open-corp-factory-item">
+                <img src="/images/fabrika/12.jpg" alt="O-PEN lojistik ve sevkiyat alanı" loading="lazy" />
+                <div className="open-corp-factory-overlay">
+                  <span>Kalite Kontrol & Sevkiyat</span>
+                </div>
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
+      {/* =========================================================================
+          BÖLÜM 5: KALİTE POLİTİKASI & ÜRETİM STANDARTLARI
           ========================================================================= */}
       <section id="kalite" className="open-section open-corp-quality-section">
         <Container>

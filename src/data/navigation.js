@@ -72,12 +72,6 @@ export const navigation = {
           desc: 'Güneş kontrolü, hırsızlık koruması ve monoblok motorlu sistemler',
           image: '/images/urunler/panjur-kepenk.jpg',
         },
-        {
-          slug: 'sineklik-aksesuar-sistemleri',
-          title: 'Sineklik & Aksesuar',
-          desc: 'Plise sineklikler ve dayanıklı kol-kilit donanımları',
-          image: '/images/urunler/sineklik-aksesuar.jpg',
-        },
       ],
     },
     {
@@ -120,7 +114,6 @@ export const navigation = {
       { label: 'Alüminyum Doğrama & Sürme', path: '/urunler/aluminyum-dograma' },
       { label: 'Giriş & Dış Kapı Sistemleri', path: '/urunler/kapi-sistemleri' },
       { label: 'Panjur & Kepenk Çözümleri', path: '/urunler/panjur-kepenk-sistemleri' },
-      { label: 'Sineklik & Donanımlar', path: '/urunler/sineklik-aksesuar-sistemleri' },
     ],
     legal: [
       { label: 'Gizlilik Politikası', path: '/gizlilik' },

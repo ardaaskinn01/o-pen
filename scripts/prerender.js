@@ -12,7 +12,7 @@ const routes = [
   {
     path: '/',
     title: 'O-PEN | PVC ve Alüminyum Pencere-Kapı Sistemleri',
-    desc: 'O-PEN - PVC ve alüminyum pencere, kapı, panjur ve sineklik sistemlerinde kurumsal kalite, üstün ısı-ses yalıtımı ve profesyonel montaj güvencesi.',
+    desc: 'O-PEN - PVC ve alüminyum pencere, kapı ve panjur sistemlerinde kurumsal kalite, üstün ısı-ses yalıtımı ve profesyonel montaj güvencesi.',
   },
   {
     path: '/kurumsal',
@@ -22,7 +22,7 @@ const routes = [
   {
     path: '/urunler',
     title: 'Ürün Gruplarımız | O-PEN Pencere & Kapı Sistemleri',
-    desc: 'PVC Pencere, Alüminyum Doğrama & Sürme, Kapı Sistemleri, Panjur ve Sineklik çözümleri.',
+    desc: 'PVC Pencere, Alüminyum Doğrama & Sürme, Kapı Sistemleri ve Panjur & Kepenk çözümleri.',
   },
   {
     path: '/urunler/pvc-pencere-sistemleri',
@@ -43,11 +43,6 @@ const routes = [
     path: '/urunler/panjur-kepenk-sistemleri',
     title: 'Panjur ve Güvenlik Kepenk Sistemleri | O-PEN Sistemleri',
     desc: 'Güneş ışığını filtreleyen, ısı yalıtımına ekstra katkı sağlayan ve hırsızlığa karşı koruyan motorlu panjur çözümleri.',
-  },
-  {
-    path: '/urunler/sineklik-aksesuar-sistemleri',
-    title: 'Sineklik ve Donanım Aksesuarları | O-PEN Sistemleri',
-    desc: 'Temiz hava sirkülasyonu sağlayan dayanıklı plise sineklikler ve A sınıfı pencere-kapı donanım aksesuarları.',
   },
   {
     path: '/referanslar',

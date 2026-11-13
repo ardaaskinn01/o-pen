@@ -378,8 +378,7 @@ export const ContactPage = () => {
                       <option value="Alüminyum Doğrama & Sürme">Alüminyum Doğrama & Sürme</option>
                       <option value="Kapı Sistemleri">Giriş ve Dış Kapı Sistemleri</option>
                       <option value="Panjur ve Kepenk">Panjur ve Güvenlik Kepenk Sistemleri</option>
-                      <option value="Sineklik ve Aksesuar">Sineklik ve Donanım Aksesuarları</option>
-                      <option value="Komple Proje / Toplu İnşaat">Komple Villa / Toplu İnşaat Çözümü</option>
+                      <option value="Komple Proje / Toplu İnşaat">Komple Villa / Toplu Proje Çözümü</option>
                     </select>
                   </div>
 

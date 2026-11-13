@@ -11,7 +11,7 @@ import products from '../data/products';
 import siteConfig from '../data/site';
 import './ProductsPage.css';
 
-const categories = ['Tümü', 'PVC Pencere', 'Alüminyum', 'Kapı Sistemleri', 'Panjur', 'Aksesuar'];
+const categories = ['Tümü', 'PVC Pencere', 'Alüminyum', 'Kapı Sistemleri', 'Panjur'];
 
 export const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('Tümü');
@@ -47,7 +47,7 @@ export const ProductsPage = () => {
         <title>Ürünlerimiz | {siteConfig.name} Pencere & Kapı Sistemleri</title>
         <meta
           name="description"
-          content="O-PEN PVC Pencere, Alüminyum Doğrama & Sürme, Kapı Sistemleri, Panjur ve Sineklik çözümleri. Yüksek ısı ve ses yalıtımlı sistemler."
+          content="O-PEN PVC Pencere, Alüminyum Doğrama & Sürme, Kapı Sistemleri ve Panjur & Kepenk çözümleri. Yüksek ısı ve ses yalıtımlı sistemler."
         />
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
