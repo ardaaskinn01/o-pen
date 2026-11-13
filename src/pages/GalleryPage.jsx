@@ -99,45 +99,60 @@ export const GalleryPage = () => {
             ))}
           </div>
 
-          {/* Galeri Grid */}
-          <div className="open-gallery-grid">
-            {filteredItems.map((item, idx) => (
-              <Reveal key={item.id} delay={idx * 0.05}>
-                <div
-                  className="open-gallery-item"
-                  onClick={() => openLightbox(idx)}
-                  role="button"
-                  tabIndex={0}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Enter' || e.key === ' ') openLightbox(idx);
-                  }}
-                  aria-label={`${item.title} fotoğrafını tam ekran büyüt`}
-                >
-                  <img
-                    src={item.src}
-                    alt={item.alt}
-                    className="open-gallery-thumb"
-                    loading="lazy"
-                    width="400"
-                    height="300"
-                  />
-                  <div className="open-gallery-overlay">
-                    <ZoomIn size={28} className="open-gallery-zoom-icon" />
-                    <span className="open-gallery-item-cat">{item.cat}</span>
-                    <h4 className="open-gallery-item-title">{item.title}</h4>
+          {/* Galeri Grid veya Boş Durum */}
+          {filteredItems.length > 0 ? (
+            <div className="open-gallery-grid">
+              {filteredItems.map((item, idx) => (
+                <Reveal key={item.id} delay={idx * 0.05}>
+                  <div
+                    className="open-gallery-item"
+                    onClick={() => openLightbox(idx)}
+                    role="button"
+                    tabIndex={0}
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') openLightbox(idx);
+                    }}
+                    aria-label={`${item.title} fotoğrafını tam ekran büyüt`}
+                  >
+                    <img
+                      src={item.src}
+                      alt={item.alt}
+                      className="open-gallery-thumb"
+                      loading="lazy"
+                      width="400"
+                      height="300"
+                    />
+                    <div className="open-gallery-overlay">
+                      <ZoomIn size={28} className="open-gallery-zoom-icon" />
+                      <span className="open-gallery-item-cat">{item.cat}</span>
+                      <h4 className="open-gallery-item-title">{item.title}</h4>
+                    </div>
                   </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
+                </Reveal>
+              ))}
+            </div>
+          ) : (
+            <div className="open-gallery-empty-state">
+              <p className="open-gallery-empty-title">Bu kategorideki montaj ve uygulama fotoğrafları çok yakında eklenecektir.</p>
+              <p className="open-gallery-empty-desc">
+                Devam eden ve tamamlanan projelerimizin yerinde çekilmiş gerçek fotoğrafları arşivimize yüklenmektedir.
+              </p>
+            </div>
+          )}
 
-          <div style={{ textAlign: 'center', marginTop: '4rem' }}>
-            <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem' }}>
-              Benzer bir projeyi eviniz veya binanız için hayata geçirmek ister misiniz?
-            </p>
-            <Button to="/iletisim" variant="primary" size="lg">
-              Ücretsiz Keşif Randevusu Alın
-            </Button>
+          {/* Alt Çağrı Kartı */}
+          <div className="open-gallery-cta-card">
+            <div className="open-gallery-cta-text">
+              <h3 className="open-gallery-cta-title">Mekânınıza Özel Ölçü ve Fiyat Teklifi Alın</h3>
+              <p className="open-gallery-cta-desc">
+                PVC, alüminyum veya panjur sistemleriniz için yerinde ücretsiz lazer ölçümü ve şeffaf fiyatlandırma sunuyoruz.
+              </p>
+            </div>
+            <div className="open-gallery-cta-action">
+              <Button to="/teklif-al" variant="primary" size="lg">
+                Fiyat Teklifi Al
+              </Button>
+            </div>
           </div>
         </Container>
       </section>

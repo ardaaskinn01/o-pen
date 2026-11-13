@@ -14,6 +14,7 @@ import Button from '../ui/Button';
 import Logo from '../ui/Logo';
 import navigation from '../../data/navigation';
 import siteConfig from '../../data/site';
+import productThumbnails from '../../data/productThumbnails';
 import './Header.css';
 
 export const Header = () => {
@@ -201,7 +202,7 @@ export const Header = () => {
                             >
                               <div className="open-megamenu-card__img-wrap">
                                 <img
-                                  src={prod.image}
+                                  src={productThumbnails[prod.slug] || prod.image}
                                   alt={prod.title}
                                   className="open-megamenu-card__img"
                                   loading="lazy"

@@ -97,7 +97,7 @@ export const images = {
     { src: '/images/fabrika/12.jpg', alt: 'O-PEN sevkiyat ve nihai kontrol' },
   ],
 
-  // Uygulama & Üretim Galerisi
+  // Gerçek Fabrika ve Atölye Galerisi (Stok/fake görseller kaldırıldı)
   gallery: [
     { id: 1, src: '/images/fabrika/0.jpg', alt: 'O-PEN üretim tesisi imalat sahası', title: 'Modern Fabrika Üretim Sahamız', cat: 'Fabrika' },
     { id: 2, src: '/images/fabrika/1.jpg', alt: 'O-PEN profil kesim ve hazırlık tezgahı', title: 'CNC Profil Kesim ve Hazırlık', cat: 'Fabrika' },
@@ -105,18 +105,12 @@ export const images = {
     { id: 4, src: '/images/fabrika/12.jpg', alt: 'O-PEN sevkiyat öncesi kalite kontrol', title: 'Son Kontrol ve Sevkiyat Hazırlığı', cat: 'Fabrika' },
     { id: 5, src: '/images/fabrika/2.jpg', alt: 'O-PEN fabrika doğrama üretim sahası', title: 'Doğrama İmalat İstasyonu', cat: 'Fabrika' },
     { id: 6, src: '/images/fabrika/4.jpg', alt: 'O-PEN profil işleme ve destek sacı montajı', title: 'Çelik Takviyeli Profil İşleme', cat: 'Fabrika' },
-    { id: 7, src: '/images/galeri/galeri-1.jpg', alt: 'O-PEN antrasit PVC pencere montajı', title: 'Antrasit Villa Pencere Uygulaması', cat: 'PVC Pencere' },
-    { id: 8, src: '/images/galeri/galeri-2.jpg', alt: 'O-PEN geniş açılı alüminyum sürme kapı', title: 'Geniş Açıklıklı Sürme Alüminyum', cat: 'Alüminyum' },
-    { id: 9, src: '/images/galeri/galeri-3.jpg', alt: 'O-PEN alüminyum sürme cam sistemi', title: 'Geniş Açıklıklı Cam Sürme Çözümü', cat: 'Alüminyum' },
-    { id: 10, src: '/images/galeri/galeri-4.jpg', alt: 'O-PEN motorlu monoblok panjur', title: 'Entegre Motorlu Panjur Sistemi', cat: 'Panjur' },
-    { id: 11, src: '/images/galeri/galeri-5.jpg', alt: 'O-PEN modern salon pencere detayı', title: 'Modern Çift Açılım Pencere', cat: 'PVC Pencere' },
-    { id: 12, src: '/images/galeri/galeri-6.jpg', alt: 'O-PEN alüminyum kış bahçesi ve sürme', title: 'Kış Bahçesi ve Alüminyum Teras Çözümü', cat: 'Alüminyum' },
-    { id: 13, src: '/images/galeri/galeri-7.jpg', alt: 'O-PEN mimari alüminyum cephe doğrama', title: 'Minimalist Alüminyum Doğrama', cat: 'Alüminyum' },
-    { id: 14, src: '/images/galeri/galeri-8.jpg', alt: 'O-PEN kilitli dış kapı ve panjur montajı', title: 'Kilitli Geçiş Kapısı ve Panjur', cat: 'Kapı' },
-    { id: 15, src: '/images/galeri/galeri-9.jpg', alt: 'O-PEN ahşap desenli lamine PVC pencere', title: 'Dekoratif Ahşap Desenli PVC', cat: 'PVC Pencere' },
-    { id: 16, src: '/images/galeri/galeri-10.jpg', alt: 'O-PEN villa veranda alüminyum sürme', title: 'Veranda Boydan Boya Sürme Sistem', cat: 'Alüminyum' },
-    { id: 17, src: '/images/galeri/galeri-11.jpg', alt: 'O-PEN motorlu alüminyum giyotin sistem', title: 'Motorlu Alüminyum Giyotin Sistem', cat: 'Alüminyum' },
-    { id: 18, src: '/images/galeri/galeri-12.jpg', alt: 'O-PEN güvenlik kilitli dış kapı serisi', title: 'Çok Noktalı Kilitli Giriş Kapısı', cat: 'Kapı' },
+    { id: 7, src: '/images/fabrika/5.jpg', alt: 'O-PEN atölye üretim süreci', title: 'Atölye İmalat Aşamaları', cat: 'Fabrika' },
+    { id: 8, src: '/images/fabrika/6.jpg', alt: 'O-PEN doğrama montaj tezgahları', title: 'Doğrama Montaj Tezgahları', cat: 'Fabrika' },
+    { id: 9, src: '/images/fabrika/7.jpg', alt: 'O-PEN profil hazırlık bölümü', title: 'Profil Hazırlık ve Stok', cat: 'Fabrika' },
+    { id: 10, src: '/images/fabrika/8.jpg', alt: 'O-PEN üretim hattı detayları', title: 'Hassas Montaj Çizgisi', cat: 'Fabrika' },
+    { id: 11, src: '/images/fabrika/9.jpg', alt: 'O-PEN doğrama montaj istasyonu', title: 'İmalat Kalite Kontrol', cat: 'Fabrika' },
+    { id: 12, src: '/images/fabrika/10.jpg', alt: 'O-PEN atölye profil rafları', title: 'Profil Depolama ve Hazırlık', cat: 'Fabrika' },
   ],
 
   // Genel ve Vitrin

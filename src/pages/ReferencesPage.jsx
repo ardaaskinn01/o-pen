@@ -1,119 +1,125 @@
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Building2, MapPin, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Building2, MapPin, ArrowRight, Images, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import Container from '../components/ui/Container';
 import PageHero from '../components/ui/PageHero';
 import SectionTitle from '../components/ui/SectionTitle';
 import Button from '../components/ui/Button';
 import Reveal from '../components/ui/Reveal';
 import siteConfig from '../data/site';
-import images from '../data/images';
+import referenceProjects from '../data/referenceProjects';
 import './ReferencesPage.css';
 
-// Eski şantiye projeleri pen doğrama ve cephe montaj referanslarına dönüştürüldü
-const references = [
-  {
-    id: 1,
-    title: 'Gediz Vadi Konakları Projesi',
-    location: 'Kütahya / Gediz',
-    year: '2025',
-    category: 'PVC Pencere & Monoblok Panjur',
-    image: images.gallery[0]?.src,
-    scope: '70 mm çok odacıklı antrasit gri PVC pencere sistemleri, akustik lamine cam ve akıllı ev uyumlu panjurlar.',
-    stats: '36 Daire / 280 Doğrama',
-  },
-  {
-    id: 2,
-    title: 'Çeşme Lüks Taş Villa Projesi',
-    location: 'İzmir / Çeşme',
-    year: '2025',
-    category: 'Alüminyum Sürme & Geniş Camlama',
-    image: images.gallery[1]?.src,
-    scope: 'Geniş açıklıklı Hebeschiebe alüminyum sürme kapılar, temperli cam teras korkulukları ve motorlu panjurlar.',
-    stats: '14 Villa / 120+ Doğrama Ünitesi',
-  },
-  {
-    id: 3,
-    title: 'Kütahya Zafer Ticari İş Merkezi',
-    location: 'Kütahya / Merkez',
-    year: '2024',
-    category: 'Alüminyum Cephe & Giriş Kapıları',
-    image: images.gallery[6]?.src,
-    scope: 'Silikon cephe giydirme, otomatik fotoselli giriş kapıları ve güneş kırıcı lamel sistemleri.',
-    stats: '4.500 m² Cam Cephe Alanı',
-  },
-  {
-    id: 4,
-    title: 'Urla Bağ Evleri Butik Yaşam',
-    location: 'İzmir / Urla',
-    year: '2024',
-    category: 'Isıcamlı Sürme Doğrama Sistemleri',
-    image: images.gallery[5]?.src,
-    scope: 'Dört mevsim kış bahçesi cam tavan uygulaması, geniş temperli sürme doğramalar ve dekoratif giriş kapıları.',
-    stats: '8 Özel Konut',
-  },
-  {
-    id: 5,
-    title: 'Simav Termal Tesis Doğrama Yenileme',
-    location: 'Kütahya / Simav',
-    year: '2023',
-    category: 'Korozyon Dayanımlı PVC Sistemleri',
-    image: images.gallery[8]?.src,
-    scope: 'Yüksek nem ve ısıya dayanıklı özel kilit donanımlı çift açılım PVC pencereler ve plise sineklikler.',
-    stats: '40 Ünite Doğrama Değişimi',
-  },
-  {
-    id: 6,
-    title: 'Mavişehir Rezidans Konutları',
-    location: 'İzmir / Karşıyaka',
-    year: '2023',
-    category: 'Akustik Doğrama & Sürme',
-    image: images.gallery[9]?.src,
-    scope: 'Yüksek desibel ses yalıtımlı lamine cam doğramalar, ağır hizmet alüminyum sürme sistemleri.',
-    stats: '48 Daire / 380 Doğrama',
-  },
-];
+const regions = ['Tümü', 'Kütahya', 'İzmir', 'Aydın'];
 
 export const ReferencesPage = () => {
+  const [selectedRegion, setSelectedRegion] = useState('Tümü');
+  const [activeModalProject, setActiveModalProject] = useState(null);
+  const [activeImageIdx, setActiveImageIdx] = useState(0);
+
+  useEffect(() => {
+    if (activeModalProject) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [activeModalProject]);
+
+  const filteredProjects =
+    selectedRegion === 'Tümü'
+      ? referenceProjects
+      : referenceProjects.filter((p) => p.region === selectedRegion);
+
+  const openProjectModal = (proj) => {
+    setActiveModalProject(proj);
+    setActiveImageIdx(0);
+  };
+
+  const closeProjectModal = () => {
+    setActiveModalProject(null);
+  };
+
+  const nextImg = (e) => {
+    e.stopPropagation();
+    if (!activeModalProject) return;
+    setActiveImageIdx((prev) => (prev + 1) % activeModalProject.images.length);
+  };
+
+  const prevImg = (e) => {
+    e.stopPropagation();
+    if (!activeModalProject) return;
+    setActiveImageIdx((prev) => (prev - 1 + activeModalProject.images.length) % activeModalProject.images.length);
+  };
+
   return (
     <div className="open-references-page">
       <Helmet>
         <title>Referanslarımız | {siteConfig.name} Projeleri</title>
         <meta
           name="description"
-          content="O-PEN Pencere ve Kapı Sistemleri referans projeleri, konut, villa ve kurumsal yapı montajları."
+          content="O-PEN Pencere ve Kapı Sistemleri referans projeleri; Kütahya, İzmir ve Aydın genelinde başarıyla teslim edilen konut ve villa montajları."
         />
       </Helmet>
 
       <PageHero
-        title="Referanslarımız"
-        subtitle="Ege Bölgesi ve Türkiye genelinde hayata geçirdiğimiz nitelikli villa, konut ve ticari doğrama projelerimiz."
+        title="Referans Projelerimiz"
+        subtitle="Kütahya ve Ege Bölgesi genelinde hayata geçirdiğimiz nitelikli toplu konut, site ve villa doğrama projelerimiz."
         badge="BAŞARIYLA TESLİM EDİLEN YAPILAR"
         breadcrumbs={[{ label: 'Referanslar' }]}
-        backgroundImage={images.gallery[0]?.src}
+        backgroundImage={referenceProjects[0]?.cover}
       />
 
       <section className="open-section">
         <Container>
           <SectionTitle
-            badge="GÜVEN KAZANAN İŞLERİMİZ"
+            badge="TAMAMLANAN YAPILAR"
             title="Seçkin Referans Projelerimiz"
             subtitle="Doğru mühendislik, kaliteli malzeme ve zamanında teslimat prensibimizle tamamlanan işlerimiz."
           />
 
+          {/* Bölge Filtreleri */}
+          <div className="open-ref-filters">
+            {regions.map((reg) => (
+              <button
+                key={reg}
+                type="button"
+                className={`open-ref-filter-btn ${selectedRegion === reg ? 'open-ref-filter-btn--active' : ''}`}
+                onClick={() => setSelectedRegion(reg)}
+              >
+                {reg} {reg !== 'Tümü' && `(${referenceProjects.filter((p) => p.region === reg).length})`}
+              </button>
+            ))}
+          </div>
+
           <div className="open-ref-grid">
-            {references.map((refItem, idx) => (
-              <Reveal key={refItem.id} delay={idx * 0.08}>
-                <div className="open-ref-card">
+            {filteredProjects.map((refItem, idx) => (
+              <Reveal key={refItem.id} delay={idx * 0.05}>
+                <div
+                  className="open-ref-card"
+                  onClick={() => openProjectModal(refItem)}
+                  role="button"
+                  tabIndex={0}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Enter' || e.key === ' ') openProjectModal(refItem);
+                  }}
+                  aria-label={`${refItem.title} detay fotoğraflarını aç`}
+                >
                   <div className="open-ref-media">
                     <img
-                      src={refItem.image}
+                      src={refItem.cover}
                       alt={refItem.title}
                       className="open-ref-img"
                       loading="lazy"
                       width="500"
                       height="320"
                     />
-                    <div className="open-ref-year">{refItem.year}</div>
+                    <div className="open-ref-img-count">
+                      <Images size={14} />
+                      <span>{refItem.imageCount} Fotoğraf</span>
+                    </div>
                   </div>
 
                   <div className="open-ref-body">
@@ -124,11 +130,13 @@ export const ReferencesPage = () => {
 
                     <h3 className="open-ref-title">{refItem.title}</h3>
                     <span className="open-ref-cat">{refItem.category}</span>
-                    <p className="open-ref-scope">{refItem.scope}</p>
+                    <p className="open-ref-scope">{refItem.desc}</p>
 
-                    <div className="open-ref-stats-badge">
-                      <CheckCircle2 size={15} color="var(--color-primary)" />
-                      <span>{refItem.stats}</span>
+                    <div className="open-ref-card-action">
+                      <span className="open-ref-view-btn">
+                        <span>Fotoğrafları İncele</span>
+                        <ArrowRight size={14} />
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -152,6 +160,67 @@ export const ReferencesPage = () => {
           </div>
         </Container>
       </section>
+
+      {/* Proje Fotoğrafları Modal / Lightbox */}
+      {activeModalProject && (
+        <div className="open-ref-modal-backdrop" onClick={closeProjectModal} role="dialog" aria-modal="true">
+          <div className="open-ref-modal-dialog" onClick={(e) => e.stopPropagation()}>
+            <button className="open-ref-modal-close" onClick={closeProjectModal} aria-label="Kapat">
+              <X size={26} />
+            </button>
+
+            <div className="open-ref-modal-header">
+              <span className="open-ref-modal-badge">{activeModalProject.location}</span>
+              <h3 className="open-ref-modal-title">{activeModalProject.title}</h3>
+            </div>
+
+            <div className="open-ref-modal-view">
+              <button
+                className="open-ref-modal-nav open-ref-modal-nav--prev"
+                onClick={prevImg}
+                aria-label="Önceki Fotoğraf"
+              >
+                <ChevronLeft size={30} />
+              </button>
+
+              <img
+                src={activeModalProject.images[activeImageIdx]}
+                alt={`${activeModalProject.title} Fotoğraf ${activeImageIdx + 1}`}
+                className="open-ref-modal-img"
+              />
+
+              <button
+                className="open-ref-modal-nav open-ref-modal-nav--next"
+                onClick={nextImg}
+                aria-label="Sonraki Fotoğraf"
+              >
+                <ChevronRight size={30} />
+              </button>
+            </div>
+
+            {/* Küçük Resimler (Thumbnails Bar) */}
+            <div className="open-ref-modal-thumbs">
+              {activeModalProject.images.map((img, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  className={`open-ref-modal-thumb ${i === activeImageIdx ? 'open-ref-modal-thumb--active' : ''}`}
+                  onClick={() => setActiveImageIdx(i)}
+                >
+                  <img src={img} alt={`Küçük önizleme ${i + 1}`} />
+                </button>
+              ))}
+            </div>
+
+            <div className="open-ref-modal-footer">
+              <span className="open-ref-modal-desc">{activeModalProject.desc}</span>
+              <span className="open-ref-modal-counter">
+                {activeImageIdx + 1} / {activeModalProject.images.length}
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
