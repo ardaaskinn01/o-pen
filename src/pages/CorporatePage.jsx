@@ -3,13 +3,9 @@ import { useLocation } from 'react-router-dom';
 import {
   CheckCircle2,
   ArrowRight,
-  ShieldCheck,
   SunMedium,
   Award,
-  Factory,
   Quote,
-  Layers,
-  HeartHandshake,
   Compass,
 } from 'lucide-react';
 import Container from '../components/ui/Container';
@@ -195,33 +191,6 @@ export const CorporatePage = () => {
               </Card>
             </Reveal>
           </div>
-
-          {/* Temel Kurumsal Değerler */}
-          <div className="open-corp-values-area">
-            <h3 className="open-corp-values-title">Vazgeçilmez İlkelerimiz</h3>
-            <div className="open-corp-values-grid">
-              <div className="open-corp-value-item">
-                <ShieldCheck size={24} className="open-corp-value-icon" />
-                <h4>Güven & Dürüstlük</h4>
-                <p>Verdiğimiz sözün ve teklif ettiğimiz malzemenin arkasındayız.</p>
-              </div>
-              <div className="open-corp-value-item">
-                <Layers size={24} className="open-corp-value-icon" />
-                <h4>Teknik Uzmanlık</h4>
-                <p>Hatasız lazer ölçüm ve A sınıfı sertifikalı profil işçiliği.</p>
-              </div>
-              <div className="open-corp-value-item">
-                <HeartHandshake size={24} className="open-corp-value-icon" />
-                <h4>Müşteri Odaklılık</h4>
-                <p>Her evin mimarisine özel projelendirme ve satış sonrası servis.</p>
-              </div>
-              <div className="open-corp-value-item">
-                <Factory size={24} className="open-corp-value-icon" />
-                <h4>Modern Tesis</h4>
-                <p>Otomasyonlu CNC hatlarıyla milimetrik kesim ve köşe kaynağı.</p>
-              </div>
-            </div>
-          </div>
         </Container>
       </section>
 
@@ -232,42 +201,26 @@ export const CorporatePage = () => {
         <Container>
           <div className="open-corp-why-grid">
             <Reveal direction="left">
-              <div>
+              <div className="open-corp-why-content">
                 <span className="open-section-header__badge">KURUMSAL FARKLARIMIZ</span>
                 <h2 className="open-corp-heading">
-                  Neden Birçok Yapı Sahibi <span className="open-text-orange">O-PEN</span> Sistemlerini Tercih Ediyor?
+                  Neden Birçok Yapı Sahibi <span className="open-text-orange">O-PEN</span> Tercih Ediyor?
                 </h2>
                 <div className="open-concept-line" />
                 <p className="open-corp-text">
-                  Pencere ve kapı doğramaları, bir yapıda değiştirilmesi en zahmetli ve maliyetli unsurlardır.
-                  Yanlış seçilen bir profil veya tecrübesizce yapılan montaj; hava sızıntısına, terlemeye, küfe
-                  ve yüksek yakıt faturalarına sebep olur.
+                  Pencere ve kapı doğramaları bir yapının en kritik bileşenidir. Doğru profil ve uzman montajla konforu kalıcı kılıyoruz.
                 </p>
 
-                <div className="open-corp-features-list">
+                <div className="open-corp-why-pills">
                   {[
-                    {
-                      title: 'A Sınıfı Et Kalınlığına Sahip Profiller',
-                      desc: 'Hafif ve dayanıksız profiller yerine, rüzgar yüküne dayanıklı yüksek et kalınlığı.',
-                    },
-                    {
-                      title: 'Akustik Lamine Cam ve EPDM Conta',
-                      desc: 'Hem kış soğuğunu hem de dış gürültüyü en aza indiren sızdırmazlık teknolojisi.',
-                    },
-                    {
-                      title: 'Kendi Fabrikamızda Doğrudan Üretim',
-                      desc: 'Aracısız, doğrudan birinci elden fabrika imalatı ve rekabetçi kurumsal fiyatlar.',
-                    },
-                    {
-                      title: 'Tozsuz ve Titiz Yerinde Montaj',
-                      desc: 'Eski pencerelerinizi çevreye zarar vermeden söküp yenilerini teraziye alarak teslim ediyoruz.',
-                    },
-                  ].map((feat, i) => (
-                    <div key={i} className="open-corp-feat-row">
-                      <div className="open-corp-feat-icon">
-                        <CheckCircle2 size={20} color="var(--color-primary)" />
-                      </div>
-                      <div>
+                    { num: '01', title: 'A Sınıfı Et Kalınlığı', desc: 'Rüzgar yüküne dayanıklı yüksek mukavemetli et kalınlığı.' },
+                    { num: '02', title: 'Akustik Lamine Cam & EPDM', desc: 'Kış soğuğunu ve şehir gürültüsünü bloke eden sızdırmazlık.' },
+                    { num: '03', title: 'Doğrudan Fabrika İmalatı', desc: 'Aracısız, birinci elden imalat ve şeffaf kurumsal maliyet.' },
+                    { num: '04', title: 'Titiz Terazi Montajı', desc: 'Lazer hassasiyetinde terazi kontrolü ve temiz montaj.' },
+                  ].map((feat) => (
+                    <div key={feat.num} className="open-corp-why-pill">
+                      <span className="open-corp-why-pill-num">{feat.num}</span>
+                      <div className="open-corp-why-pill-body">
                         <h4>{feat.title}</h4>
                         <p>{feat.desc}</p>
                       </div>
@@ -284,14 +237,14 @@ export const CorporatePage = () => {
                   alt="O-PEN kalite kontrol ve kaynak aşaması"
                   className="open-corp-why-img"
                   loading="lazy"
-                  width="600"
-                  height="450"
+                  width="500"
+                  height="340"
                 />
-                <div className="open-corp-why-stat-card">
-                  <Award size={36} color="var(--color-primary)" />
+                <div className="open-corp-why-stat-pill">
+                  <Award size={22} color="var(--color-primary)" />
                   <div>
-                    <div className="open-corp-why-stat-num">%100 Yerli İmalat</div>
-                    <div className="open-corp-why-stat-txt">Avrupa Standartlarında İzolasyon</div>
+                    <strong>%100 Fabrika İmalatı</strong>
+                    <span>Avrupa Normlarında Yalıtım</span>
                   </div>
                 </div>
               </div>

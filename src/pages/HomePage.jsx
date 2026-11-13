@@ -5,7 +5,6 @@ import {
   ShieldCheck,
   SunMedium,
   VolumeX,
-  Layers,
   MousePointerClick,
   ChevronLeft,
   ChevronRight,
@@ -15,7 +14,6 @@ import {
   Factory,
   Truck,
   Headphones,
-  Award,
 } from 'lucide-react';
 import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
@@ -58,37 +56,35 @@ const stats = [
   { value: '%99.4', label: 'Müşteri Memnuniyeti', desc: 'Zamanında teslimat ve garanti' },
 ];
 
-// 5. Neden O-PEN Nitelikleri
+// 5. Neden O-PEN Nitelikleri (Özet 4 Temel Mühendislik Değeri)
 const advantages = [
   {
+    num: '01',
     icon: SunMedium,
-    title: 'Üstün Isı İzolasyonu',
-    desc: 'Çok odacıklı profiller ve sinerji cam kombinasyonuyla kışın ısıyı içeride, yazın sıcağı dışarıda tutar.',
+    tag: 'Termal Verimlilik',
+    title: 'Üstün Isı & Enerji Yalıtımı',
+    desc: 'Çok odacıklı profil gövdesi ve sinerji cam mimarisiyle kışın soğuğu, yazın yakıcı sıcağı keserek %40 enerji tasarrufu sağlar.',
   },
   {
+    num: '02',
     icon: VolumeX,
-    title: 'Akustik Ses Yalıtımı',
-    desc: 'Şehir karmaşasını ve sokak gürültüsünü 42 dB’ye kadar filtreleyen yüksek sızdırmaz EPDM conta yapısı.',
+    tag: 'Akustik Konfor',
+    title: '42 dB Akustik Ses Bariyeri',
+    desc: 'Çok kademeli EPDM fitil geometrisi ve lamine cam kombinasyonu ile şehir karmaşasını mekânınızın dışında tutar.',
   },
   {
+    num: '03',
     icon: ShieldCheck,
-    title: 'İleri Seviye Güvenlik',
-    desc: 'Mantar başlı kilit donanımları ve gövde içi çelik destek saçları ile hırsızlığa karşı tam koruma.',
+    tag: 'Maksimum Güvenlik',
+    title: 'Çelik Gövde & Mantar Kilit',
+    desc: 'Profillerin içini boydan boya saran galvanizli çelik destek sacları ve mantar başlı kilit pimleriyle hırsızlığa geçit vermez.',
   },
   {
-    icon: Layers,
-    title: 'Enerji Tasarrufu',
-    desc: 'Isınma ve soğutma giderlerinde %40’a varan tasarruf sağlayarak bütçenizi ve doğayı korur.',
-  },
-  {
+    num: '04',
     icon: Wrench,
-    title: 'Profesyonel Montaj',
-    desc: 'Kendi bünyemizdeki sertifikalı montaj ekiplerimizle sıfır hava kaçağı ve milimetrik terazi garantisi.',
-  },
-  {
-    icon: Award,
-    title: 'Uzun Ömürlü Garanti',
-    desc: 'Solmayan, sararmayan UV dayanımlı yüzey kalitesi ve aksam mekanizmalarında uzun vadeli kurumsal garanti.',
+    tag: 'Mühendislik Garantisi',
+    title: 'Milimetrik Montaj & Garanti',
+    desc: 'Sertifikalı kendi montaj ustalarımızla lazer terazi kontrolünde, sıfır hava kaçaksız montaj ve 10 yıl kurumsal güvence.',
   },
 ];
 
@@ -274,31 +270,6 @@ export const HomePage = () => {
                   Ağır ve hantal doğramaların aksine; modern profil estetiği, yüksek gün ışığı geçirgenliği ve sızdırmazlıkta
                   taviz vermeyen bir mühendislik sunuyoruz.
                 </p>
-
-                {/* 3 Değer Kartı */}
-                <div className="open-concept-cards">
-                  <div className="open-concept-mini-card">
-                    <SunMedium size={22} className="open-concept-mini-icon" />
-                    <div>
-                      <h4>Aydınlık & Ferahlık</h4>
-                      <p>Maksimum cam alanı ile daha çok doğal gün ışığı.</p>
-                    </div>
-                  </div>
-                  <div className="open-concept-mini-card">
-                    <ShieldCheck size={22} className="open-concept-mini-icon" />
-                    <div>
-                      <h4>Güven & Şeffaflık</h4>
-                      <p>Hırsızlığa dayanıklı çelik kilitler ve dürüst işçilik.</p>
-                    </div>
-                  </div>
-                  <div className="open-concept-mini-card">
-                    <VolumeX size={22} className="open-concept-mini-icon" />
-                    <div>
-                      <h4>Sessiz & Huzurlu</h4>
-                      <p>Dış dünyanın gürültüsünü unutturan akustik yalıtım.</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </Reveal>
 
@@ -441,21 +412,23 @@ export const HomePage = () => {
               </div>
             </Reveal>
 
-            {/* SAĞ: Minimalist Özellik Listesi */}
+            {/* SAĞ: Orijinal Modern Mühendislik Kartları (2x2 Grid) */}
             <div className="open-split-content-col">
-              <div className="open-features-clean-list">
+              <div className="open-features-modern-grid">
                 {advantages.map((adv, idx) => {
                   const IconComp = adv.icon;
                   return (
-                    <Reveal key={idx} delay={idx * 0.06}>
-                      <div className="open-clean-feature-row">
-                        <div className="open-clean-feature-icon">
-                          <IconComp size={20} />
+                    <Reveal key={idx} delay={idx * 0.08}>
+                      <div className="open-modern-adv-card">
+                        <div className="open-modern-adv-header">
+                          <div className="open-modern-adv-icon">
+                            <IconComp size={20} />
+                          </div>
+                          <span className="open-modern-adv-num">{adv.num}</span>
                         </div>
-                        <div className="open-clean-feature-body">
-                          <h4 className="open-clean-feature-title">{adv.title}</h4>
-                          <p className="open-clean-feature-desc">{adv.desc}</p>
-                        </div>
+                        <span className="open-modern-adv-tag">{adv.tag}</span>
+                        <h4 className="open-modern-adv-title">{adv.title}</h4>
+                        <p className="open-modern-adv-desc">{adv.desc}</p>
                       </div>
                     </Reveal>
                   );

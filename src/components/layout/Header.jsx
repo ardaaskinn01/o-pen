@@ -98,10 +98,6 @@ export const Header = () => {
               <Mail size={13} className="open-topbar__icon" />
               <span>{siteConfig.email}</span>
             </a>
-            <span className="open-topbar__divider open-topbar__item--hide-sm">|</span>
-            <Link to={navigation.topbar.ctaLink} className="open-topbar__cta-badge">
-              <span>{navigation.topbar.ctaText}</span>
-            </Link>
           </div>
         </Container>
       </div>
