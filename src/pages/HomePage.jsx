@@ -5,7 +5,8 @@ import {
   ShieldCheck,
   SunMedium,
   VolumeX,
-  Sparkles,
+  Layers,
+  MousePointerClick,
   ChevronLeft,
   ChevronRight,
   CheckCircle2,
@@ -15,9 +16,6 @@ import {
   Truck,
   Headphones,
   Award,
-  Zap,
-  Star,
-  Quote,
 } from 'lucide-react';
 import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
@@ -34,7 +32,7 @@ import './HomePage.css';
 const heroSlides = [
   {
     image: images.hero[0].src,
-    badge: 'o-pen window yaklaşımı',
+    badge: 'Üstün Konfor & Yalıtım',
     title: 'Açık, Işık Alan, Ferah Yaşam Alanları',
     subtitle: 'Doğal gün ışığını evinize davet eden yüksek yalıtımlı PVC ve mimari alüminyum sistemleri.',
   },
@@ -56,7 +54,7 @@ const heroSlides = [
 const stats = [
   { value: '45+', label: 'Yıllık Sektör Tecrübesi', desc: '1977’den günümüze gelen ustalık' },
   { value: '18.000+', label: 'Montajı Yapılan Pencere & Kapı', desc: 'Binlerce mutlu hane ve ofis' },
-  { value: '6', label: 'Ana Sistem Kategorisi', desc: 'PVC, Alüminyum, Cam Balkon, Panjur' },
+  { value: '5', label: 'Ana Sistem Kategorisi', desc: 'PVC, Alüminyum, Kapı, Panjur, Sineklik' },
   { value: '%99.4', label: 'Müşteri Memnuniyeti', desc: 'Zamanında teslimat ve garanti' },
 ];
 
@@ -78,7 +76,7 @@ const advantages = [
     desc: 'Mantar başlı kilit donanımları ve gövde içi çelik destek saçları ile hırsızlığa karşı tam koruma.',
   },
   {
-    icon: Zap,
+    icon: Layers,
     title: 'Enerji Tasarrufu',
     desc: 'Isınma ve soğutma giderlerinde %40’a varan tasarruf sağlayarak bütçenizi ve doğayı korur.',
   },
@@ -128,29 +126,7 @@ const historyTimeline = [
   {
     year: 'Bugün',
     title: 'O-PEN Marka Tescili',
-    desc: '"o-pen window" felsefesiyle PVC, alüminyum sürme, cam balkon ve panjurda yenilikçi kurumsal kimlik.',
-  },
-];
-
-// Müşteri Yorumları
-const testimonials = [
-  {
-    name: 'Serdar B.',
-    loc: 'Urla / Villa Projesi',
-    text: 'Salonumuzdaki eski sürgülü doğramaları O-PEN alüminyum sürme ve temperli cam ile yeniledik. Evin ışığı ve ferahlığı inanılmaz değişti, rüzgarda tek bir ses dahi yok.',
-    stars: 5,
-  },
-  {
-    name: 'Meltem K.',
-    loc: 'Karşıyaka / Konut Dairesi',
-    text: 'Caddedeki araç trafiği yüzünden pencerelerimizi değiştirdik. Akustik camlı PVC pencereler sayesinde evimiz ilk defa sessizliğe kavuştu. Montaj ekibi çok temiz çalıştı.',
-    stars: 5,
-  },
-  {
-    name: 'Hakan Y.',
-    loc: 'Çeşme / Yazlık Balkon Kapatma',
-    text: 'Katlanır cam balkon ve motorlu panjur sistemlerini eksiksiz 4 günde teslim ettiler. İşçilikleri ve iletişimleri gerçekten çok kurumsal, teşekkür ediyorum.',
-    stars: 5,
+    desc: 'PVC, alüminyum sürme, kapı ve panjur sistemlerinde yenilikçi kurumsal kimlik.',
   },
 ];
 
@@ -199,8 +175,6 @@ export const HomePage = () => {
         ],
         sameAs: [
           siteConfig.social.instagram,
-          siteConfig.social.facebook,
-          siteConfig.social.linkedin,
         ],
       },
       {
@@ -221,7 +195,7 @@ export const HomePage = () => {
     <div className="open-home">
       <SEO
         title="PVC ve Alüminyum Pencere-Kapı Sistemleri"
-        description="O-PEN - PVC ve alüminyum pencere, sürme kapı, cam balkon ve motorlu panjur sistemlerinde üstün ısı-ses yalıtımı ve profesyonel montaj güvencesi."
+        description="O-PEN - PVC ve alüminyum pencere, sürme kapı, panjur ve sineklik sistemlerinde üstün ısı-ses yalıtımı ve profesyonel montaj güvencesi."
         canonicalUrl=""
         structuredData={homeJsonLd}
       />
@@ -240,7 +214,6 @@ export const HomePage = () => {
             <Container className="open-hero__content">
               <div className="open-hero__inner">
                 <div className="open-hero__badge">
-                  <Sparkles size={14} className="open-hero__badge-icon" />
                   <span>{slide.badge}</span>
                 </div>
                 <h1 className="open-hero__title">{slide.title}</h1>
@@ -249,7 +222,7 @@ export const HomePage = () => {
                   <Button to="/urunler" variant="primary" size="lg" icon={ArrowRight}>
                     Ürünlerimizi Keşfedin
                   </Button>
-                  <Button to="/iletisim" variant="outline" size="lg" className="open-hero__btn-secondary">
+                  <Button to="/teklif-al" variant="outline" size="lg" className="open-hero__btn-secondary">
                     Ücretsiz Keşif Talebi
                   </Button>
                 </div>
@@ -280,16 +253,16 @@ export const HomePage = () => {
       </section>
 
       {/* =========================================================================
-          2. "o-pen window" YAKLAŞIMI (Marka Hikayesi & İnteraktif Pencere Efekti)
+          2. FERAH YAŞAM ANLAYIŞI (Ürün Kalitesi & İnteraktif Pencere Deneyimi)
           ========================================================================= */}
       <section className="open-section open-concept-section">
         <Container>
           <div className="open-concept-grid">
             <Reveal direction="left">
               <div className="open-concept-text">
-                <span className="open-concept-badge">Markamızın Doğuşu</span>
+                <span className="open-concept-badge">Ferah Yaşam Alanları</span>
                 <h2 className="open-concept-title">
-                  Neden <span className="open-text-orange">"o-pen window"</span> Yaklaşımı?
+                  Aydınlık, Konforlu ve <span className="open-text-orange">Güvenli Mekânlar</span>
                 </h2>
                 <div className="open-concept-line" />
                 <p className="open-concept-lead">
@@ -297,9 +270,9 @@ export const HomePage = () => {
                   günün ilk ışığını içeri davet eden ve sevdiklerinizi güvende tutan en can alıcı mimari detaydır.
                 </p>
                 <p className="open-concept-p">
-                  <strong>O-PEN</strong> ismi, İngilizce <em>"open window" (açık pencere)</em> kavramından ve
-                  ferah, aydınlık yaşam alanları tasarlama tutkumuzdan doğmuştur. Ağır, karanlık ve hantal doğramaların
-                  aksine; ince profil estetiği, yüksek gün ışığı geçirgenliği ve sızdırmazlıkta taviz vermeyen bir mühendislik sunuyoruz.
+                  <strong>O-PEN</strong>, yaşam alanlarınıza ferahlık, konfor ve yüksek enerji tasarrufu kazandırmak üzere üretir.
+                  Ağır ve hantal doğramaların aksine; modern profil estetiği, yüksek gün ışığı geçirgenliği ve sızdırmazlıkta
+                  taviz vermeyen bir mühendislik sunuyoruz.
                 </p>
 
                 {/* 3 Değer Kartı */}
@@ -356,7 +329,7 @@ export const HomePage = () => {
                   </div>
                 </div>
                 <div className="open-interactive-hint">
-                  <Sparkles size={16} color="var(--color-primary)" />
+                  <MousePointerClick size={16} color="var(--color-primary)" />
                   <span>İnteraktif: <strong>{isWindowOpen ? 'Kapatmak' : 'Açmak'}</strong> için çerçeveye tıklayın</span>
                 </div>
               </div>
@@ -569,34 +542,6 @@ export const HomePage = () => {
               ))}
             </div>
           </div>
-
-          {/* Müşteri Yorumları */}
-          <div className="open-testimonials-area">
-            <SectionTitle
-              badge="MÜŞTERİ DENEYİMLERİ"
-              title="Kullanıcılarımız Ne Diyor?"
-              subtitle="Montajını tamamladığımız ev ve projelerden gerçek kullanıcı geri bildirimleri."
-            />
-            <div className="open-testimonials-grid">
-              {testimonials.map((t, idx) => (
-                <Reveal key={idx} delay={idx * 0.1}>
-                  <Card hoverEffect className="open-testimonial-card">
-                    <Quote size={28} className="open-testimonial-quote" />
-                    <div className="open-testimonial-stars">
-                      {[...Array(t.stars)].map((_, i) => (
-                        <Star key={i} size={16} fill="#FF6A00" color="#FF6A00" />
-                      ))}
-                    </div>
-                    <p className="open-testimonial-text">"{t.text}"</p>
-                    <div className="open-testimonial-author">
-                      <div className="open-testimonial-name">{t.name}</div>
-                      <div className="open-testimonial-loc">{t.loc}</div>
-                    </div>
-                  </Card>
-                </Reveal>
-              ))}
-            </div>
-          </div>
         </Container>
       </section>
 
@@ -612,8 +557,8 @@ export const HomePage = () => {
             </p>
           </div>
           <div className="open-final-cta-actions">
-            <Button to="/iletisim" variant="primary" size="lg" icon={ArrowRight}>
-              Ücretsiz Keşif Al
+            <Button to="/teklif-al" variant="primary" size="lg" icon={ArrowRight}>
+              Ücretsiz Keşif & Teklif Al
             </Button>
             <a
               href={`https://wa.me/${siteConfig.whatsappRaw}?text=${encodeURIComponent(siteConfig.whatsappMessage)}`}

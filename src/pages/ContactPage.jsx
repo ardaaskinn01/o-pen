@@ -5,10 +5,8 @@ import {
   Phone,
   Mail,
   MapPin,
-  Clock,
   Send,
   ExternalLink,
-  MessageCircle,
   CheckCircle2,
   AlertCircle,
   Navigation,
@@ -19,6 +17,7 @@ import PageHero from '../components/ui/PageHero';
 import SectionTitle from '../components/ui/SectionTitle';
 import Button from '../components/ui/Button';
 import Reveal from '../components/ui/Reveal';
+import WhatsAppIcon from '../components/ui/WhatsAppIcon';
 import siteConfig from '../data/site';
 import images from '../data/images';
 import './ContactPage.css';
@@ -159,14 +158,6 @@ export const ContactPage = () => {
       longitude: siteConfig.coordinates.lng,
     },
     hasMap: siteConfig.mapsUrl,
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-        opens: '08:30',
-        closes: '18:30',
-      },
-    ],
   };
 
   const breadcrumbJsonLd = {
@@ -262,7 +253,7 @@ export const ContactPage = () => {
                         rel="noreferrer"
                         className="open-contact-wa-link"
                       >
-                        <MessageCircle size={15} />
+                        <WhatsAppIcon size={16} />
                         <span>WhatsApp ile 7/24 Hızlı Mesaj Gönderin</span>
                       </a>
                     </div>
@@ -280,19 +271,7 @@ export const ContactPage = () => {
                           {siteConfig.email}
                         </a>
                       </p>
-                      <span className="open-contact-note">Teknik şartname ve mimari projeleriniz için</span>
-                    </div>
-                  </div>
-
-                  {/* Çalışma Saatleri */}
-                  <div className="open-contact-card">
-                    <div className="open-contact-card__icon-box">
-                      <Clock size={24} />
-                    </div>
-                    <div className="open-contact-card__content">
-                      <h4>Mesai Saatlerimiz</h4>
-                      <p>Pazartesi - Cumartesi: 08:30 - 18:30</p>
-                      <span className="open-contact-note">Pazar: Kapalı (WhatsApp üzerinden mesaj bırakabilirsiniz)</span>
+                      <span className="open-contact-note">Teknik şartname ve kurumsal projeleriniz için</span>
                     </div>
                   </div>
                 </div>
@@ -306,7 +285,7 @@ export const ContactPage = () => {
                   <span className="open-form-badge">HIZLI TEKLİF</span>
                   <h3 className="open-form-title">Keşif ve Fiyat Teklif Formu</h3>
                   <p className="open-form-subtitle">
-                    Aşağıdaki formu doldurun, mimari ekibimiz ölçülerinize göre en uygun çözümü 24 saat içinde hazırlasın.
+                    Aşağıdaki formu doldurun, uzman ekibimiz ölçülerinize göre en uygun çözümü 24 saat içinde hazırlasın.
                   </p>
                 </div>
 
@@ -346,7 +325,6 @@ export const ContactPage = () => {
                       required
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="Örn: Ahmet Yılmaz"
                       className="open-form-input"
                     />
                   </div>
@@ -364,7 +342,6 @@ export const ContactPage = () => {
                         required
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="ad@ornek.com"
                         className="open-form-input"
                       />
                     </div>
@@ -380,7 +357,6 @@ export const ContactPage = () => {
                         required
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="0546 768 99 92"
                         className="open-form-input"
                       />
                     </div>
@@ -400,8 +376,7 @@ export const ContactPage = () => {
                     >
                       <option value="PVC Pencere Sistemleri">PVC Pencere Sistemleri</option>
                       <option value="Alüminyum Doğrama & Sürme">Alüminyum Doğrama & Sürme</option>
-                      <option value="Kapı Sistemleri">Giriş ve Balkon Kapı Sistemleri</option>
-                      <option value="Cam Balkon Sistemleri">Cam Balkon Sistemleri</option>
+                      <option value="Kapı Sistemleri">Giriş ve Dış Kapı Sistemleri</option>
                       <option value="Panjur ve Kepenk">Panjur ve Güvenlik Kepenk Sistemleri</option>
                       <option value="Sineklik ve Aksesuar">Sineklik ve Donanım Aksesuarları</option>
                       <option value="Komple Proje / Toplu İnşaat">Komple Villa / Toplu İnşaat Çözümü</option>
@@ -420,7 +395,6 @@ export const ContactPage = () => {
                       required
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Tahmini pencere adedi, balkon ölçüsü veya projeniz hakkında kısa bilgi veriniz..."
                       className="open-form-textarea"
                     />
                   </div>

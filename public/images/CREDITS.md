@@ -16,12 +16,11 @@ Tüm harici görseller **Unsplash Lisansı** ve **Pexels Lisansı** (ticari kull
 ---
 
 ## 2. Ürün Kategorileri (`/images/urunler/`)
-- `pvc-pencere.jpg`: Unsplash - Çok odacıklı modern beyaz ve antrasit PVC pencere detayı.
-- `aluminyum-dograma.jpg`: Unsplash - Isı yalıtımlı siyah/antrasit alüminyum sürme sistem.
-- `kapi-sistemleri.jpg`: Unsplash - Güvenlik kilitli modern dış giriş ve veranda kapısı.
-- `cam-balkon.jpg`: Unsplash - Katlanır/sürgülü cam balkon ve kış bahçesi uygulaması.
-- `panjur-kepenk.jpg`: Unsplash - Entegre monoblok panjur ve güneş kırıcı sistem.
-- `sineklik-aksesuar.jpg`: Unsplash - Plise pencere tülü ve dayanıklı kilit-kol aksesuarları.
+- `pvc-pencere.jpg`: Unsplash (Fotoğrafçı: Scott Webb) - Çok odacıklı modern beyaz PVC pencere detayı ve doğal gün ışığı.
+- `aluminyum-dograma.jpg`: Unsplash (Fotoğrafçı: R Architecture) - Isı yalıtımlı antrasit alüminyum sürme pencere ve cam kapı serisi.
+- `kapi-sistemleri.jpg`: Unsplash (Fotoğrafçı: Christian Koch) - Güvenlik kilitli modern dış giriş ve kilitli kapı sistemi.
+- `panjur-kepenk.jpg`: Unsplash (Fotoğrafçı: Bernard Hermant) - Entegre monoblok panjur ve lamel güneş kırıcı sistemi.
+- `sineklik-aksesuar.jpg`: Unsplash (Fotoğrafçı: Jacek Dylag) - Dayanıklı kilit-kol aksesuarları ve pencere tülü donanımı.
 
 ---
 
@@ -54,8 +53,8 @@ Tüm harici görseller **Unsplash Lisansı** ve **Pexels Lisansı** (ticari kull
 2. **Alüminyum Sürme Kapı / Villa Cephesi:**
    > `Ultra-realistic modern luxury villa terrace, slim-profile black and orange-detailed aluminum sliding glass doors seamlessly connecting interior wood floor to outdoor pool deck, sharp glass reflections, golden hour light, architectural digest style, clean corporate pen company showcase --ar 16:9`
 
-3. **Cam Balkon / Kış Bahçesi:**
-   > `Modern apartment balcony enclosed with transparent folding glass balcony system, open panels showing panoramic city and sea view, warm cozy interior balcony setup with green plants, pristine craftsmanship, realistic daylight --ar 4:3`
+3. **Panjur ve Kepenk Sistemi:**
+   > `Modern residential villa facade with integrated anthracite motorized roller shutters partially shaded against the golden sun, clean architectural lines, pristine craftsmanship, realistic daylight --ar 16:9`
 
 4. **Atölye ve Profil Montajı:**
    > `Professional technician in black uniform with orange logo subtle accents, assembling a precision double-glazed PVC window frame in a modern bright factory, CNC machines blurred in background, industrial clean craftsmanship, depth of field --ar 16:9`

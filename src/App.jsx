@@ -10,7 +10,7 @@ const ProductsPage = lazy(() => import('./pages/ProductsPage'));
 const ProductDetailPage = lazy(() => import('./pages/ProductDetailPage'));
 const ReferencesPage = lazy(() => import('./pages/ReferencesPage'));
 const GalleryPage = lazy(() => import('./pages/GalleryPage'));
-const BlogPage = lazy(() => import('./pages/BlogPage'));
+const QuotePage = lazy(() => import('./pages/QuotePage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const LegalPage = lazy(() => import('./pages/LegalPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
@@ -43,7 +43,7 @@ export function App() {
           <Route path="urunler/:slug" element={<ProductDetailPage />} />
           <Route path="referanslar" element={<ReferencesPage />} />
           <Route path="galeri" element={<GalleryPage />} />
-          <Route path="blog" element={<BlogPage />} />
+          <Route path="teklif-al" element={<QuotePage />} />
           <Route path="iletisim" element={<ContactPage />} />
           <Route path="gizlilik" element={<LegalPage type="privacy" />} />
           <Route path="cerez" element={<LegalPage type="cookies" />} />

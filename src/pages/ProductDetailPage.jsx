@@ -6,7 +6,7 @@ import {
   ArrowRight,
   ShieldCheck,
   ChevronDown,
-  Sparkles,
+  Ruler,
   Phone,
   MessageCircle,
 } from 'lucide-react';
@@ -162,7 +162,7 @@ export const ProductDetailPage = () => {
                 {/* Teklif Al Kutusu (Ürün Adını Taşır) */}
                 <div className="open-detail-cta-card">
                   <div className="open-detail-cta-card__top">
-                    <Sparkles size={24} color="var(--color-primary)" />
+                    <Ruler size={24} color="var(--color-primary)" />
                     <div>
                       <h4>Bu Sistem İçin Ücretsiz Keşif Alın</h4>
                       <p>Ölçülerinizi bildirin, 24 saat içinde net maliyet teklifi sunalım.</p>
@@ -170,7 +170,7 @@ export const ProductDetailPage = () => {
                   </div>
                   <div className="open-detail-cta-card__actions">
                     <Button
-                      to={`/iletisim?urun=${encodeURIComponent(product.title)}`}
+                      to={`/teklif-al?urun=${encodeURIComponent(product.title)}`}
                       variant="primary"
                       size="md"
                       icon={ArrowRight}

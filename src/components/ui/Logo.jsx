@@ -21,7 +21,7 @@ export const Logo = ({
       {showText && (
         <div className="open-logo-text">
           <span className="open-logo-title">
-            <span className="open-logo-accent">O-</span>PEN
+            O<span className="open-logo-accent">-</span>PEN
           </span>
           <span className="open-logo-subtitle">Pencere & Kapı Sistemleri</span>
         </div>

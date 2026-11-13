@@ -10,7 +10,7 @@ import images from '../data/images';
 import siteConfig from '../data/site';
 import './GalleryPage.css';
 
-const categories = ['Tümü', 'PVC Pencere', 'Alüminyum', 'Cam Balkon', 'Panjur', 'Kapı'];
+const categories = ['Tümü', 'PVC Pencere', 'Alüminyum', 'Panjur', 'Kapı'];
 
 export const GalleryPage = () => {
   const [selectedCat, setSelectedCat] = useState('Tümü');
@@ -65,7 +65,7 @@ export const GalleryPage = () => {
         <title>Uygulama Galerisi | {siteConfig.name} Sistemleri</title>
         <meta
           name="description"
-          content="O-PEN PVC Pencere, sürme alüminyum, cam balkon ve motorlu panjur uygulama fotoğrafları ve şantiye teslim kareleri."
+          content="O-PEN PVC Pencere, sürme alüminyum, motorlu panjur ve dış kapı uygulama fotoğrafları ve montaj kareleri."
         />
       </Helmet>
 

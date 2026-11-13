@@ -12,17 +12,17 @@ const routes = [
   {
     path: '/',
     title: 'O-PEN | PVC ve Alüminyum Pencere-Kapı Sistemleri',
-    desc: 'O-PEN - PVC ve alüminyum pencere, kapı, cam balkon ve panjur sistemlerinde kurumsal kalite, üstün ısı-ses yalıtımı ve profesyonel montaj güvencesi.',
+    desc: 'O-PEN - PVC ve alüminyum pencere, kapı, panjur ve sineklik sistemlerinde kurumsal kalite, üstün ısı-ses yalıtımı ve profesyonel montaj güvencesi.',
   },
   {
     path: '/kurumsal',
     title: 'Kurumsal | O-PEN Pencere & Kapı Sistemleri',
-    desc: '1977 yılından günümüze uzanan tecrübe, o-pen window felsefesi, vizyon, misyon ve kalite standartlarımız.',
+    desc: '1977 yılından günümüze uzanan tecrübe, kurumsal vizyon, misyon ve kalite standartlarımız.',
   },
   {
     path: '/urunler',
     title: 'Ürün Gruplarımız | O-PEN Pencere & Kapı Sistemleri',
-    desc: 'PVC Pencere, Alüminyum Doğrama & Sürme, Kapı Sistemleri, Cam Balkon ve Panjur çözümleri.',
+    desc: 'PVC Pencere, Alüminyum Doğrama & Sürme, Kapı Sistemleri, Panjur ve Sineklik çözümleri.',
   },
   {
     path: '/urunler/pvc-pencere-sistemleri',
@@ -36,13 +36,8 @@ const routes = [
   },
   {
     path: '/urunler/kapi-sistemleri',
-    title: 'Giriş ve Balkon Kapı Sistemleri | O-PEN Sistemleri',
-    desc: 'Çelik takviyeli profiller, çok noktalı emniyet kilitleri ve şık mimari panellerle donatılmış kapı çözümleri.',
-  },
-  {
-    path: '/urunler/cam-balkon-sistemleri',
-    title: 'Cam Balkon Sistemleri | O-PEN Sistemleri',
-    desc: 'Balkonları dört mevsim yaşayan konforlu yaşam alanlarına dönüştüren estetik ve şeffaf camlama sistemleri.',
+    title: 'Giriş ve Dış Kapı Sistemleri | O-PEN Sistemleri',
+    desc: 'Çelik takviyeli profiller, çok noktalı emniyet kilitleri ve dayanıklı kapı çözümleri.',
   },
   {
     path: '/urunler/panjur-kepenk-sistemleri',
@@ -65,9 +60,9 @@ const routes = [
     desc: 'Montajını tamamladığımız villa, rezidans ve konut projelerinden detay kareler ve işçilik kalitemiz.',
   },
   {
-    path: '/blog',
-    title: 'Blog & Faydalı Bilgiler | O-PEN',
-    desc: 'Pencere ve kapı sistemleri hakkında rehberler, yalıtım ipuçları ve sektörel haberler.',
+    path: '/teklif-al',
+    title: 'Fiyat Teklifi Al | O-PEN Pencere & Kapı',
+    desc: 'O-PEN PVC ve Alüminyum pencere, kapı ve panjur sistemleri için hızlı ve şeffaf fiyat teklifi alın. Milimetrik lazer keşif ve net maliyet hesabı.',
   },
   {
     path: '/iletisim',

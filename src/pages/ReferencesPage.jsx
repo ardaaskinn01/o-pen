@@ -13,63 +13,63 @@ import './ReferencesPage.css';
 const references = [
   {
     id: 1,
+    title: 'Gediz Vadi Konakları Projesi',
+    location: 'Kütahya / Gediz',
+    year: '2025',
+    category: 'PVC Pencere & Monoblok Panjur',
+    image: images.gallery[0]?.src,
+    scope: '70 mm çok odacıklı antrasit gri PVC pencere sistemleri, akustik lamine cam ve akıllı ev uyumlu panjurlar.',
+    stats: '36 Daire / 280 Doğrama',
+  },
+  {
+    id: 2,
     title: 'Çeşme Lüks Taş Villa Projesi',
     location: 'İzmir / Çeşme',
     year: '2025',
-    category: 'Alüminyum Sürme & Cam Balkon',
+    category: 'Alüminyum Sürme & Geniş Camlama',
     image: images.gallery[1]?.src,
     scope: 'Geniş açıklıklı Hebeschiebe alüminyum sürme kapılar, temperli cam teras korkulukları ve motorlu panjurlar.',
     stats: '14 Villa / 120+ Doğrama Ünitesi',
   },
   {
-    id: 2,
-    title: 'Mavişehir Rezidans Konutları',
-    location: 'İzmir / Karşıyaka',
-    year: '2024',
-    category: 'PVC Pencere & Monoblok Panjur',
-    image: images.gallery[0]?.src,
-    scope: '70 mm çok odacıklı antrasit gri PVC pencere sistemleri, akustik lamine cam ve akıllı ev uyumlu panjurlar.',
-    stats: '48 Daire / 380 Doğrama',
-  },
-  {
     id: 3,
-    title: 'Urla Bağ Evleri Butik Yaşam',
-    location: 'İzmir / Urla',
+    title: 'Kütahya Zafer Ticari İş Merkezi',
+    location: 'Kütahya / Merkez',
     year: '2024',
-    category: 'Isıcamlı Cam Balkon & Doğrama',
-    image: images.gallery[5]?.src,
-    scope: 'Dört mevsim kış bahçesi cam tavan uygulaması, katlanır temperli cam balkonlar ve dekoratif giriş kapıları.',
-    stats: '8 Özel Konut',
-  },
-  {
-    id: 4,
-    title: 'Nazilli Ticari İş Merkezi & Showroom',
-    location: 'Aydın / Nazilli',
-    year: '2023',
     category: 'Alüminyum Cephe & Giriş Kapıları',
     image: images.gallery[6]?.src,
     scope: 'Silikon cephe giydirme, otomatik fotoselli giriş kapıları ve güneş kırıcı lamel sistemleri.',
     stats: '4.500 m² Cam Cephe Alanı',
   },
   {
+    id: 4,
+    title: 'Urla Bağ Evleri Butik Yaşam',
+    location: 'İzmir / Urla',
+    year: '2024',
+    category: 'Isıcamlı Sürme Doğrama Sistemleri',
+    image: images.gallery[5]?.src,
+    scope: 'Dört mevsim kış bahçesi cam tavan uygulaması, geniş temperli sürme doğramalar ve dekoratif giriş kapıları.',
+    stats: '8 Özel Konut',
+  },
+  {
     id: 5,
-    title: 'Foça Sahil Evleri Komple Yenileme',
-    location: 'İzmir / Foça',
+    title: 'Simav Termal Tesis Doğrama Yenileme',
+    location: 'Kütahya / Simav',
     year: '2023',
     category: 'Korozyon Dayanımlı PVC Sistemleri',
     image: images.gallery[8]?.src,
-    scope: 'Deniz tuzu ve neme dayanıklı özel kilit donanımlı çift açılım PVC pencereler ve plise sineklikler.',
-    stats: '24 Konut Doğrama Değişimi',
+    scope: 'Yüksek nem ve ısıya dayanıklı özel kilit donanımlı çift açılım PVC pencereler ve plise sineklikler.',
+    stats: '40 Ünite Doğrama Değişimi',
   },
   {
     id: 6,
-    title: 'Bornova Modern Ofis Binası',
-    location: 'İzmir / Bornova',
-    year: '2022',
+    title: 'Mavişehir Rezidans Konutları',
+    location: 'İzmir / Karşıyaka',
+    year: '2023',
     category: 'Akustik Doğrama & Sürme',
     image: images.gallery[9]?.src,
-    scope: 'Yüksek desibel ses yalıtımlı ofis ara bölme camları, ağır hizmet alüminyum sürme sistemleri.',
-    stats: '6 Katlı Plaza Binası',
+    scope: 'Yüksek desibel ses yalıtımlı lamine cam doğramalar, ağır hizmet alüminyum sürme sistemleri.',
+    stats: '48 Daire / 380 Doğrama',
   },
 ];
 
@@ -146,7 +146,7 @@ export const ReferencesPage = () => {
                 ve toptan proje fiyat teklifimizi hazırlayalım.
               </p>
             </div>
-            <Button to="/iletisim" variant="primary" size="lg" icon={ArrowRight}>
+            <Button to="/teklif-al" variant="primary" size="lg" icon={ArrowRight}>
               Toplu Proje Teklifi Al
             </Button>
           </div>

@@ -13,7 +13,7 @@ export const products = [
     subtitle: 'Maksimum Isı ve Ses Yalıtımı Sağlayan Çok Odacıklı Sistemler',
     shortDescription: 'Enerji tasarruflu, çift ve üç cam seçenekli, kurumsal kalitede yüksek yalıtımlı PVC pencere sistemleri.',
     longDescription:
-      'O-PEN PVC Pencere Sistemleri, zorlu iklim koşullarında dahi maksimum enerji tasarrufu ve ses konforu sunmak üzere tasarlanmıştır. Çok odacıklı gövde geometrisi, içerideki sıcaklığı korurken dış ortam gürültüsünü 42 dB seviyesine kadar izole eder. "o-pen window" yaklaşımıyla daha geniş cam yüzeyleri ve zarif hatlar sunarak iç mekânlara maksimum doğal gün ışığı kazandırır.',
+      'O-PEN PVC Pencere Sistemleri, zorlu iklim koşullarında dahi maksimum enerji tasarrufu ve ses konforu sunmak üzere tasarlanmıştır. Çok odacıklı gövde geometrisi, içerideki sıcaklığı korurken dış ortam gürültüsünü 42 dB seviyesine kadar izole eder. Geniş cam yüzeyleri ve zarif hatlar sunarak iç mekânlara maksimum doğal gün ışığı kazandırır.',
     image: '/images/urunler/pvc-pencere.jpg',
     gallery: [
       '/images/urunler/pvc-pencere.jpg',
@@ -99,18 +99,18 @@ export const products = [
         a: 'Kol çevrildiğinde kanat özel rulmanlar üzerinde hafifçe yukarı kalkar ve yüzlerce kiloluk cam adeta havada kayar gibi zahmetsizce hareket eder. Kol kapandığında conta zemine baskı yaparak tam sızdırmazlık oluşturur.',
       },
     ],
-    relatedSlugs: ['pvc-pencere-sistemleri', 'cam-balkon-sistemleri', 'kapi-sistemleri'],
+    relatedSlugs: ['pvc-pencere-sistemleri', 'kapi-sistemleri', 'panjur-kepenk-sistemleri'],
   },
   {
     id: 'kapi-sistemleri',
     slug: 'kapi-sistemleri',
-    title: 'Giriş ve Balkon Kapı Sistemleri',
+    title: 'Giriş ve Dış Kapı Sistemleri',
     category: 'Kapı Sistemleri',
     badge: 'Güvenlik & Estetik',
-    subtitle: 'Yüksek Güvenlik Donanımlı Giriş ve Katlanır Balkon Kapıları',
-    shortDescription: 'Çelik takviyeli profiller, çok noktalı emniyet kilitleri ve şık mimari panellerle donatılmış kapı çözümleri.',
+    subtitle: 'Yüksek Güvenlik Donanımlı Giriş ve Kilitli Kapı Sistemleri',
+    shortDescription: 'Çelik takviyeli profiller, çok noktalı emniyet kilitleri ve dayanıklı kapı çözümleri.',
     longDescription:
-      'O-PEN Kapı Sistemleri, mekânınıza ilk girişte güveni ve zarafeti hissettirir. Dış kapılarda hırsızlığa karşı dirençli çok noktalı kilit dilleri ve ağır hizmet tipi menteşeler kullanılırken; balkon ve teras kapılarında çift açılım ve sürme seçenekleriyle rüzgar-yağmur sızdırmazlığı garanti edilir.',
+      'O-PEN Kapı Sistemleri, mekânınıza ilk girişte güveni ve zarafeti hissettirir. Dış kapılarda hırsızlığa karşı dirençli çok noktalı kilit dilleri ve ağır hizmet tipi menteşeler kullanılırken; rüzgar ve yağmur sızdırmazlığı üstün EPDM contalarla garanti edilir.',
     image: '/images/urunler/kapi-sistemleri.jpg',
     gallery: [
       '/images/urunler/kapi-sistemleri.jpg',
@@ -141,51 +141,6 @@ export const products = [
       },
     ],
     relatedSlugs: ['pvc-pencere-sistemleri', 'aluminyum-dograma', 'panjur-kepenk-sistemleri'],
-  },
-  {
-    id: 'cam-balkon',
-    slug: 'cam-balkon-sistemleri',
-    title: 'Cam Balkon Sistemleri',
-    category: 'Cam Balkon',
-    badge: 'Panoramik Yaşam',
-    subtitle: 'Katlanır, Sürgülü ve Uzaktan Kumandalı Giyotin Çözümleri',
-    shortDescription: 'Balkonları dört mevsim yaşayan konforlu yaşam alanlarına dönüştüren estetik ve şeffaf camlama sistemleri.',
-    longDescription:
-      'O-PEN Cam Balkon Sistemleri; evinizin balkonunu, terasını veya kış bahçesini rüzgar, toz ve yağmurdan koruyarak panoramik bir dinlenme odasına dönüştürür. 8 mm ve 10 mm temperli rodajlı emniyet camları, paslanmaz rulman takımları ve su tahliye oluklu profilleriyle yıllarca sorunsuz çalışır.',
-    image: '/images/urunler/cam-balkon.jpg',
-    gallery: [
-      '/images/urunler/cam-balkon.jpg',
-      '/images/galeri/galeri-3.jpg',
-      '/images/galeri/galeri-6.jpg',
-      '/images/galeri/galeri-11.jpg',
-    ],
-    features: [
-      '8 mm ve 10 mm darbelere dayanıklı temperli emniyet camı',
-      'Paslanmaz çelik gövdeli çift rulmanlı tekerlek donanımı',
-      'Özel su tahliye kanallı ve gizli damlalıklı kasa profili',
-      'Panellerin tamamını tek köşede toplayarak %100 açık alan',
-      'Şeffaf conta veya uzun ömürlü alüminyum fitil alternatifleri',
-      'Füme, bronz, yeşil, mavi ve şeffaf cam renk opsiyonları',
-    ],
-    technicalSpecs: [
-      { label: 'Cam Tipi', value: '8 mm / 10 mm Rodajlı Temperli Cam' },
-      { label: 'Kasa Malzemesi', value: 'Ekstrüzyon Alüminyum Profil' },
-      { label: 'Tekerlek Mekanizması', value: 'Paslanmaz Çelik Rulmanlı' },
-      { label: 'Maksimum Panel Yüksekliği', value: '2.800 mm' },
-      { label: 'Maksimum Panel Genişliği', value: '650 mm' },
-      { label: 'Fitil Yapısı', value: 'Manyetik & Alüminyum H Fitil' },
-    ],
-    faq: [
-      {
-        q: 'Cam balkonlar yağmur suyunu içeri alır mı?',
-        a: 'O-PEN profillerinde dahili damlalık ve gizli su tahliye kanalları mevcuttur. Eğimli kasa yapısı sayesinde su dışarı tahliye edilir ve içeri sızma yapmaz.',
-      },
-      {
-        q: 'Giyotin cam balkondan farkı nedir?',
-        a: 'Katlanır sistem el ile açılıp köşede toplanırken, motorlu giyotin sistem uzaktan kumanda ile dikey olarak aşağı-yukarı hareket eder ve balkon korkuluğu görevi de görür.',
-      },
-    ],
-    relatedSlugs: ['aluminyum-dograma', 'panjur-kepenk-sistemleri', 'sineklik-aksesuar-sistemleri'],
   },
   {
     id: 'panjur-kepenk',
@@ -225,7 +180,7 @@ export const products = [
         a: 'Manuel redüktörlü motor opsiyonumuz sayesinde elektrik kesintilerinde özel kol yardımıyla panjurunuzu kolayca açıp kapatabilirsiniz.',
       },
     ],
-    relatedSlugs: ['pvc-pencere-sistemleri', 'kapi-sistemleri', 'cam-balkon-sistemleri'],
+    relatedSlugs: ['pvc-pencere-sistemleri', 'kapi-sistemleri', 'sineklik-aksesuar-sistemleri'],
   },
   {
     id: 'sineklik-aksesuar',
@@ -265,7 +220,7 @@ export const products = [
         a: 'Gerek yoktur; plise tül kendi kasası içinde katlandığı için kış mevsiminde kapalı tutularak dış hava şartlarından korunabilir.',
       },
     ],
-    relatedSlugs: ['pvc-pencere-sistemleri', 'aluminyum-dograma', 'cam-balkon-sistemleri'],
+    relatedSlugs: ['pvc-pencere-sistemleri', 'aluminyum-dograma', 'kapi-sistemleri'],
   },
 ];
 

@@ -4,12 +4,10 @@ import {
   Phone,
   Mail,
   MapPin,
-  Clock,
   Menu,
   X,
   ChevronDown,
   ArrowRight,
-  Sparkles,
 } from 'lucide-react';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
@@ -80,16 +78,11 @@ export const Header = () => {
       {/* 1. ÜST İNCE BİLGİ ÇUBUĞU (Siyah / Antrasit) */}
       <div className="open-topbar">
         <Container className="open-topbar__inner">
-          {/* Sol: Adres & Çalışma Saatleri */}
+          {/* Sol: Adres */}
           <div className="open-topbar__col">
             <span className="open-topbar__item">
               <MapPin size={13} className="open-topbar__icon" />
               <span>{navigation.topbar.address}</span>
-            </span>
-            <span className="open-topbar__divider">|</span>
-            <span className="open-topbar__item open-topbar__item--hide-sm">
-              <Clock size={13} className="open-topbar__icon" />
-              <span>{navigation.topbar.hours}</span>
             </span>
           </div>
 
@@ -106,7 +99,6 @@ export const Header = () => {
             </a>
             <span className="open-topbar__divider open-topbar__item--hide-sm">|</span>
             <Link to={navigation.topbar.ctaLink} className="open-topbar__cta-badge">
-              <Sparkles size={11} />
               <span>{navigation.topbar.ctaText}</span>
             </Link>
           </div>
@@ -247,13 +239,13 @@ export const Header = () => {
           {/* Sağ Eylem: Teklif Butonu & Mobil Hamburger */}
           <div className="open-main-navbar__actions">
             <Button
-              to="/iletisim"
+              to="/teklif-al"
               variant="primary"
               size="sm"
               icon={ArrowRight}
               className="open-nav-cta-btn"
             >
-              Ücretsiz Keşif / Teklif Al
+              Fiyat Teklifi Al
             </Button>
 
             <button
@@ -357,10 +349,7 @@ export const Header = () => {
                       Alüminyum Doğrama & Sürme
                     </Link>
                     <Link to="/urunler/kapi-sistemleri" className="open-mobile-accordion__sublink" onClick={() => setMobileOpen(false)}>
-                      Giriş ve Balkon Kapıları
-                    </Link>
-                    <Link to="/urunler/cam-balkon-sistemleri" className="open-mobile-accordion__sublink" onClick={() => setMobileOpen(false)}>
-                      Cam Balkon Sistemleri
+                      Giriş ve Dış Kapı Sistemleri
                     </Link>
                     <Link to="/urunler/panjur-kepenk-sistemleri" className="open-mobile-accordion__sublink" onClick={() => setMobileOpen(false)}>
                       Panjur & Kepenk Çözümleri
@@ -378,8 +367,8 @@ export const Header = () => {
               <NavLink to="/galeri" className="open-mobile-nav__link" onClick={() => setMobileOpen(false)}>
                 Galeri
               </NavLink>
-              <NavLink to="/blog" className="open-mobile-nav__link" onClick={() => setMobileOpen(false)}>
-                Blog
+              <NavLink to="/teklif-al" className="open-mobile-nav__link" onClick={() => setMobileOpen(false)}>
+                Teklif Al
               </NavLink>
               <NavLink to="/iletisim" className="open-mobile-nav__link" onClick={() => setMobileOpen(false)}>
                 İletişim
@@ -388,8 +377,8 @@ export const Header = () => {
 
             {/* Mobil CTA ve İletişim Kartı */}
             <div className="open-mobile-drawer__footer">
-              <Button to="/iletisim" variant="primary" size="md" icon={ArrowRight} style={{ width: '100%' }} onClick={() => setMobileOpen(false)}>
-                Ücretsiz Keşif & Teklif Al
+              <Button to="/teklif-al" variant="primary" size="md" icon={ArrowRight} style={{ width: '100%' }} onClick={() => setMobileOpen(false)}>
+                Fiyat Teklifi & Keşif Al
               </Button>
 
               <div className="open-mobile-drawer__contact">

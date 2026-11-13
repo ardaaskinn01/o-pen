@@ -7,7 +7,7 @@ import {
   SunMedium,
   Award,
   Factory,
-  Sparkles,
+  Quote,
   Layers,
   HeartHandshake,
   Compass,
@@ -47,14 +47,14 @@ export const CorporatePage = () => {
         <title>Kurumsal | {siteConfig.name} Pencere & Kapı Sistemleri</title>
         <meta
           name="description"
-          content="O-PEN kurumsal yapısı, 1977'den gelen ustalık geleneği, o-pen window felsefesi, vizyon, misyon ve kalite standartları."
+          content="O-PEN kurumsal yapısı, 1977'den gelen ustalık geleneği, vizyon, misyon ve kalite standartları."
         />
       </Helmet>
 
       {/* Page Hero */}
       <PageHero
         title="Kurumsal"
-        subtitle="1977'den bugüne uzanan tecrübe ve 'o-pen window' anlayışımızla ferah, aydınlık ve dayanıklı pencereler üretiyoruz."
+        subtitle="1977'den bugüne uzanan tecrübemizle ferah, aydınlık ve dayanıklı pencereler üretiyoruz."
         badge="KÖKLÜ GEÇMİŞ & KURUMSAL GÜVEN"
         breadcrumbs={[{ label: 'Kurumsal' }]}
         backgroundImage={images.showcase.about.src}
@@ -105,9 +105,9 @@ export const CorporatePage = () => {
                 </p>
 
                 <div className="open-corp-quote-box">
-                  <Sparkles size={24} className="open-corp-quote-icon" />
+                  <Quote size={24} className="open-corp-quote-icon" />
                   <p>
-                    <strong>"o-pen window"</strong> yaklaşımı: Bir yapının en temel ihtiyacı içerideki havanın tazelenmesi,
+                    <strong>Kalite ve Konfor İlkemiz:</strong> Bir yapının en temel ihtiyacı içerideki havanın tazelenmesi,
                     doğal ışığın kesintisiz girmesi ve dış dünyanın gürültüsünden arınmış huzurlu bir ortamdır.
                   </p>
                 </div>
@@ -186,7 +186,7 @@ export const CorporatePage = () => {
                 </div>
                 <h3 className="open-corp-vm-title">Vizyonumuz</h3>
                 <p className="open-corp-vm-desc">
-                  "o-pen window" felsefesiyle, Türkiye genelinde ve uluslararası pazarda estetik, ferahlık ve üstün izolasyon
+                  Türkiye genelinde ve uluslararası pazarda estetik, ferahlık ve üstün izolasyon
                   denince akla gelen ilk kurumsal pen markası olmak. Gelişen mimari trendlere yön veren inovatif profil,
                   sürme ve akıllı cephe çözümleriyle sektörün referans noktası haline gelmek.
                 </p>

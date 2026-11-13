@@ -17,7 +17,7 @@ const staticRoutes = [
   { url: '/urunler', changefreq: 'weekly', priority: '0.9' },
   { url: '/referanslar', changefreq: 'monthly', priority: '0.8' },
   { url: '/galeri', changefreq: 'weekly', priority: '0.8' },
-  { url: '/blog', changefreq: 'weekly', priority: '0.7' },
+  { url: '/teklif-al', changefreq: 'weekly', priority: '0.9' },
   { url: '/iletisim', changefreq: 'monthly', priority: '0.8' },
   { url: '/gizlilik', changefreq: 'yearly', priority: '0.3' },
   { url: '/cerez', changefreq: 'yearly', priority: '0.3' },
@@ -29,7 +29,6 @@ const productSlugs = [
   'pvc-pencere-sistemleri',
   'aluminyum-dograma',
   'kapi-sistemleri',
-  'cam-balkon-sistemleri',
   'panjur-kepenk-sistemleri',
   'sineklik-aksesuar-sistemleri',
 ];

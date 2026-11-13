@@ -6,10 +6,9 @@
 export const navigation = {
   // Üst İnce Bilgi Çubuğu
   topbar: {
-    address: 'İzmir, Türkiye',
-    hours: 'Pzt - Cts: 08:30 - 18:30',
+    address: 'Kütahya, Türkiye',
     ctaText: 'Hızlı Teklif Al',
-    ctaLink: '/iletisim',
+    ctaLink: '/teklif-al',
   },
 
   // Ana Menü Öğeleri
@@ -25,7 +24,7 @@ export const navigation = {
         {
           label: 'Hakkımızda',
           path: '/kurumsal',
-          desc: 'O-PEN marka hikayesi ve o-pen window felsefesi',
+          desc: 'O-PEN kurumsal geçmişi ve üretim kalitesi',
         },
         {
           label: 'Vizyon & Misyon',
@@ -64,14 +63,8 @@ export const navigation = {
         {
           slug: 'kapi-sistemleri',
           title: 'Kapı Sistemleri',
-          desc: 'Güvenlik, estetik ve yalıtımlı giriş & balkon kapıları',
+          desc: 'Güvenlik, estetik ve yalıtımlı giriş ve dış kapılar',
           image: '/images/urunler/kapi-sistemleri.jpg',
-        },
-        {
-          slug: 'cam-balkon-sistemleri',
-          title: 'Cam Balkon Sistemleri',
-          desc: 'Dört mevsim panoramik manzara sunan katlanır camlama',
-          image: '/images/urunler/cam-balkon.jpg',
         },
         {
           slug: 'panjur-kepenk-sistemleri',
@@ -96,6 +89,10 @@ export const navigation = {
       path: '/galeri',
     },
     {
+      label: 'Teklif Al',
+      path: '/teklif-al',
+    },
+    {
       label: 'İletişim',
       path: '/iletisim',
     },
@@ -107,8 +104,7 @@ export const navigation = {
       { label: 'Ana Sayfa', path: '/' },
       { label: 'Uygulama Galerisi', path: '/galeri' },
       { label: 'Referans Projeler', path: '/referanslar' },
-      { label: 'Blog & Rehberler', path: '/blog' },
-      { label: 'Ücretsiz Keşif Al', path: '/iletisim' },
+      { label: 'Fiyat Teklifi Al', path: '/teklif-al' },
       { label: 'İletişim & Harita', path: '/iletisim' },
     ],
     corporate: [
@@ -122,8 +118,7 @@ export const navigation = {
     products: [
       { label: 'PVC Pencere Sistemleri', path: '/urunler/pvc-pencere-sistemleri' },
       { label: 'Alüminyum Doğrama & Sürme', path: '/urunler/aluminyum-dograma' },
-      { label: 'Giriş & Balkon Kapıları', path: '/urunler/kapi-sistemleri' },
-      { label: 'Cam Balkon Sistemleri', path: '/urunler/cam-balkon-sistemleri' },
+      { label: 'Giriş & Dış Kapı Sistemleri', path: '/urunler/kapi-sistemleri' },
       { label: 'Panjur & Kepenk Çözümleri', path: '/urunler/panjur-kepenk-sistemleri' },
       { label: 'Sineklik & Donanımlar', path: '/urunler/sineklik-aksesuar-sistemleri' },
     ],

@@ -66,7 +66,7 @@ export const LegalPage = ({ type = 'privacy' }) => {
       sections: [
         {
           heading: '1. Fikri Mülkiyet ve Telif Hakları',
-          content: `Bu web sitesinde yer alan O-PEN logosu, "o-pen window" marka sloganı, teknik şartname çizimleri, metinler, fotoğraflar ve grafikler O-PEN tescilli hakları kapsamındadır. Yazılı izin alınmaksızın kısmen veya tamamen kopyalanamaz, çoğaltılamaz ve ticari amaçla kullanılamaz.`,
+          content: `Bu web sitesinde yer alan O-PEN logosu, marka görselleri, teknik şartname çizimleri, metinler, fotoğraflar ve grafikler O-PEN tescilli hakları kapsamındadır. Yazılı izin alınmaksızın kısmen veya tamamen kopyalanamaz, çoğaltılamaz ve ticari amaçla kullanılamaz.`,
         },
         {
           heading: '2. Bilgilendirme ve Teknik Değerler',
@@ -74,7 +74,7 @@ export const LegalPage = ({ type = 'privacy' }) => {
         },
         {
           heading: '3. Sorumluluk Sınırları ve Uyuşmazlık Çözümü',
-          content: `Web sitesinin kesintisiz veya hatasız çalışacağına dair garanti verilmemektedir. İşbu kullanım koşullarından doğabilecek her türlü hukuki uyuşmazlıkta Türkiye Cumhuriyeti kanunları geçerli olup, İzmir Mahkemeleri ve İcra Daireleri yetkilidir.`,
+          content: `Web sitesinin kesintisiz veya hatasız çalışacağına dair garanti verilmemektedir. İşbu kullanım koşullarından doğabilecek her türlü hukuki uyuşmazlıkta Türkiye Cumhuriyeti kanunları geçerli olup, Kütahya Mahkemeleri ve İcra Daireleri yetkilidir.`,
         },
       ],
     },

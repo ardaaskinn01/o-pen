@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Sparkles, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Compass, CheckCircle2 } from 'lucide-react';
 import Container from '../components/ui/Container';
 import PageHero from '../components/ui/PageHero';
 import SectionTitle from '../components/ui/SectionTitle';
@@ -11,7 +11,7 @@ import products from '../data/products';
 import siteConfig from '../data/site';
 import './ProductsPage.css';
 
-const categories = ['Tümü', 'PVC Pencere', 'Alüminyum', 'Kapı Sistemleri', 'Cam Balkon', 'Panjur', 'Aksesuar'];
+const categories = ['Tümü', 'PVC Pencere', 'Alüminyum', 'Kapı Sistemleri', 'Panjur', 'Aksesuar'];
 
 export const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('Tümü');
@@ -47,7 +47,7 @@ export const ProductsPage = () => {
         <title>Ürünlerimiz | {siteConfig.name} Pencere & Kapı Sistemleri</title>
         <meta
           name="description"
-          content="O-PEN PVC Pencere, Alüminyum Doğrama & Sürme, Kapı Sistemleri, Cam Balkon ve Panjur çözümleri. Yüksek ısı ve ses yalıtımlı mimari sistemler."
+          content="O-PEN PVC Pencere, Alüminyum Doğrama & Sürme, Kapı Sistemleri, Panjur ve Sineklik çözümleri. Yüksek ısı ve ses yalıtımlı sistemler."
         />
         <script type="application/ld+json">{JSON.stringify(breadcrumbJsonLd)}</script>
       </Helmet>
@@ -132,16 +132,16 @@ export const ProductsPage = () => {
 
           {/* Alt Bilgilendirme */}
           <div className="open-prod-info-box">
-            <Sparkles size={28} className="open-prod-info-icon" />
+            <Compass size={28} className="open-prod-info-icon" />
             <div>
               <h4 className="open-prod-info-title">Özel Ölçü ve Kurumsal Projelendirme</h4>
               <p className="open-prod-info-desc">
-                Standart ölçülerin dışındaki tüm mimari projeleriniz, villa cepheleriniz ve ticari alanlarınız için
+                Standart ölçülerin dışındaki tüm projeleriniz, villa cepheleriniz ve ticari alanlarınız için
                 yerinde lazer ölçümü yaparak projenize özel statik ve yalıtım hesabı çıkarıyoruz.
               </p>
             </div>
-            <Button to="/iletisim" variant="dark" size="md">
-              Mimarımızla Görüşün
+            <Button to="/teklif-al" variant="dark" size="md">
+              Teklif Alın & Danışın
             </Button>
           </div>
         </Container>

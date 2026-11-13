@@ -8,7 +8,7 @@ export const siteConfig = {
   legalName: 'O-PEN Pencere & Kapı Sistemleri',
   tagline: 'Açık, Işık Alan, Ferah Yaşam Alanları İçin PVC ve Alüminyum Sistemleri',
   description:
-    'O-PEN - PVC ve alüminyum pencere, kapı, cam balkon ve panjur sistemlerinde kurumsal kalite, üstün ısı-ses yalıtımı ve profesyonel montaj güvencesi.',
+    'O-PEN - PVC ve alüminyum pencere, kapı, panjur ve sineklik sistemlerinde kurumsal kalite, üstün ısı-ses yalıtımı ve profesyonel montaj güvencesi.',
 
   // Alan Adı (Kullanıcı henüz domaini kesinleştirmediğinde yer tutucu olarak çalışır)
   // Prodüksiyonda örn: https://www.o-pen.com veya https://www.o-pen.com.tr
@@ -32,9 +32,7 @@ export const siteConfig = {
 
   // Sosyal Medya Profilleri
   social: {
-    facebook: 'https://facebook.com/openpencere',
-    instagram: 'https://instagram.com/openpencere',
-    linkedin: 'https://linkedin.com/company/openpencere',
+    instagram: 'https://www.instagram.com/nrt_grup_as/',
   },
 
   // Marka & Tema
