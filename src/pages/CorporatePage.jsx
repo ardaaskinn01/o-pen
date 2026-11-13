@@ -26,7 +26,6 @@ const tabs = [
   { id: 'hakkimizda', label: 'Hakkımızda', hash: '' },
   { id: 'vizyon', label: 'Vizyon & Misyon', hash: '#vizyon' },
   { id: 'neden', label: 'Neden O-PEN?', hash: '#neden' },
-  { id: 'kalite', label: 'Kalite Politikası', hash: '#kalite' },
 ];
 
 export const CorporatePage = () => {
@@ -37,8 +36,6 @@ export const CorporatePage = () => {
     ? 'vizyon'
     : location.hash === '#neden'
     ? 'neden'
-    : location.hash === '#kalite'
-    ? 'kalite'
     : 'hakkimizda';
 
   return (
@@ -345,53 +342,6 @@ export const CorporatePage = () => {
                 <div className="open-corp-factory-overlay">
                   <span>Kalite Kontrol & Sevkiyat</span>
                 </div>
-              </div>
-            </Reveal>
-          </div>
-        </Container>
-      </section>
-
-      {/* =========================================================================
-          BÖLÜM 5: KALİTE POLİTİKASI & ÜRETİM STANDARTLARI
-          ========================================================================= */}
-      <section id="kalite" className="open-section open-corp-quality-section">
-        <Container>
-          <SectionTitle
-            badge="STANDARTLARIMIZ"
-            title="Kalite ve Çevre Politikamız"
-            subtitle="Üretimin her aşamasında sıkı toleranslar ve uluslararası test kriterleri."
-            dark
-          />
-
-          <div className="open-corp-quality-grid">
-            <Reveal delay={0.1}>
-              <div className="open-corp-quality-card">
-                <div className="open-corp-quality-icon"><Award size={26} /></div>
-                <h3>TSE & CE Belgeli Profiller</h3>
-                <p>
-                  Kullandığımız tüm PVC ve alüminyum profiller, Türk Standartları Enstitüsü (TSE) ve Avrupa CE normlarına
-                  uygunluk sertifikasına sahiptir.
-                </p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.2}>
-              <div className="open-corp-quality-card">
-                <div className="open-corp-quality-icon"><ShieldCheck size={26} /></div>
-                <h3>Sertifikalı Rüzgar ve Su Testleri</h3>
-                <p>
-                  Sistemlerimiz şiddetli rüzgar basıncı, su sızdırmazlık ve hava geçirgenliği laboratuvar testlerinden başarıyla geçmiştir.
-                </p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.3}>
-              <div className="open-corp-quality-card">
-                <div className="open-corp-quality-icon"><Factory size={26} /></div>
-                <h3>Geri Dönüştürülebilir & Çevre Dostu</h3>
-                <p>
-                  Kurşunsuz kalsiyum-çinko stabilizatörlü, çevre dostu hammaddeler kullanarak doğaya ve insan sağlığına saygılı üretim yapıyoruz.
-                </p>
               </div>
             </Reveal>
           </div>

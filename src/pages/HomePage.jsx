@@ -25,6 +25,7 @@ import SEO from '../components/common/SEO';
 import products from '../data/products';
 import siteConfig from '../data/site';
 import images from '../data/images';
+import productThumbnails from '../data/productThumbnails';
 import './HomePage.css';
 
 // 1. Hero Slides
@@ -354,7 +355,7 @@ export const HomePage = () => {
                 <Link to={`/urunler/${item.slug}`} className="open-product-card">
                   <div className="open-product-card__img-box">
                     <img
-                      src={item.image}
+                      src={productThumbnails[item.id] || item.image}
                       alt={item.imageAlt || item.title}
                       className="open-product-card__img"
                       loading="lazy"

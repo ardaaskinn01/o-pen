@@ -36,11 +36,6 @@ export const navigation = {
           path: '/kurumsal#neden',
           desc: 'Üstün ısı-ses yalıtımı ve işçilik garantisi',
         },
-        {
-          label: 'Kalite Politikası',
-          path: '/kurumsal#kalite',
-          desc: 'A sınıfı profiller ve Avrupa standartlarında üretim',
-        },
       ],
     },
     {
@@ -105,7 +100,6 @@ export const navigation = {
       { label: 'Hakkımızda', path: '/kurumsal' },
       { label: 'Vizyon & Misyon', path: '/kurumsal#vizyon' },
       { label: 'Neden O-PEN?', path: '/kurumsal#neden' },
-      { label: 'Kalite Politikası', path: '/kurumsal#kalite' },
       { label: 'Referanslarımız', path: '/referanslar' },
       { label: 'Uygulama Galerisi', path: '/galeri' },
     ],

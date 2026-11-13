@@ -316,9 +316,6 @@ export const Header = () => {
                     <Link to="/kurumsal#neden" className="open-mobile-accordion__sublink" onClick={() => setMobileOpen(false)}>
                       Neden O-PEN?
                     </Link>
-                    <Link to="/kurumsal#kalite" className="open-mobile-accordion__sublink" onClick={() => setMobileOpen(false)}>
-                      Kalite Politikası
-                    </Link>
                   </div>
                 )}
               </div>

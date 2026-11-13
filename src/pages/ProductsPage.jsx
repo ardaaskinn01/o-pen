@@ -9,6 +9,7 @@ import Button from '../components/ui/Button';
 import Reveal from '../components/ui/Reveal';
 import products from '../data/products';
 import siteConfig from '../data/site';
+import productThumbnails from '../data/productThumbnails';
 import './ProductsPage.css';
 
 const categories = ['Tümü', 'PVC Pencere', 'Alüminyum', 'Kapı Sistemleri', 'Panjur'];
@@ -88,7 +89,7 @@ export const ProductsPage = () => {
                 <div className="open-catalog-card">
                   <div className="open-catalog-card__media">
                     <img
-                      src={prod.image}
+                      src={productThumbnails[prod.id] || prod.image}
                       alt={prod.title}
                       className="open-catalog-card__img"
                       loading="lazy"
