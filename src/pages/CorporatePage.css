@@ -1,0 +1,519 @@
+/* ==========================================================================
+   CORPORATE (KURUMSAL) PAGE STYLES
+   ========================================================================== */
+
+.open-corporate-page {
+  background-color: var(--bg-body);
+}
+
+/* Tabs Bar */
+.open-corp-tabs-bar {
+  background-color: var(--bg-surface);
+  border-bottom: 1px solid var(--border-light);
+  position: sticky;
+  top: 70px;
+  z-index: 90;
+  box-shadow: var(--shadow-sm);
+}
+
+.open-corp-tabs {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.75rem 0;
+}
+
+.open-corp-tab {
+  font-family: var(--font-heading);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 0.55rem 1.25rem;
+  border-radius: var(--radius-full);
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.open-corp-tab:hover {
+  color: var(--color-primary);
+  background-color: var(--color-primary-subtle);
+}
+
+.open-corp-tab--active {
+  color: var(--color-white) !important;
+  background-color: var(--color-primary) !important;
+  box-shadow: 0 4px 12px rgba(255, 106, 0, 0.35);
+}
+
+/* Bölüm 1: Hakkımızda & Hikaye */
+.open-corp-content-section {
+  padding: 5.5rem 0;
+  background-color: var(--bg-surface);
+}
+
+.open-corp-story-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .open-corp-story-grid {
+    grid-template-columns: 1.15fr 1fr;
+  }
+}
+
+.open-corp-heading {
+  font-size: clamp(1.85rem, 3.5vw, 2.6rem);
+  color: var(--color-dark);
+  line-height: 1.25;
+}
+
+.open-corp-lead-text {
+  font-size: 1.1rem;
+  color: var(--text-main);
+  line-height: 1.75;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.open-corp-text {
+  font-size: 0.975rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.open-corp-quote-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  background-color: var(--color-primary-subtle);
+  border-left: 4px solid var(--color-primary);
+  padding: 1.25rem 1.5rem;
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+  margin-top: 2rem;
+}
+
+.open-corp-quote-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.open-corp-quote-box p {
+  font-size: 0.925rem;
+  color: var(--color-dark);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Sağ Görsel İstifi */
+.open-corp-images-stack {
+  position: relative;
+  padding: 1.5rem;
+}
+
+.open-corp-img-main {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border-light);
+}
+
+.open-corp-img-main img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  display: block;
+}
+
+.open-corp-img-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.75rem 1.25rem;
+  background: linear-gradient(to top, rgba(11, 11, 12, 0.9) 0%, transparent 100%);
+  color: var(--color-white);
+  font-size: 0.825rem;
+  font-weight: 600;
+}
+
+.open-corp-img-secondary {
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  width: 240px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+  border: 4px solid #FFFFFF;
+}
+
+.open-corp-img-secondary img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+}
+
+.open-corp-badge-experience {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1rem 1.25rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-orange);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.open-corp-badge-num {
+  font-family: var(--font-heading);
+  font-size: 2.25rem;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.open-corp-badge-txt {
+  font-size: 0.725rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-top: 0.25rem;
+}
+
+@media (max-width: 640px) {
+  .open-corp-img-secondary,
+  .open-corp-badge-experience {
+    display: none;
+  }
+}
+
+/* Bölüm 2: Vizyon & Misyon */
+.open-corp-vm-section {
+  padding: 5.5rem 0;
+  background-color: var(--bg-body);
+}
+
+.open-corp-vm-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+@media (min-width: 768px) {
+  .open-corp-vm-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.open-corp-vm-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.open-corp-vm-icon-box {
+  width: 60px;
+  height: 60px;
+  border-radius: var(--radius-md);
+  background-color: var(--color-primary-subtle);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.open-corp-vm-title {
+  font-size: 1.45rem;
+  margin-bottom: 0.75rem;
+}
+
+.open-corp-vm-desc {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+  flex: 1;
+}
+
+.open-corp-vm-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  border-top: 1px solid var(--border-light);
+  padding-top: 1.25rem;
+}
+
+.open-corp-vm-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-main);
+  font-weight: 500;
+}
+
+/* Değerler Alanı */
+.open-corp-values-area {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.open-corp-values-title {
+  font-size: 1.5rem;
+  margin-bottom: 2.25rem;
+}
+
+.open-corp-values-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .open-corp-values-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .open-corp-values-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.open-corp-value-item {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem 1.25rem;
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+
+.open-corp-value-item:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.open-corp-value-icon {
+  color: var(--color-primary);
+  margin-bottom: 0.85rem;
+}
+
+.open-corp-value-item h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.4rem;
+}
+
+.open-corp-value-item p {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Bölüm 3: Neden O-PEN */
+.open-corp-why-section {
+  padding: 5.5rem 0;
+  background-color: var(--bg-surface);
+}
+
+.open-corp-why-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .open-corp-why-grid {
+    grid-template-columns: 1.15fr 1fr;
+  }
+}
+
+.open-corp-features-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.open-corp-feat-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.open-corp-feat-icon {
+  margin-top: 0.15rem;
+  flex-shrink: 0;
+}
+
+.open-corp-feat-row h4 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.open-corp-feat-row p {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.open-corp-why-media {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+}
+
+.open-corp-why-img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.open-corp-why-stat-card {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  right: 1.5rem;
+  background-color: rgba(11, 11, 12, 0.92);
+  backdrop-filter: blur(8px);
+  padding: 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(255, 106, 0, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.open-corp-why-stat-num {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--color-white);
+}
+
+.open-corp-why-stat-txt {
+  font-size: 0.8rem;
+  color: var(--color-gray-400);
+}
+
+/* Bölüm 4: Kalite Politikası */
+.open-corp-quality-section {
+  padding: 5.5rem 0;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+}
+
+.open-corp-quality-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .open-corp-quality-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.open-corp-quality-card {
+  background-color: var(--color-dark-surface);
+  border: 1px solid var(--color-gray-800);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  transition: all var(--transition-fast);
+}
+
+.open-corp-quality-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-4px);
+}
+
+.open-corp-quality-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 106, 0, 0.15);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.open-corp-quality-card h3 {
+  color: var(--color-white);
+  font-size: 1.15rem;
+  margin-bottom: 0.75rem;
+}
+
+.open-corp-quality-card p {
+  color: var(--color-gray-400);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Kurumsal CTA Bandı */
+.open-corp-cta-band {
+  background: linear-gradient(135deg, #FF6A00 0%, #E55C00 100%);
+  color: var(--color-white);
+  padding: 4.5rem 0;
+}
+
+.open-corp-cta-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+@media (min-width: 860px) {
+  .open-corp-cta-inner {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.open-corp-cta-title {
+  color: var(--color-white);
+  font-size: clamp(1.6rem, 3.5vw, 2.25rem);
+  font-weight: 800;
+  line-height: 1.25;
+  margin-bottom: 0.4rem;
+}
+
+.open-corp-cta-desc {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.open-corp-cta-btns {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+

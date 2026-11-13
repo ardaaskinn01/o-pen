@@ -1,0 +1,11 @@
+# ==============================================================================
+# O-PEN Pencere & Kapı Sistemleri Robots.txt
+# ==============================================================================
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /*?*
+
+# Sitemap Konumu
+Sitemap: https://www.o-pen.com.tr/sitemap.xml

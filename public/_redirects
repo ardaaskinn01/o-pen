@@ -1,0 +1,14 @@
+# 301 Kalıcı Yönlendirmeler (Netlify / Cloudflare Pages / Apache)
+
+# Eski Nurettin Tutak URL'lerinden Yeni O-PEN Sayfalarına 301 Geçişleri
+/hakkinda/*          /kurumsal          301!
+/kurumsal/uretim     /kurumsal          301!
+/kurumsal/kereste    /kurumsal          301!
+/kurumsal/misafirhane /kurumsal         301!
+/projelerimiz/*      /referanslar       301!
+/contact             /iletisim          301!
+/products            /urunler           301!
+
+# SPA Fallback (Tüm diğer rotalar index.html'e)
+/*                   /index.html        200
+

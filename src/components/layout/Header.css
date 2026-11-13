@@ -1,0 +1,598 @@
+/* ==========================================================================
+   HEADER & NAVBAR (Kurumsal FıratPen / Winsa Esintili)
+   ========================================================================== */
+
+.open-header-wrapper {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  transition: all var(--transition-normal);
+}
+
+/* 1. ÜST İNCE BİLGİ ÇUBUĞU */
+.open-topbar {
+  background-color: var(--color-dark);
+  color: var(--color-gray-300);
+  font-size: 0.8125rem;
+  border-bottom: 1px solid var(--color-gray-800);
+  transition: height var(--transition-normal), opacity var(--transition-normal);
+}
+
+.open-topbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.45rem;
+  padding-bottom: 0.45rem;
+}
+
+.open-topbar__col {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.open-topbar__item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.open-topbar__icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.open-topbar__divider {
+  color: var(--color-gray-700);
+  font-size: 0.75rem;
+}
+
+.open-topbar__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--color-gray-300);
+  transition: color var(--transition-fast);
+}
+
+.open-topbar__link:hover {
+  color: var(--color-primary);
+}
+
+.open-topbar__cta-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  background-color: rgba(255, 106, 0, 0.15);
+  color: var(--color-primary);
+  border: 1px solid rgba(255, 106, 0, 0.35);
+  padding: 0.15rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.open-topbar__cta-badge:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* 2. ANA NAVBAR */
+.open-main-navbar {
+  background-color: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.open-header-wrapper--scrolled .open-main-navbar {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.12);
+  background-color: #FFFFFF;
+}
+
+.open-main-navbar__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 84px;
+  transition: height var(--transition-normal);
+}
+
+.open-header-wrapper--scrolled .open-main-navbar__inner {
+  height: 70px; /* Scroll olduğunda küçülme (shrink) */
+}
+
+.open-main-navbar__brand {
+  flex-shrink: 0;
+}
+
+/* Nav Menü Listesi (Desktop) */
+.open-nav-list {
+  display: none;
+  align-items: center;
+  gap: 1.5rem;
+  height: 100%;
+}
+
+@media (min-width: 1024px) {
+  .open-nav-list {
+    display: flex;
+  }
+}
+
+.open-nav-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.open-nav-link {
+  font-family: var(--font-heading);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.5rem 0;
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.open-nav-link:hover,
+.open-nav-link--active {
+  color: var(--color-primary);
+}
+
+.open-nav-link--active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: var(--radius-full);
+}
+
+.open-nav-chevron {
+  transition: transform var(--transition-fast);
+}
+
+.open-nav-chevron--rotated {
+  transform: rotate(180deg);
+  color: var(--color-primary);
+}
+
+/* 3. STANDART DROPDOWN (Kurumsal) */
+.open-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  min-width: 260px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  padding: 0.75rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-normal);
+  z-index: 1001;
+}
+
+.open-dropdown-menu--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.open-dropdown-menu__header {
+  padding: 0.5rem 0.75rem 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+  margin-bottom: 0.5rem;
+}
+
+.open-dropdown-menu__badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  letter-spacing: 0.08em;
+}
+
+.open-dropdown-menu__title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  margin: 0;
+}
+
+.open-dropdown-link {
+  display: block;
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.open-dropdown-link:hover {
+  background-color: var(--color-primary-subtle);
+  transform: translateX(4px);
+}
+
+.open-dropdown-link__title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.open-dropdown-link:hover .open-dropdown-link__title {
+  color: var(--color-primary);
+}
+
+.open-dropdown-link__desc {
+  font-size: 0.775rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+/* 4. MEGA MENÜ (Görselli Ürün Kartları) */
+.open-megamenu {
+  position: fixed;
+  top: auto;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: var(--bg-surface);
+  border-top: 2px solid var(--color-primary);
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.15);
+  padding: 2.25rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(12px);
+  transition: all var(--transition-normal);
+  z-index: 1001;
+}
+
+.open-megamenu--visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.open-megamenu__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.open-megamenu__badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-primary);
+  letter-spacing: 0.1em;
+}
+
+.open-megamenu__title {
+  font-size: 1.35rem;
+  color: var(--color-dark);
+  margin: 0.2rem 0 0;
+}
+
+.open-megamenu__view-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.open-megamenu__view-all:hover {
+  text-decoration: underline;
+}
+
+.open-megamenu__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.25rem;
+}
+
+.open-megamenu-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-body);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-light);
+  transition: all var(--transition-fast);
+}
+
+.open-megamenu-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.open-megamenu-card__img-wrap {
+  position: relative;
+  width: 100%;
+  height: 110px;
+  overflow: hidden;
+  background: var(--color-dark-surface);
+}
+
+.open-megamenu-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-normal);
+}
+
+.open-megamenu-card:hover .open-megamenu-card__img {
+  transform: scale(1.08);
+}
+
+.open-megamenu-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11, 11, 12, 0.4) 0%, transparent 60%);
+}
+
+.open-megamenu-card__content {
+  padding: 0.85rem;
+}
+
+.open-megamenu-card__title {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
+}
+
+.open-megamenu-card:hover .open-megamenu-card__title {
+  color: var(--color-primary);
+}
+
+.open-megamenu-card__desc {
+  font-size: 0.725rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 5. SAĞ EYLEMLER & HAMBURGER */
+.open-main-navbar__actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.open-nav-cta-btn {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .open-nav-cta-btn {
+    display: inline-flex;
+  }
+}
+
+.open-hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-dark);
+  padding: 0.4rem;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition-fast);
+}
+
+.open-hamburger:hover {
+  color: var(--color-primary);
+}
+
+@media (min-width: 1024px) {
+  .open-hamburger {
+    display: none;
+  }
+}
+
+/* 6. MOBİL ÇEKMECE (Drawer & Focus Trap) */
+.open-mobile-drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  visibility: hidden;
+  transition: visibility var(--transition-normal);
+}
+
+.open-mobile-drawer--open {
+  visibility: visible;
+}
+
+.open-mobile-drawer__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 11, 12, 0.6);
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.open-mobile-drawer--open .open-mobile-drawer__backdrop {
+  opacity: 1;
+}
+
+.open-mobile-drawer__content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 85%;
+  max-width: 380px;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform var(--transition-normal);
+  box-shadow: -4px 0 25px rgba(0, 0, 0, 0.2);
+}
+
+.open-mobile-drawer--open .open-mobile-drawer__content {
+  transform: translateX(0);
+}
+
+.open-mobile-drawer__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.open-mobile-drawer__close {
+  color: var(--color-dark);
+  padding: 0.4rem;
+  border-radius: var(--radius-sm);
+}
+
+.open-mobile-drawer__close:hover {
+  color: var(--color-primary);
+}
+
+.open-mobile-drawer__body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.open-mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.open-mobile-nav__link {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  padding: 0.85rem 0.5rem;
+  border-bottom: 1px solid var(--border-subtle);
+  display: block;
+}
+
+.open-mobile-nav__link:hover,
+.open-mobile-nav__link.active {
+  color: var(--color-primary);
+}
+
+/* Mobil Akordeon */
+.open-mobile-accordion {
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.open-mobile-accordion__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-dark);
+  padding: 0.85rem 0.5rem;
+}
+
+.open-mobile-accordion__header:hover {
+  color: var(--color-primary);
+}
+
+.open-mobile-accordion__icon {
+  transition: transform var(--transition-fast);
+}
+
+.open-mobile-accordion__icon--open {
+  transform: rotate(180deg);
+  color: var(--color-primary);
+}
+
+.open-mobile-accordion__content {
+  padding: 0.25rem 0.5rem 0.75rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--bg-body);
+  border-radius: var(--radius-md);
+  margin-bottom: 0.5rem;
+}
+
+.open-mobile-accordion__sublink {
+  font-size: 0.9rem;
+  color: var(--text-main);
+  padding: 0.4rem 0;
+}
+
+.open-mobile-accordion__sublink--bold {
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.open-mobile-accordion__sublink:hover {
+  color: var(--color-primary);
+}
+
+/* Mobil Alt Alan */
+.open-mobile-drawer__footer {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.open-mobile-drawer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.open-mobile-drawer__contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.open-mobile-drawer__contact-item:hover {
+  color: var(--color-primary);
+}
+
+/* Responsive Gizlemeler */
+@media (max-width: 640px) {
+  .open-topbar__item--hide-sm {
+    display: none;
+  }
+}
+
