@@ -79,11 +79,15 @@ export const Header = () => {
       {/* 1. ÜST İNCE BİLGİ ÇUBUĞU (Siyah / Antrasit) */}
       <div className="open-topbar">
         <Container className="open-topbar__inner">
-          {/* Sol: Adres */}
+          {/* Sol: Adres & Kurumsal Aidiyet */}
           <div className="open-topbar__col">
             <span className="open-topbar__item">
               <MapPin size={13} className="open-topbar__icon" />
               <span>{navigation.topbar.address}</span>
+            </span>
+            <span className="open-topbar__divider open-topbar__item--hide-sm">|</span>
+            <span className="open-topbar__item open-topbar__item--hide-sm" style={{ fontWeight: 700, color: 'var(--color-primary)', letterSpacing: '0.04em' }}>
+              NRT GRUP İNŞ. A.Ş. KURULUŞUDUR.
             </span>
           </div>
 

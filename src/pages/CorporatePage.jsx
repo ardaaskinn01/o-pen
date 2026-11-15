@@ -93,8 +93,8 @@ export const CorporatePage = () => {
                 <p className="open-corp-text">
                   1992 yılında kurumsal kimliğimizi güçlendirmek amacıyla sanayi ve üretim yatırımları hız kazanmış;
                   modern PVC profil işleme, ısı yalıtımlı çift cam ve kapı sistemleri fabrikamız faaliyete geçmiştir.
-                  Bugün ise yapı sektöründeki uzun yıllara dayanan saha tecrübemizi, tescilli markamız <strong>O-PEN</strong> çatısı
-                  altında bir araya getirerek yalnızca bir pencere değil, ferah bir yaşam standardı inşa ediyoruz.
+                  Bugün ise yapı sektöründeki uzun yıllara dayanan saha tecrübemizi, <strong>NRT GRUP İNŞ. A.Ş. KURULUŞU</strong> olan
+                  tescilli markamız <strong>O-PEN</strong> çatısı altında bir araya getirerek yalnızca bir pencere değil, ferah bir yaşam standardı inşa ediyoruz.
                 </p>
 
                 <div className="open-corp-quote-box">
@@ -124,7 +124,7 @@ export const CorporatePage = () => {
                 </div>
                 <div className="open-corp-img-secondary">
                   <img
-                    src="/images/fabrika/1.jpg"
+                    src="/images/fabrika/2.jpg"
                     alt="O-PEN CNC profil işleme tezgahı"
                     loading="lazy"
                     width="320"
@@ -261,7 +261,7 @@ export const CorporatePage = () => {
           <SectionTitle
             badge="TESİSİMİZ"
             title="Üretim Sahamız ve Teknolojimiz"
-            subtitle="Kütahya'daki modern tesisimizde milimetrik hassasiyetle imal edilen sistemlerimiz."
+            subtitle="Gediz/Kütahya'daki modern tesisimizde milimetrik hassasiyetle imal edilen sistemlerimiz."
           />
 
           <div className="open-corp-factory-grid">
@@ -275,7 +275,7 @@ export const CorporatePage = () => {
             </Reveal>
             <Reveal delay={0.1}>
               <div className="open-corp-factory-item">
-                <img src="/images/fabrika/1.jpg" alt="O-PEN profil kesim hattı" loading="lazy" />
+                <img src="/images/fabrika/2.jpg" alt="O-PEN profil kesim hattı" loading="lazy" />
                 <div className="open-corp-factory-overlay">
                   <span>CNC Profil Kesim & Hazırlık</span>
                 </div>

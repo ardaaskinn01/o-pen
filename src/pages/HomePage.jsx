@@ -46,6 +46,12 @@ const heroSlides = [
     title: 'Modern Mimariye Açılan Sağlam Pencereler',
     subtitle: 'Konut, villa ve kurumsal projeleriniz için milimetrik imalat ve profesyonel montaj kalitesi.',
   },
+  {
+    image: images.hero[3].src,
+    badge: 'Estetik & Dayanıklılık',
+    title: 'Geleceğin Standartlarında İleri Teknoloji',
+    subtitle: 'Rüzgar, fırtına ve dış seslere karşı maksimum direnç sunan sertifikalı profil sistemleri.',
+  },
 ];
 
 // 4. Sayaç Verileri (Rakamlarla O-PEN)
@@ -209,7 +215,8 @@ export const HomePage = () => {
             <div className="open-hero__overlay" />
             <Container className="open-hero__content">
               <div className="open-hero__inner">
-                <div className="open-hero__badge">
+                <div className="open-hero__tag">
+                  <span className="open-hero__tag-dot" />
                   <span>{slide.badge}</span>
                 </div>
                 <h1 className="open-hero__title">{slide.title}</h1>
@@ -256,7 +263,7 @@ export const HomePage = () => {
           <div className="open-concept-grid">
             <Reveal direction="left">
               <div className="open-concept-text">
-                <span className="open-concept-badge">Ferah Yaşam Alanları</span>
+                <span className="open-concept-tag">Ferah Yaşam Alanları</span>
                 <h2 className="open-concept-title">
                   Aydınlık, Konforlu ve <span className="open-text-orange">Güvenli Mekânlar</span>
                 </h2>

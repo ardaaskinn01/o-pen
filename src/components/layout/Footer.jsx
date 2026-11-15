@@ -71,6 +71,9 @@ export const Footer = () => {
               {/* Sütun 1: Marka & Sosyal Medya */}
               <div className="open-footer-col open-footer-col--brand">
                 <Logo variant="light" size="md" />
+                <div style={{ marginTop: '0.65rem', marginBottom: '0.75rem', fontSize: '0.8rem', fontWeight: 800, color: 'var(--color-primary)', letterSpacing: '0.06em' }}>
+                  NRT GRUP İNŞ. A.Ş. KURULUŞUDUR.
+                </div>
                 <p className="open-footer-brand-desc">
                   İleri teknoloji, üstün ısı-ses yalıtımı ve dayanıklı profil sistemlerimizle ferah yaşam alanları sunuyoruz.
                   Ustalık geleneğimiz ve yenilikçi PVC & Alüminyum teknolojimizle hizmetinizdeyiz.
@@ -235,7 +238,7 @@ export const Footer = () => {
         <div className="open-footer-bottom">
           <Container className="open-footer-bottom__inner">
             <p className="open-footer-bottom__copy">
-              © {currentYear} <span className="open-footer-bottom__highlight">{siteConfig.name}</span> Pen Sistemleri. Tüm hakları saklıdır.
+              © {currentYear} <span className="open-footer-bottom__highlight">{siteConfig.name}</span> Pen Sistemleri. NRT GRUP İNŞ. A.Ş. KURULUŞUDUR. Tüm hakları saklıdır.
             </p>
             <div className="open-footer-bottom__legal">
               {navigation.footer.legal.map((leg) => (

@@ -19,7 +19,6 @@ export const products = [
       '/images/urunler/pvc-pencere.jpg',
       '/images/galeri/galeri-1.jpg',
       '/images/galeri/galeri-5.jpg',
-      '/images/galeri/galeri-9.jpg',
     ],
     features: [
       '70 mm - 80 mm profil genişliği ve 5-6 odacıklı gövde yapısı',
@@ -70,7 +69,6 @@ export const products = [
       '/images/urunler/aluminyum-dograma.jpg',
       '/images/galeri/galeri-2.jpg',
       '/images/galeri/galeri-7.jpg',
-      '/images/galeri/galeri-10.jpg',
     ],
     features: [
       'Gelişmiş poliamid ısı yalıtım bariyeri (Termal Köprülü)',
@@ -114,9 +112,8 @@ export const products = [
     image: '/images/urunler/kapi-sistemleri.jpg',
     gallery: [
       '/images/urunler/kapi-sistemleri.jpg',
-      '/images/galeri/galeri-8.jpg',
-      '/images/galeri/galeri-12.jpg',
-      '/images/hero/hero-2.jpg',
+      '/images/galeri/galeri-6.jpg',
+      '/images/hero/hero-new-2.jpg',
     ],
     features: [
       'Gövde içi güçlendirilmiş U ve kutu çelik takviyeleri',
@@ -156,8 +153,7 @@ export const products = [
     gallery: [
       '/images/urunler/panjur-kepenk.jpg',
       '/images/galeri/galeri-4.jpg',
-      '/images/hero/hero-1.jpg',
-      '/images/galeri/galeri-8.jpg',
+      '/images/hero/hero-new-5.jpg',
     ],
     features: [
       'Poliüretan köpük dolgulu ses ve ısı yalıtımlı alüminyum lameller',

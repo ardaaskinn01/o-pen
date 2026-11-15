@@ -146,10 +146,10 @@ export const ContactPage = () => {
     priceRange: '₺₺',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Özyurt Mahallesi, Gediz Fabrika & Showroom',
+      streetAddress: 'Gediz OSB',
       addressLocality: 'Gediz',
       addressRegion: 'Kütahya',
-      postalCode: '43100',
+      postalCode: '43600',
       addressCountry: 'TR',
     },
     geo: {
@@ -445,7 +445,7 @@ export const ContactPage = () => {
                 <MapPin size={22} color="var(--color-primary)" />
                 <div>
                   <h3 className="open-map-title">Fabrika & Üretim Merkezimiz Harita Konumu</h3>
-                  <p className="open-map-subtitle">Gediz / Kütahya Üretim ve Montaj Tesisimiz</p>
+                  <p className="open-map-subtitle">Gediz/Kütahya Üretim ve Montaj Tesisimiz</p>
                 </div>
               </div>
 

@@ -10,7 +10,7 @@ import siteConfig from '../data/site';
 import referenceProjects from '../data/referenceProjects';
 import './ReferencesPage.css';
 
-const regions = ['Tümü', 'Kütahya', 'İzmir', 'Aydın'];
+const regions = ['Tümü', 'İzmir', 'Aydın'];
 
 export const ReferencesPage = () => {
   const [selectedRegion, setSelectedRegion] = useState('Tümü');
@@ -60,13 +60,13 @@ export const ReferencesPage = () => {
         <title>Projelerimiz | {siteConfig.name}</title>
         <meta
           name="description"
-          content="O-PEN Pencere ve Kapı Sistemleri devam eden ve tamamlanan projeleri; Kütahya, İzmir ve Aydın genelinde konut, site ve villa montajları."
+          content="O-PEN Pencere ve Kapı Sistemleri devam eden ve tamamlanan projeleri; Ege Bölgesi, İzmir ve Aydın genelinde konut, site ve villa montajları."
         />
       </Helmet>
 
       <PageHero
         title="Projelerimiz"
-        subtitle="Kütahya ve Ege Bölgesi genelinde imalat ve montajını üstlendiğimiz nitelikli toplu konut, site ve villa projelerimiz."
+        subtitle="Ege Bölgesi genelinde imalat ve montajını üstlendiğimiz nitelikli toplu konut, site ve villa projelerimiz."
         badge="ŞANTİYE VE UYGULAMA SAHALARIMIZ"
         breadcrumbs={[{ label: 'Projeler' }]}
         backgroundImage={referenceProjects[0]?.cover}

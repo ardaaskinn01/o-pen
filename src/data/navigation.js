@@ -6,7 +6,7 @@
 export const navigation = {
   // Üst İnce Bilgi Çubuğu
   topbar: {
-    address: 'Kütahya, Türkiye',
+    address: 'Gediz/Kütahya, Türkiye',
     ctaText: 'Hızlı Teklif Al',
     ctaLink: '/teklif-al',
   },

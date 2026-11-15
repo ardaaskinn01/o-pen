@@ -15,7 +15,7 @@ export const LegalPage = ({ type = 'privacy' }) => {
       sections: [
         {
           heading: '1. Veri Sorumlusu Sıfatı',
-          content: `6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, veri sorumlusu sıfatıyla O-PEN Pencere & Kapı Sistemleri ("O-PEN" veya "Şirket") olarak; müşterilerimizin, web sitesi ziyaretçilerimizin ve iş ortaklarımızın kişisel verilerini aşağıda izah edilen kapsam ve amaçlar doğrultusunda hukuka ve dürüstlük kurallarına uygun şekilde işlemekteyiz.`,
+          content: `6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, veri sorumlusu sıfatıyla bir NRT Grup İnşaat A.Ş. kuruluşu ve markası olan O-PEN Pencere ve Kapı Sistemleri ("O-PEN" veya "Şirket") olarak; müşterilerimizin, web sitesi ziyaretçilerimizin ve iş ortaklarımızın kişisel verilerini aşağıda izah edilen kapsam ve amaçlar doğrultusunda hukuka ve dürüstlük kurallarına uygun şekilde işlemekteyiz.`,
         },
         {
           heading: '2. İşlenen Kişisel Veriler ve Toplanma Amaçları',
@@ -66,7 +66,7 @@ export const LegalPage = ({ type = 'privacy' }) => {
       sections: [
         {
           heading: '1. Fikri Mülkiyet ve Telif Hakları',
-          content: `Bu web sitesinde yer alan O-PEN logosu, marka görselleri, teknik şartname çizimleri, metinler, fotoğraflar ve grafikler O-PEN tescilli hakları kapsamındadır. Yazılı izin alınmaksızın kısmen veya tamamen kopyalanamaz, çoğaltılamaz ve ticari amaçla kullanılamaz.`,
+          content: `Bu web sitesinde yer alan O-PEN logosu, marka görselleri, teknik şartname çizimleri, metinler, fotoğraflar ve grafikler NRT Grup İnşaat A.Ş. ve O-PEN tescilli hakları kapsamındadır. Yazılı izin alınmaksızın kısmen veya tamamen kopyalanamaz, çoğaltılamaz ve ticari amaçla kullanılamaz.`,
         },
         {
           heading: '2. Bilgilendirme ve Teknik Değerler',

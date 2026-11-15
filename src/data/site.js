@@ -22,7 +22,7 @@ export const siteConfig = {
   email: 'info@o-pen.com.tr',
 
   // Fiziksel Konum ve Harita
-  address: 'Özyurt Mahallesi, Gediz / Kütahya, Türkiye',
+  address: 'Gediz OSB, 43600 Gediz/Kütahya',
   coordinates: {
     lat: 38.9647869,
     lng: 29.3641572,
