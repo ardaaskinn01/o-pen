@@ -74,6 +74,10 @@ export const navigation = {
       path: '/projeler',
     },
     {
+      label: 'Haberler',
+      path: '/haberler',
+    },
+    {
       label: 'Galeri',
       path: '/galeri',
     },
@@ -91,6 +95,7 @@ export const navigation = {
   footer: {
     quickLinks: [
       { label: 'Ana Sayfa', path: '/' },
+      { label: 'Haberler & Duyurular', path: '/haberler' },
       { label: 'Uygulama Galerisi', path: '/galeri' },
       { label: 'Projelerimiz', path: '/projeler' },
       { label: 'Fiyat Teklifi Al', path: '/teklif-al' },

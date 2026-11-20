@@ -98,12 +98,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 84px;
+  height: 88px;
   transition: height var(--transition-normal);
 }
 
 .open-header-wrapper--scrolled .open-main-navbar__inner {
-  height: 70px; /* Scroll olduğunda küçülme (shrink) */
+  height: 74px; /* Scroll olduğunda küçülme (shrink) */
 }
 
 .open-main-navbar__brand {

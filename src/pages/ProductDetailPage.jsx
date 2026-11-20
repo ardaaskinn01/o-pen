@@ -197,6 +197,34 @@ export const ProductDetailPage = () => {
       </section>
 
       {/* =========================================================================
+          ÜRÜN SERİLERİ & OPSİYONLARI (Varsa Listelenir)
+          ========================================================================= */}
+      {product.series && product.series.length > 0 && (
+        <section className="open-section open-detail-series-sec">
+          <Container>
+            <SectionTitle
+              badge="SERİLER & SİSTEMLER"
+              title={`${product.title} Çözüm Gruplarımız`}
+              subtitle="Projenizin mimari yapısına, kat yüksekliğine ve yalıtım ihtiyacına özel profil serilerimiz."
+            />
+
+            <div className="open-detail-series-grid">
+              {product.series.map((item, idx) => (
+                <div key={idx} className="open-detail-series-card">
+                  <div className="open-detail-series-card__header">
+                    <span className="open-detail-series-card__tag">{item.tag}</span>
+                    <h3 className="open-detail-series-card__title">{item.name}</h3>
+                    <span className="open-detail-series-card__specs">{item.specs}</span>
+                  </div>
+                  <p className="open-detail-series-card__desc">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </Container>
+        </section>
+      )}
+
+      {/* =========================================================================
           TEKNİK ÖZELLİKLER TABLOSU (Yer Tutucu Değerler Net Şekilde Listelendi)
           ========================================================================= */}
       <section className="open-section open-detail-tech-sec">

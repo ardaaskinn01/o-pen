@@ -60,6 +60,11 @@ const routes = [
     desc: 'Montajını tamamladığımız villa, rezidans ve konut projelerinden detay kareler ve işçilik kalitemiz.',
   },
   {
+    path: '/haberler',
+    title: 'Haberler & Duyurular | O-PEN Sistemleri',
+    desc: 'O-PEN kurumsal haberleri, Ar-Ge yatırımları, fuar katılımları ve fabrika duyuruları.',
+  },
+  {
     path: '/teklif-al',
     title: 'Fiyat Teklifi Al | O-PEN Pencere & Kapı',
     desc: 'O-PEN PVC ve Alüminyum pencere, kapı ve panjur sistemleri için hızlı ve şeffaf fiyat teklifi alın. Milimetrik lazer keşif ve net maliyet hesabı.',

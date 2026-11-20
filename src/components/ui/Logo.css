@@ -23,16 +23,16 @@
 
 /* Boyutlar */
 .open-logo-wrap--sm .open-logo-img {
-  width: 36px;
-  height: 36px;
+  width: 44px;
+  height: 44px;
 }
 .open-logo-wrap--md .open-logo-img {
-  width: 48px;
-  height: 48px;
+  width: 58px;
+  height: 58px;
 }
 .open-logo-wrap--lg .open-logo-img {
-  width: 64px;
-  height: 64px;
+  width: 72px;
+  height: 72px;
 }
 
 /* Zemin / Varyant Uyumları */
@@ -52,10 +52,18 @@
 
 .open-logo-title {
   font-family: var(--font-heading);
-  font-size: 1.5rem;
+  font-size: 1.85rem;
   font-weight: 900;
   letter-spacing: -0.04em;
   line-height: 1;
+}
+
+.open-logo-wrap--sm .open-logo-title {
+  font-size: 1.55rem;
+}
+
+.open-logo-wrap--lg .open-logo-title {
+  font-size: 2.25rem;
 }
 
 .open-logo-wrap--light .open-logo-title {
@@ -71,11 +79,21 @@
 }
 
 .open-logo-subtitle {
-  font-size: 0.65rem;
-  font-weight: 600;
+  font-size: 0.72rem;
+  font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.14em;
+  margin-top: 0.25rem;
+}
+
+.open-logo-wrap--sm .open-logo-subtitle {
+  font-size: 0.65rem;
   letter-spacing: 0.12em;
-  margin-top: 0.2rem;
+}
+
+.open-logo-wrap--lg .open-logo-subtitle {
+  font-size: 0.85rem;
+  letter-spacing: 0.15em;
 }
 
 .open-logo-wrap--light .open-logo-subtitle {

@@ -13,6 +13,8 @@ const GalleryPage = lazy(() => import('./pages/GalleryPage'));
 const QuotePage = lazy(() => import('./pages/QuotePage'));
 const ContactPage = lazy(() => import('./pages/ContactPage'));
 const LegalPage = lazy(() => import('./pages/LegalPage'));
+const NewsPage = lazy(() => import('./pages/NewsPage'));
+const NewsDetailPage = lazy(() => import('./pages/NewsDetailPage'));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage'));
 
 // Hafif yükleme göstergesi
@@ -44,6 +46,8 @@ export function App() {
           <Route path="projeler" element={<ReferencesPage />} />
           <Route path="referanslar" element={<ReferencesPage />} />
           <Route path="galeri" element={<GalleryPage />} />
+          <Route path="haberler" element={<NewsPage />} />
+          <Route path="haberler/:slug" element={<NewsDetailPage />} />
           <Route path="teklif-al" element={<QuotePage />} />
           <Route path="iletisim" element={<ContactPage />} />
           <Route path="gizlilik" element={<LegalPage type="privacy" />} />

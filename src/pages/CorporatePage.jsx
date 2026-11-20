@@ -107,33 +107,27 @@ export const CorporatePage = () => {
               </div>
             </Reveal>
 
-            {/* Sağ Blok Görselleri: O-PEN Gerçek Fabrika ve Üretim Tesisimiz */}
+            {/* Sağ Blok: Kurucu Onur Köşesi (Hasan Tutak - 1977 Ustalık Mirası) */}
             <Reveal direction="right" delay={0.15}>
-              <div className="open-corp-images-stack">
-                <div className="open-corp-img-main">
+              <div className="open-corp-founder-card">
+                <div className="open-corp-founder-frame">
                   <img
-                    src="/images/fabrika/0.jpg"
-                    alt="O-PEN modern fabrika üretim tesisi"
+                    src="/images/kurumsal/hasan-tutak.jpg"
+                    alt="Hasan Tutak - Kurucu Usta (1977)"
+                    className="open-corp-founder-img"
                     loading="lazy"
-                    width="600"
-                    height="420"
-                  />
-                  <div className="open-corp-img-caption">
-                    <span>O-PEN Entegre Üretim Tesisi</span>
-                  </div>
-                </div>
-                <div className="open-corp-img-secondary">
-                  <img
-                    src="/images/fabrika/2.jpg"
-                    alt="O-PEN CNC profil işleme tezgahı"
-                    loading="lazy"
-                    width="320"
-                    height="220"
+                    width="420"
+                    height="535"
                   />
                 </div>
-                <div className="open-corp-badge-experience">
-                  <span className="open-corp-badge-num">45+</span>
-                  <span className="open-corp-badge-txt">Yıllık Ustalık Geleneği</span>
+
+                <div className="open-corp-founder-info">
+                  <span className="open-corp-founder-role">TEMEL TAŞIMIZ & ONURSAL KURUCUMUZ</span>
+                  <h3 className="open-corp-founder-name">Hasan Tutak</h3>
+                  <p className="open-corp-founder-bio">
+                    1977 yılında dürüstlük, el emeği ve tavizsiz iş ahlakıyla atölyemizin ilk kıvılcımını yakan Hasan Tutak;
+                    bugün O-PEN'in modern tesislerinde hayat bulan kalite standartlarımızın ve üretim disiplinimizin manevi mimarıdır.
+                  </p>
                 </div>
               </div>
             </Reveal>

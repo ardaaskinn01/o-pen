@@ -24,6 +24,7 @@ import products from '../data/products';
 import siteConfig from '../data/site';
 import images from '../data/images';
 import productThumbnails from '../data/productThumbnails';
+import announcements from '../data/announcements';
 import './HomePage.css';
 
 // 1. Hero Slides
@@ -508,6 +509,58 @@ export const HomePage = () => {
                 })}
               </div>
             </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* =========================================================================
+          HABERLER & DUYURULAR (Fıratpen Tarzı Dinamik Akış)
+          ========================================================================= */}
+      <section className="open-section open-home-news-section">
+        <Container>
+          <div className="open-preview-header">
+            <div>
+              <span className="open-section-header__badge">BİZDEN HABERLER</span>
+              <h2 className="open-section-header__title">Haberler & Duyurular</h2>
+            </div>
+            <Button to="/haberler" variant="outline" size="md" icon={ArrowRight}>
+              Tüm Haberleri Gör
+            </Button>
+          </div>
+
+          <div className="open-home-news-grid">
+            {announcements.slice(0, 3).map((item, idx) => (
+              <Reveal key={item.id} delay={idx * 0.1}>
+                <article className="open-home-news-card">
+                  <div className="open-home-news-card__media">
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="open-home-news-card__img"
+                      loading="lazy"
+                      width="400"
+                      height="260"
+                    />
+                    <span className="open-home-news-card__badge">{item.badge}</span>
+                  </div>
+                  <div className="open-home-news-card__content">
+                    <div className="open-home-news-card__meta">
+                      <span>{item.date}</span>
+                      <span>•</span>
+                      <span>{item.category}</span>
+                    </div>
+                    <h3 className="open-home-news-card__title">
+                      <Link to={`/haberler/${item.slug}`}>{item.title}</Link>
+                    </h3>
+                    <p className="open-home-news-card__summary">{item.summary}</p>
+                    <Link to={`/haberler/${item.slug}`} className="open-home-news-card__link">
+                      <span>Devamını Oku</span>
+                      <ArrowRight size={15} />
+                    </Link>
+                  </div>
+                </article>
+              </Reveal>
+            ))}
           </div>
         </Container>
       </section>
