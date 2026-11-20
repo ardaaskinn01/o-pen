@@ -356,8 +356,11 @@ export const Header = () => {
                 )}
               </div>
 
-              <NavLink to="/referanslar" className="open-mobile-nav__link" onClick={() => setMobileOpen(false)}>
-                Referanslar
+              <NavLink to="/projeler" className="open-mobile-nav__link" onClick={() => setMobileOpen(false)}>
+                Projeler
+              </NavLink>
+              <NavLink to="/haberler" className="open-mobile-nav__link" onClick={() => setMobileOpen(false)}>
+                Haberler & Duyurular
               </NavLink>
               <NavLink to="/galeri" className="open-mobile-nav__link" onClick={() => setMobileOpen(false)}>
                 Galeri
