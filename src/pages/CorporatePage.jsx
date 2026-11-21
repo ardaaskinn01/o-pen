@@ -116,17 +116,22 @@ export const CorporatePage = () => {
                     alt="Hasan Tutak - Kurucu Usta (1977)"
                     className="open-corp-founder-img"
                     loading="lazy"
-                    width="420"
-                    height="535"
+                    width="480"
+                    height="270"
                   />
                 </div>
 
                 <div className="open-corp-founder-info">
                   <span className="open-corp-founder-role">TEMEL TAŞIMIZ & ONURSAL KURUCUMUZ</span>
                   <h3 className="open-corp-founder-name">Hasan Tutak</h3>
+                  <div className="open-corp-founder-divider" />
                   <p className="open-corp-founder-bio">
-                    1977 yılında dürüstlük, el emeği ve tavizsiz iş ahlakıyla atölyemizin ilk kıvılcımını yakan Hasan Tutak;
-                    bugün O-PEN'in modern tesislerinde hayat bulan kalite standartlarımızın ve üretim disiplinimizin manevi mimarıdır.
+                    1977 yılında dürüstlük, alın teri ve tavizsiz iş ahlakıyla ilk teknik metal doğrama atölyemizin kıvılcımını yakan Hasan Tutak;
+                    yarım asrı aşan tecrübemizin, ustalığa duyulan saygının ve üretim disiplinimizin yaşayan manevi mimarıdır.
+                  </p>
+                  <p className="open-corp-founder-extra">
+                    Bugün O-PEN'in Gediz OSB'deki modern robotik otomasyon tesislerinde milimetrik hassasiyetle imal edilen her profilde,
+                    onun 1977'de başlattığı "sağlam iş, dürüst ticaret" felsefesinin izleri ve emeği yaşamaktadır.
                   </p>
                 </div>
               </div>
