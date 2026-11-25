@@ -19,6 +19,7 @@ const staticRoutes = [
   { url: '/referanslar', changefreq: 'monthly', priority: '0.7' },
   { url: '/galeri', changefreq: 'weekly', priority: '0.8' },
   { url: '/haberler', changefreq: 'weekly', priority: '0.8' },
+  { url: '/bayilik', changefreq: 'monthly', priority: '0.9' },
   { url: '/teklif-al', changefreq: 'weekly', priority: '0.9' },
   { url: '/iletisim', changefreq: 'monthly', priority: '0.8' },
   { url: '/gizlilik', changefreq: 'yearly', priority: '0.3' },

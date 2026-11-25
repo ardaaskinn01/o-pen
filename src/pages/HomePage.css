@@ -126,6 +126,22 @@
   border-color: var(--color-white) !important;
 }
 
+.open-hero__btn-dealer {
+  background-color: rgba(255, 106, 0, 0.15) !important;
+  border-color: var(--color-primary) !important;
+  color: #fff !important;
+  backdrop-filter: blur(4px);
+  font-weight: 700;
+}
+
+.open-hero__btn-dealer:hover {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 18px rgba(255, 106, 0, 0.45);
+}
+
 /* Navigasyon Okları */
 .open-hero__nav {
   position: absolute;
@@ -1432,4 +1448,94 @@
 
 .open-home-news-card__link:hover {
   gap: 0.65rem;
+}
+
+
+/* =========================================================================
+   BAYİLİK BANNER (Ana Sayfa)
+   ========================================================================= */
+.open-home-dealer-banner {
+  padding: 2rem 0;
+}
+
+.open-home-dealer-card {
+  background: linear-gradient(135deg, #11141a 0%, #1c222c 100%);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255, 106, 0, 0.25);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.15);
+  padding: 3rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.open-home-dealer-card::before {
+  content: '';
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  width: 250px;
+  height: 250px;
+  background: radial-gradient(circle, rgba(255, 106, 0, 0.15) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+@media (min-width: 992px) {
+  .open-home-dealer-card {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.open-home-dealer-content {
+  flex: 1;
+}
+
+.open-home-dealer-badge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+}
+
+.open-home-dealer-title {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 0.75rem;
+}
+
+.open-home-dealer-desc {
+  font-size: 1rem;
+  color: var(--color-gray-300);
+  line-height: 1.6;
+  max-width: 680px;
+  margin-bottom: 1.5rem;
+}
+
+.open-home-dealer-perks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.open-home-dealer-perk {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.open-home-dealer-action {
+  flex-shrink: 0;
 }

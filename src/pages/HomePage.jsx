@@ -229,6 +229,9 @@ export const HomePage = () => {
                   <Button to="/teklif-al" variant="outline" size="lg" className="open-hero__btn-secondary">
                     Ücretsiz Keşif Talebi
                   </Button>
+                  <Button to="/bayilik" variant="outline" size="lg" className="open-hero__btn-dealer">
+                    Bayilik Başvurusu
+                  </Button>
                 </div>
               </div>
             </Container>
@@ -640,6 +643,44 @@ export const HomePage = () => {
                   <span>{p}</span>
                 </div>
               ))}
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* =========================================================================
+          BAYİLİK ÇAĞRISI (Bölgesel İş Ortaklığı Vitrini)
+          ========================================================================= */}
+      <section className="open-section open-home-dealer-banner">
+        <Container>
+          <div className="open-home-dealer-card">
+            <div className="open-home-dealer-content">
+              <span className="open-home-dealer-badge">BÖLGENİZDE O-PEN GÜCÜ</span>
+              <h2 className="open-home-dealer-title">
+                Yetkili Satış Noktamız & Bayimiz Olun
+              </h2>
+              <p className="open-home-dealer-desc">
+                Gediz OSB'deki modern robotik üretim hatlarımızın gücü, yüksek kâr marjı, bölge koruması ve NRT Grup A.Ş. güvencesiyle işinizi büyütün.
+              </p>
+              <div className="open-home-dealer-perks">
+                <div className="open-home-dealer-perk">
+                  <CheckCircle2 size={16} color="var(--color-primary)" />
+                  <span>Doğrudan Fabrika Fiyatları</span>
+                </div>
+                <div className="open-home-dealer-perk">
+                  <CheckCircle2 size={16} color="var(--color-primary)" />
+                  <span>Bölge Koruması & Münhasırlık</span>
+                </div>
+                <div className="open-home-dealer-perk">
+                  <CheckCircle2 size={16} color="var(--color-primary)" />
+                  <span>Teknik & Pazarlama Desteği</span>
+                </div>
+              </div>
+            </div>
+            <div className="open-home-dealer-action">
+              <Button to="/bayilik" variant="primary" size="lg" icon={ArrowRight}>
+                Bayilik Başvurusu Yapın
+              </Button>
             </div>
           </div>
         </Container>

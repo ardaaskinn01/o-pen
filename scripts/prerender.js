@@ -65,6 +65,11 @@ const routes = [
     desc: 'O-PEN kurumsal haberleri, Ar-Ge yatırımları, fuar katılımları ve fabrika duyuruları.',
   },
   {
+    path: '/bayilik',
+    title: 'Bayilik Başvurusu | O-PEN Pencere & Kapı Satış Noktası',
+    desc: 'O-PEN Pencere ve Kapı Sistemleri yetkili bayisi olun. Fabrika üretim gücü, bölge koruması ve yüksek kâr marjıyla kazanın.',
+  },
+  {
     path: '/teklif-al',
     title: 'Fiyat Teklifi Al | O-PEN Pencere & Kapı',
     desc: 'O-PEN PVC ve Alüminyum pencere, kapı ve panjur sistemleri için hızlı ve şeffaf fiyat teklifi alın. Milimetrik lazer keşif ve net maliyet hesabı.',

@@ -36,6 +36,11 @@ export const navigation = {
           path: '/kurumsal#neden',
           desc: 'Üstün ısı-ses yalıtımı ve işçilik garantisi',
         },
+        {
+          label: 'Bayilik Başvurusu',
+          path: '/bayilik',
+          desc: 'O-PEN yetkili satış noktası ve iş ortağımız olun',
+        },
       ],
     },
     {
@@ -95,16 +100,18 @@ export const navigation = {
   footer: {
     quickLinks: [
       { label: 'Ana Sayfa', path: '/' },
-      { label: 'Haberler & Duyurular', path: '/haberler' },
-      { label: 'Uygulama Galerisi', path: '/galeri' },
-      { label: 'Projelerimiz', path: '/projeler' },
+      { label: 'Bayilik Başvurusu', path: '/bayilik' },
       { label: 'Fiyat Teklifi Al', path: '/teklif-al' },
+      { label: 'Projelerimiz', path: '/projeler' },
+      { label: 'Uygulama Galerisi', path: '/galeri' },
+      { label: 'Haberler & Duyurular', path: '/haberler' },
       { label: 'İletişim & Harita', path: '/iletisim' },
     ],
     corporate: [
       { label: 'Hakkımızda', path: '/kurumsal' },
       { label: 'Vizyon & Misyon', path: '/kurumsal#vizyon' },
       { label: 'Neden O-PEN?', path: '/kurumsal#neden' },
+      { label: 'Bayilik Başvurusu', path: '/bayilik' },
       { label: 'Projelerimiz', path: '/projeler' },
       { label: 'Uygulama Galerisi', path: '/galeri' },
     ],

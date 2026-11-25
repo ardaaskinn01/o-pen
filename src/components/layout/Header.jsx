@@ -27,6 +27,26 @@ export const Header = () => {
   const firstFocusableRef = useRef(null);
 
   const [prevPath, setPrevPath] = useState(location.pathname);
+  const dropdownTimeoutRef = useRef(null);
+
+  const handleMouseEnter = (label) => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    // 160ms intentional hover delay to prevent accidental triggers while moving mouse
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setOpenDropdown(label);
+    }, 160);
+  };
+
+  const handleMouseLeave = () => {
+    if (dropdownTimeoutRef.current) {
+      clearTimeout(dropdownTimeoutRef.current);
+    }
+    dropdownTimeoutRef.current = setTimeout(() => {
+      setOpenDropdown(null);
+    }, 120);
+  };
 
   // Render sırasında pathname değişimini yakalayarak state'i resetleme (React 19 & Hooks kuralına uygun)
   if (location.pathname !== prevPath) {
@@ -123,8 +143,8 @@ export const Header = () => {
                   <li
                     key={item.label}
                     className="open-nav-item open-nav-item--has-dropdown"
-                    onMouseEnter={() => setOpenDropdown(item.label)}
-                    onMouseLeave={() => setOpenDropdown(null)}
+                    onMouseEnter={() => handleMouseEnter(item.label)}
+                    onMouseLeave={handleMouseLeave}
                   >
                     <NavLink
                       to={item.path}
@@ -163,8 +183,8 @@ export const Header = () => {
                   <li
                     key={item.label}
                     className="open-nav-item open-nav-item--mega"
-                    onMouseEnter={() => setOpenDropdown(item.label)}
-                    onMouseLeave={() => setOpenDropdown(null)}
+                    onMouseEnter={() => handleMouseEnter(item.label)}
+                    onMouseLeave={handleMouseLeave}
                   >
                     <NavLink
                       to={item.path}
@@ -316,6 +336,9 @@ export const Header = () => {
                     </Link>
                     <Link to="/kurumsal#neden" className="open-mobile-accordion__sublink" onClick={() => setMobileOpen(false)}>
                       Neden O-PEN?
+                    </Link>
+                    <Link to="/bayilik" className="open-mobile-accordion__sublink open-mobile-accordion__sublink--bold" onClick={() => setMobileOpen(false)}>
+                      Bayilik Başvurusu →
                     </Link>
                   </div>
                 )}

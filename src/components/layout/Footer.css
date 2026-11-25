@@ -78,6 +78,69 @@
   border-color: #25D366;
 }
 
+/* Bayilik Hızlı CTA Butonu */
+.open-footer-dealer-cta {
+  margin-top: 1.25rem;
+}
+
+.open-footer-dealer-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.55rem 1rem;
+  background: rgba(255, 106, 0, 0.08);
+  border: 1px solid rgba(255, 106, 0, 0.4);
+  border-radius: var(--radius-sm, 6px);
+  color: var(--color-primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  transition: all var(--transition-fast);
+}
+
+.open-footer-dealer-btn:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(255, 106, 0, 0.35);
+}
+
+.open-footer-dealer-btn__arrow {
+  transition: transform var(--transition-fast);
+}
+
+.open-footer-dealer-btn:hover .open-footer-dealer-btn__arrow {
+  transform: translateX(3px);
+}
+
+/* Vurgulu Footer Linkleri & Rozet */
+.open-footer-link--highlight {
+  color: #fff !important;
+  font-weight: 600;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.open-footer-link--highlight:hover {
+  color: var(--color-primary) !important;
+}
+
+.open-footer-badge {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.12rem 0.4rem;
+  border-radius: 999px;
+  line-height: 1.2;
+}
+
 /* Sütun Başlıkları */
 .open-footer-col-header {
   width: 100%;
