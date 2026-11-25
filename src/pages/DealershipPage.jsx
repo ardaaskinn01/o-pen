@@ -295,7 +295,6 @@ export const DealershipPage = () => {
                         type="text"
                         name="name"
                         required
-                        placeholder="Örn: Mehmet Yılmaz"
                         value={formData.name}
                         onChange={handleChange}
                       />
@@ -307,7 +306,6 @@ export const DealershipPage = () => {
                         type="text"
                         name="company"
                         required
-                        placeholder="Örn: Yılmaz Yapı Doğrama Ltd."
                         value={formData.company}
                         onChange={handleChange}
                       />
@@ -322,7 +320,6 @@ export const DealershipPage = () => {
                         type="tel"
                         name="phone"
                         required
-                        placeholder="05XX XXX XX XX"
                         value={formData.phone}
                         onChange={handleChange}
                       />
@@ -333,7 +330,6 @@ export const DealershipPage = () => {
                         id="email"
                         type="email"
                         name="email"
-                        placeholder="info@firmaniz.com"
                         value={formData.email}
                         onChange={handleChange}
                       />
@@ -348,7 +344,6 @@ export const DealershipPage = () => {
                         type="text"
                         name="city"
                         required
-                        placeholder="Örn: İzmir, Kütahya, Manisa..."
                         value={formData.city}
                         onChange={handleChange}
                       />
@@ -359,7 +354,6 @@ export const DealershipPage = () => {
                         id="district"
                         type="text"
                         name="district"
-                        placeholder="Örn: Bornova, Gediz..."
                         value={formData.district}
                         onChange={handleChange}
                       />
@@ -394,7 +388,6 @@ export const DealershipPage = () => {
                       id="message"
                       name="message"
                       rows="3"
-                      placeholder="Mevcut faaliyet alanınız, müşteri portföyünüz ve sormak istedikleriniz..."
                       value={formData.message}
                       onChange={handleChange}
                     />
