@@ -494,3 +494,321 @@
   line-height: 1.6;
   flex: 1;
 }
+
+/* =========================================================================
+   LAMBRİ, PERVAZ & KASA İZOLASYON SİSTEMLERİ BÖLÜMÜ
+   ========================================================================= */
+.open-detail-lambri-sec {
+  background-color: #fcfcfd;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  padding: 5rem 0;
+}
+
+.open-lambri-perks-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.25rem;
+  justify-content: center;
+  margin-bottom: 2.75rem;
+  padding: 1rem 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid rgba(255, 106, 0, 0.2);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+}
+
+.open-lambri-perk-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+.open-lambri-perk-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+/* Lambri Kartları Grid */
+.open-lambri-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (min-width: 640px) {
+  .open-lambri-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .open-lambri-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.open-lambri-card {
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.04);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.open-lambri-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-primary);
+  box-shadow: 0 12px 28px rgba(255, 106, 0, 0.14);
+}
+
+.open-lambri-card__img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background-color: #1a1a1c;
+}
+
+.open-lambri-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.open-lambri-card:hover .open-lambri-card__img {
+  transform: scale(1.06);
+}
+
+.open-lambri-card__tag {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background-color: rgba(11, 11, 12, 0.85);
+  color: var(--color-primary);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 106, 0, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+.open-lambri-card__zoom-badge {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(11, 11, 12, 0.75);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: all var(--transition-fast);
+}
+
+.open-lambri-card:hover .open-lambri-card__zoom-badge {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.open-lambri-card__body {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.open-lambri-card__title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+  line-height: 1.35;
+}
+
+.open-lambri-card__desc {
+  font-size: 0.84rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: 0;
+  flex: 1;
+}
+
+/* Lambri CTA Banner */
+.open-lambri-cta-banner {
+  background: linear-gradient(135deg, #0e0e10 0%, #1c1c20 100%);
+  border: 1px solid rgba(255, 106, 0, 0.3);
+  border-radius: var(--radius-xl);
+  padding: 2rem 2.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 992px) {
+  .open-lambri-cta-banner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.open-lambri-cta-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.open-lambri-cta-icon {
+  color: var(--color-primary);
+  flex-shrink: 0;
+  margin-top: 0.2rem;
+}
+
+.open-lambri-cta-content h4 {
+  color: #ffffff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.open-lambri-cta-content p {
+  color: var(--color-gray-300);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+  max-width: 650px;
+}
+
+.open-lambri-cta-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  flex-shrink: 0;
+}
+
+.open-lambri-btn-wa {
+  color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.open-lambri-btn-wa:hover {
+  background-color: #25D366 !important;
+  border-color: #25D366 !important;
+  color: #ffffff !important;
+}
+
+/* Modal */
+.open-lambri-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: rgba(11, 11, 12, 0.85);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  animation: fadeIn 0.2s ease;
+}
+
+.open-lambri-modal__content {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  max-width: 580px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+}
+
+.open-lambri-modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(11, 11, 12, 0.6);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.open-lambri-modal__close:hover {
+  background: var(--color-primary);
+  transform: rotate(90deg);
+}
+
+.open-lambri-modal__img-wrap {
+  width: 100%;
+  max-height: 60vh;
+  background: #111;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.open-lambri-modal__img {
+  width: 100%;
+  height: 100%;
+  max-height: 60vh;
+  object-fit: contain;
+}
+
+.open-lambri-modal__info {
+  padding: 1.5rem;
+}
+
+.open-lambri-modal__tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.4rem;
+}
+
+.open-lambri-modal__info h3 {
+  font-size: 1.25rem;
+  color: var(--color-dark);
+  margin-bottom: 0.5rem;
+}
+
+.open-lambri-modal__info p {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: 0;
+}

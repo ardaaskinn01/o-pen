@@ -71,6 +71,77 @@ export const products = [
       { label: 'Su Sızdırmazlık', value: 'Sınıf 9A / E1050 (EN 12208)' },
       { label: 'Rüzgar Yükü Dayanımı', value: 'Sınıf C5 / B5 (EN 12210)' },
     ],
+    lambriSection: {
+      badge: 'TAMAMLAYICI YALITIM & ESTETİK',
+      title: 'Pervaz, Kasa İzolasyon ve PVC Lambri Sistemleri',
+      description:
+        'Pencere ve kapı montajlarında duvar ile doğrama birleşim alanlarında ısı köprülerini kesen, nem ve su sızıntısını engelleyen; aynı zamanda tavan, saçak altı ve balkon kaplamalarında dekoratif yalıtım sağlayan fabrikasyon PVC lambri ve açılı pervaz profillerimiz.',
+      items: [
+        {
+          title: 'Meşe Ahşap Desenli PVC Lambri',
+          tag: 'Doğal Ahşap Dokusu',
+          desc: 'Doğal meşe hare desenli, solmayan UV dayanımlı lamine kaplama. Tavan, sundurma ve duvar dekorasyonunda neme tam dirençli.',
+          thumb: '/images/lambri/optimized/thumb-lambri-mese-ahsap.jpg',
+          full: '/images/lambri/optimized/lambri-mese-ahsap.jpg',
+        },
+        {
+          title: 'Parlak Beyaz Odacıklı Lambri',
+          tag: 'Maksimum Hijyen & Ferahlık',
+          desc: 'Antibakteriyel pürüzsüz yüzey, kolay temizlenebilir çift cidarlı petek odacık geometrisiyle yüksek ses ve ısı yalıtımı.',
+          thumb: '/images/lambri/optimized/thumb-lambri-parlak-beyaz.jpg',
+          full: '/images/lambri/optimized/lambri-parlak-beyaz.jpg',
+        },
+        {
+          title: 'Açık Çam Desenli Lambri',
+          tag: 'Modern İskandinav Tarzı',
+          desc: 'Açık ton çam damar desenli estetik panel. Balkon, teras ve iç mekân saçak altı kaplamaları için hafif ve dayanıklı yapı.',
+          thumb: '/images/lambri/optimized/thumb-lambri-cam-ahsap.jpg',
+          full: '/images/lambri/optimized/lambri-cam-ahsap.jpg',
+        },
+        {
+          title: 'Dekoratif Çift Çizgili Lambri',
+          tag: 'Fugalı Mimari Tasarım',
+          desc: 'Derin fuga çizgisiyle tavan ve duvarlara derinlik kazandıran, gizli vidalama tırnağı sayesinde montaj izi bırakmayan sistem.',
+          thumb: '/images/lambri/optimized/thumb-lambri-cizgili-beyaz.jpg',
+          full: '/images/lambri/optimized/lambri-cizgili-beyaz.jpg',
+        },
+        {
+          title: 'Antrasit Gri Açılı Dış Köşe Profili',
+          tag: '90° Dönüş & Pervaz Çıtası',
+          desc: 'Antrasit pencere kasaları ve lambri bitiş noktaları için çift taraflı odacıklı, darbelere dirençli estetik dış köşe profili.',
+          thumb: '/images/lambri/optimized/thumb-profil-antrasit-kose.jpg',
+          full: '/images/lambri/optimized/profil-antrasit-kose.jpg',
+        },
+        {
+          title: 'Ahşap Desenli L Pervaz & Köşe Çıtası',
+          tag: 'Kasa Birleşim & Bitiş Çözümü',
+          desc: 'Doğrama ile sıva arasındaki genleşme boşluklarını ve ısı köprülerini kapatan, su ve hava kaçaklarını kesen L pervaz.',
+          thumb: '/images/lambri/optimized/thumb-profil-ahsap-kose.jpg',
+          full: '/images/lambri/optimized/profil-ahsap-kose.jpg',
+        },
+        {
+          title: 'Yıldızlı / Hologram Desenli Lambri',
+          tag: 'Dekoratif Özel Seri',
+          desc: 'Işığa göre renk değiştiren özel yıldız motifli tavan kaplama lambrisi. Banyo, mutfak ve koridor tavanları için şık çözüm.',
+          thumb: '/images/lambri/optimized/thumb-lambri-yildizli-hologram.jpg',
+          full: '/images/lambri/optimized/lambri-yildizli-hologram.jpg',
+        },
+        {
+          title: 'Beyaz Açılı Pervaz & Bitiş Profili',
+          tag: 'Standart Doğrama Pervazı',
+          desc: 'Pencere ve kapı kanat etrafında kusursuz düzgünlük sağlayan, silikon gerektirmeyen pratik geçmeli montaj profili.',
+          thumb: '/images/lambri/optimized/thumb-profil-beyaz-kose.jpg',
+          full: '/images/lambri/optimized/profil-beyaz-kose.jpg',
+        },
+      ],
+      features: [
+        'Suya, neme, rutubete ve buhara karşı %100 dayanıklı yapı (çürümez, kabarmaz)',
+        'B1 sınıfı alev geciktirici ve alevi iletmeyen güvenli PVC hammadde',
+        'Gizli vidalama ve lamba-zıvana geçme sistemiyle vidasız, pürüzsüz yüzey',
+        'Zaman içinde boya, vernik veya bakım gerektirmeyen UV dayanımlı kaplama',
+        'Gediz OSB fabrikamızda standart ve projeye özel boylarda seri üretim',
+      ],
+    },
     faq: [
       {
         q: 'PVC pencerelerin temizliği ve bakımı nasıl yapılmalıdır?',
@@ -164,6 +235,62 @@ export const products = [
       { label: 'Güvenlik Sınıfı', value: 'RC2 / RC3 Uyumlu' },
       { label: 'Hava & Rüzgar Dayanımı', value: 'Sınıf 4 / Sınıf C4' },
     ],
+    lambriSection: {
+      badge: 'TAMAMLAYICI KAPI PROFİLLERİ & YALITIM',
+      title: 'Kapı Çevresi Pervaz, Kasa İzolasyon ve PVC Lambri Sistemleri',
+      description:
+        'Dış ve iç kapı kasalarının duvarla birleşim noktalarında hava akımını ve su sızıntısını engelleyen geniş pervaz çıtaları, ısı yalıtımlı L köşe profilleri ve kapı üstü/yanı dekoratif PVC lambri kaplama çözümlerimiz.',
+      items: [
+        {
+          title: 'Ahşap Desenli L Pervaz & Köşe Çıtası',
+          tag: 'Kasa Birleşim & Bitiş Çözümü',
+          desc: 'Kapı kasası ile duvar arasındaki boşlukları ve ısı köprülerini kapatan, hava akımını ve tozu kesen estetik L pervaz.',
+          thumb: '/images/lambri/optimized/thumb-profil-ahsap-kose.jpg',
+          full: '/images/lambri/optimized/profil-ahsap-kose.jpg',
+        },
+        {
+          title: 'Antrasit Gri Açılı Dış Köşe Profili',
+          tag: 'Modern Kapı Giriş Çıtası',
+          desc: 'Antrasit giriş ve balkon kapıları için darbelere dayanıklı, çift cidarlı odacıklı 90° bitiş ve pervaz profili.',
+          thumb: '/images/lambri/optimized/thumb-profil-antrasit-kose.jpg',
+          full: '/images/lambri/optimized/profil-antrasit-kose.jpg',
+        },
+        {
+          title: 'Meşe Ahşap Desenli PVC Lambri',
+          tag: 'Giriş & Sundurma Tavanı',
+          desc: 'Kapı giriş sundurmaları, veranda ve rüzgarlık alanları için suya ve neme tam dirençli ahşap desenli kaplama.',
+          thumb: '/images/lambri/optimized/thumb-lambri-mese-ahsap.jpg',
+          full: '/images/lambri/optimized/lambri-mese-ahsap.jpg',
+        },
+        {
+          title: 'Beyaz Açılı Pervaz & Bitiş Profili',
+          tag: 'Standart Kapı Pervazı',
+          desc: 'Kapı kasası çevresinde düzgün ve temiz bir montaj çizgisi sağlayan, kire dayanıklı parlak beyaz geçmeli pervaz.',
+          thumb: '/images/lambri/optimized/thumb-profil-beyaz-kose.jpg',
+          full: '/images/lambri/optimized/profil-beyaz-kose.jpg',
+        },
+        {
+          title: 'Parlak Beyaz Odacıklı Lambri',
+          tag: 'Hijyenik Tavan Kaplama',
+          desc: 'Giriş holleri ve ıslak hacim kapı üstü tavan kaplamaları için neme dayanıklı, kolay silinebilir odacıklı panel.',
+          thumb: '/images/lambri/optimized/thumb-lambri-parlak-beyaz.jpg',
+          full: '/images/lambri/optimized/lambri-parlak-beyaz.jpg',
+        },
+        {
+          title: 'Dekoratif Çift Çizgili Lambri',
+          tag: 'Fugalı Kapı Yanı Kaplama',
+          desc: 'Giriş kapısı yanındaki duvar ve tavanlara modern ahşap/fuga derinliği katan gizli vidalı lamba-zıvana panel.',
+          thumb: '/images/lambri/optimized/thumb-lambri-cizgili-beyaz.jpg',
+          full: '/images/lambri/optimized/lambri-cizgili-beyaz.jpg',
+        },
+      ],
+      features: [
+        'Kapı kasası ile duvar arasındaki hava, rüzgar ve su sızmalarını tamamen bloke eder',
+        'Kapı montaj vidalarını ve köpük izlerini gizleyerek kusursuz fabrika bitişi sunar',
+        'Geniş renk ve ahşap desen opsiyonuyla kapı rengiyle tam ton uyumu',
+        'Çürümez, kabarmaz, nemden ve dış hava şartlarından etkilenmez',
+      ],
+    },
     faq: [
       {
         q: 'Dış kapı eşiği ayak takılmasına sebep olur mu?',
