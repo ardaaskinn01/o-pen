@@ -12,7 +12,7 @@ import siteConfig from '../data/site';
 import productThumbnails from '../data/productThumbnails';
 import './ProductsPage.css';
 
-const categories = ['Tümü', 'PVC Pencere', 'Alüminyum', 'Kapı Sistemleri', 'Panjur'];
+const categories = ['Tümü', 'PVC Pencere', 'Alüminyum', 'Kapı Sistemleri', 'Panjur', 'PVC Lambri'];
 
 export const ProductsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('Tümü');

@@ -158,11 +158,11 @@ export const Header = () => {
                       <ChevronDown size={14} className={`open-nav-chevron ${isOpen ? 'open-nav-chevron--rotated' : ''}`} />
                     </NavLink>
 
-                    {/* Standart Dropdown (Kurumsal) */}
+                    {/* Standart Dropdown (Kurumsal / Ürünler) */}
                     <div className={`open-dropdown-menu ${isOpen ? 'open-dropdown-menu--visible' : ''}`} role="menu">
                       <div className="open-dropdown-menu__header">
-                        <span className="open-dropdown-menu__badge">Kurumsal Yapımız</span>
-                        <p className="open-dropdown-menu__title">O-PEN Pen Sistemleri</p>
+                        <span className="open-dropdown-menu__badge">{item.label === 'Ürünler' ? 'Ürün Yelpazesi' : 'Kurumsal Yapımız'}</span>
+                        <p className="open-dropdown-menu__title">{item.label === 'Ürünler' ? 'O-PEN Sistemleri' : 'O-PEN Pen Sistemleri'}</p>
                       </div>
                       <div className="open-dropdown-menu__list">
                         {item.dropdown.map((sub) => (
@@ -172,71 +172,6 @@ export const Header = () => {
                           </Link>
                         ))}
                       </div>
-                    </div>
-                  </li>
-                );
-              }
-
-              if (item.isMegaMenu) {
-                const isOpen = openDropdown === item.label;
-                return (
-                  <li
-                    key={item.label}
-                    className="open-nav-item open-nav-item--mega"
-                    onMouseEnter={() => handleMouseEnter(item.label)}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    <NavLink
-                      to={item.path}
-                      className={({ isActive }) =>
-                        `open-nav-link ${isActive ? 'open-nav-link--active' : ''}`
-                      }
-                      aria-haspopup="true"
-                      aria-expanded={isOpen}
-                    >
-                      <span>{item.label}</span>
-                      <ChevronDown size={14} className={`open-nav-chevron ${isOpen ? 'open-nav-chevron--rotated' : ''}`} />
-                    </NavLink>
-
-                    {/* Mega Menü (Görselli Ürün Kartları) */}
-                    <div className={`open-megamenu ${isOpen ? 'open-megamenu--visible' : ''}`} role="menu">
-                      <Container className="open-megamenu__inner">
-                        <div className="open-megamenu__header">
-                          <div>
-                            <span className="open-megamenu__badge">Ürün Yelpazesi</span>
-                            <h3 className="open-megamenu__title">Yüksek Yalıtımlı Çözümlerimiz</h3>
-                          </div>
-                          <Link to="/urunler" className="open-megamenu__view-all">
-                            <span>Tüm Ürünleri Gör</span>
-                            <ArrowRight size={14} />
-                          </Link>
-                        </div>
-
-                        <div className="open-megamenu__grid">
-                          {item.items.map((prod) => (
-                            <Link
-                              key={prod.slug}
-                              to={`/urunler/${prod.slug}`}
-                              className="open-megamenu-card"
-                              role="menuitem"
-                            >
-                              <div className="open-megamenu-card__img-wrap">
-                                <img
-                                  src={productThumbnails[prod.slug] || prod.image}
-                                  alt={prod.title}
-                                  className="open-megamenu-card__img"
-                                  loading="lazy"
-                                />
-                                <div className="open-megamenu-card__overlay" />
-                              </div>
-                              <div className="open-megamenu-card__content">
-                                <h4 className="open-megamenu-card__title">{prod.title}</h4>
-                                <p className="open-megamenu-card__desc">{prod.desc}</p>
-                              </div>
-                            </Link>
-                          ))}
-                        </div>
-                      </Container>
                     </div>
                   </li>
                 );
@@ -374,6 +309,9 @@ export const Header = () => {
                     </Link>
                     <Link to="/urunler/panjur-kepenk-sistemleri" className="open-mobile-accordion__sublink" onClick={() => setMobileOpen(false)}>
                       Panjur & Kepenk Çözümleri
+                    </Link>
+                    <Link to="/urunler/pvc-lambri-sistemleri" className="open-mobile-accordion__sublink" onClick={() => setMobileOpen(false)}>
+                      PVC Lambri & Kaplama
                     </Link>
                   </div>
                 )}

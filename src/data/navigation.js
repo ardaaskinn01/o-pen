@@ -46,31 +46,31 @@ export const navigation = {
     {
       label: 'Ürünler',
       path: '/urunler',
-      isMegaMenu: true,
-      items: [
+      dropdown: [
         {
-          slug: 'pvc-pencere-sistemleri',
-          title: 'PVC Pencere Sistemleri',
+          label: 'PVC Pencere Sistemleri',
+          path: '/urunler/pvc-pencere-sistemleri',
           desc: 'Maksimum ısı ve ses yalıtımlı çok odacıklı profiller',
-          image: '/images/urunler/pvc-pencere.jpg',
         },
         {
-          slug: 'aluminyum-dograma',
-          title: 'Alüminyum Doğrama & Sürme',
+          label: 'Alüminyum Doğrama & Sürme',
+          path: '/urunler/aluminyum-dograma',
           desc: 'Geniş açıklıklar için mimari zarafet ve sağlamlık',
-          image: '/images/urunler/aluminyum-dograma.jpg',
         },
         {
-          slug: 'kapi-sistemleri',
-          title: 'Kapı Sistemleri',
+          label: 'Kapı Sistemleri',
+          path: '/urunler/kapi-sistemleri',
           desc: 'Güvenlik, estetik ve yalıtımlı giriş ve dış kapılar',
-          image: '/images/urunler/kapi-sistemleri.jpg',
         },
         {
-          slug: 'panjur-kepenk-sistemleri',
-          title: 'Panjur & Kepenk',
-          desc: 'Güneş kontrolü, hırsızlık koruması ve monoblok motorlu sistemler',
-          image: '/images/urunler/panjur-kepenk.jpg',
+          label: 'Panjur & Kepenk',
+          path: '/urunler/panjur-kepenk-sistemleri',
+          desc: 'Güneş kontrolü, güvenlik ve motorlu sistemler',
+        },
+        {
+          label: 'PVC Lambri & Kaplama',
+          path: '/urunler/pvc-lambri-sistemleri',
+          desc: 'Neme dayanıklı tavan, duvar ve pervaz profilleri',
         },
       ],
     },
@@ -120,6 +120,7 @@ export const navigation = {
       { label: 'Alüminyum Doğrama & Sürme', path: '/urunler/aluminyum-dograma' },
       { label: 'Giriş & Dış Kapı Sistemleri', path: '/urunler/kapi-sistemleri' },
       { label: 'Panjur & Kepenk Çözümleri', path: '/urunler/panjur-kepenk-sistemleri' },
+      { label: 'PVC Lambri & Kaplama', path: '/urunler/pvc-lambri-sistemleri' },
     ],
     legal: [
       { label: 'Gizlilik Politikası', path: '/gizlilik' },

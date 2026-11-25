@@ -45,6 +45,11 @@ const routes = [
     desc: 'Güneş ışığını filtreleyen, ısı yalıtımına ekstra katkı sağlayan ve hırsızlığa karşı koruyan motorlu panjur çözümleri.',
   },
   {
+    path: '/urunler/pvc-lambri-sistemleri',
+    title: 'PVC Lambri & Kaplama Sistemleri | O-PEN Sistemleri',
+    desc: 'Balkon, saçak altı, tavan ve ıslak hacimler için suya ve neme tam dayanıklı PVC lambri ve pervaz profilleri.',
+  },
+  {
     path: '/projeler',
     title: 'Projelerimiz | O-PEN Pencere ve Kapı Sistemleri',
     desc: 'Ege Bölgesi ve Türkiye genelinde imalat ve montajını üstlendiğimiz nitelikli villa, konut ve ticari doğrama projelerimiz.',

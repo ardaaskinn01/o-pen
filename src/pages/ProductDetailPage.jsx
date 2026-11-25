@@ -9,10 +9,9 @@ import {
   Ruler,
   Phone,
   MessageCircle,
+  Truck,
+  Award,
   Layers,
-  Sparkles,
-  Maximize2,
-  X,
 } from 'lucide-react';
 import Container from '../components/ui/Container';
 import PageHero from '../components/ui/PageHero';
@@ -30,7 +29,6 @@ export const ProductDetailPage = () => {
 
   const [activeImg, setActiveImg] = useState(0);
   const [openFaq, setOpenFaq] = useState(0);
-  const [selectedLambriImg, setSelectedLambriImg] = useState(null);
 
   if (!product) {
     return (
@@ -141,6 +139,39 @@ export const ProductDetailPage = () => {
                     ))}
                   </div>
                 )}
+
+                {/* Galeri Altı Güven & Fabrika Teslimat Bilgi Kartları */}
+                <div className="open-detail-gallery-highlights">
+                  <div className="open-detail-gh-card">
+                    <div className="open-detail-gh-card__icon">
+                      <Truck size={20} />
+                    </div>
+                    <div>
+                      <h5>Gediz OSB Doğrudan Fabrika Teslimi</h5>
+                      <p>Aracısız, doğrudan entegre üretim tesisimizden toptan ve perakende sevkiyat.</p>
+                    </div>
+                  </div>
+
+                  <div className="open-detail-gh-card">
+                    <div className="open-detail-gh-card__icon">
+                      <Award size={20} />
+                    </div>
+                    <div>
+                      <h5>TSE & EN Sertifikalı Standartlar</h5>
+                      <p>DIN EN normlarında A sınıfı hammadde, solmaz UV koruması ve yangın dayanımı.</p>
+                    </div>
+                  </div>
+
+                  <div className="open-detail-gh-card">
+                    <div className="open-detail-gh-card__icon">
+                      <Layers size={20} />
+                    </div>
+                    <div>
+                      <h5>Projeye Özel Kesim & Renk Seçenekleri</h5>
+                      <p>Standart ölçülerin yanı sıra projenize göre özel boy kesim ve lamine renk kartelası.</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </Reveal>
 
@@ -268,122 +299,9 @@ export const ProductDetailPage = () => {
       {/* =========================================================================
           TAMAMLAYICI PERVAZ, KASA İZOLASYON & PVC LAMBRİ SİSTEMLERİ
           ========================================================================= */}
-      {product.lambriSection && (
-        <section className="open-section open-detail-lambri-sec" id="lambri-sistemleri">
-          <Container>
-            <SectionTitle
-              badge={product.lambriSection.badge}
-              title={product.lambriSection.title}
-              subtitle={product.lambriSection.description}
-            />
-
-            {/* Ürün Avantajları Şeridi */}
-            <div className="open-lambri-perks-bar">
-              {product.lambriSection.features.map((feat, idx) => (
-                <div key={idx} className="open-lambri-perk-item">
-                  <Sparkles size={16} className="open-lambri-perk-icon" />
-                  <span>{feat}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Lambri ve Profil Görsel Kartları Grid */}
-            <div className="open-lambri-grid">
-              {product.lambriSection.items.map((item, idx) => (
-                <Reveal key={idx} delay={idx * 0.05}>
-                  <div
-                    className="open-lambri-card"
-                    onClick={() => setSelectedLambriImg(item)}
-                    role="button"
-                    tabIndex={0}
-                    onKeyDown={(e) => e.key === 'Enter' && setSelectedLambriImg(item)}
-                  >
-                    <div className="open-lambri-card__img-wrap">
-                      <img
-                        src={item.thumb}
-                        alt={item.title}
-                        className="open-lambri-card__img"
-                        loading="lazy"
-                        width="400"
-                        height="300"
-                      />
-                      <span className="open-lambri-card__tag">{item.tag}</span>
-                      <div className="open-lambri-card__zoom-badge" title="Büyüt">
-                        <Maximize2 size={16} />
-                      </div>
-                    </div>
-                    <div className="open-lambri-card__body">
-                      <h4 className="open-lambri-card__title">{item.title}</h4>
-                      <p className="open-lambri-card__desc">{item.desc}</p>
-                    </div>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-
-            {/* Sipariş & Ölçü Danışma Kutusu */}
-            <div className="open-lambri-cta-banner">
-              <div className="open-lambri-cta-content">
-                <Layers size={28} className="open-lambri-cta-icon" />
-                <div>
-                  <h4>Gediz OSB Fabrikamızdan İstenilen Ölçü ve Metrajda Doğrudan Teslimat</h4>
-                  <p>
-                    Pencere-kapı sistemlerinizle uyumlu lambri, açılı dış köşe, pervaz ve süpürgelik profillerini toptan veya perakende temin edebilirsiniz.
-                  </p>
-                </div>
-              </div>
-              <div className="open-lambri-cta-buttons">
-                <Button
-                  to={`/teklif-al?urun=${encodeURIComponent(product.lambriSection.title)}`}
-                  variant="primary"
-                  size="md"
-                >
-                  Metraj & Fiyat Teklifi Al
-                </Button>
-                <a
-                  href={`https://wa.me/${siteConfig.whatsappRaw}?text=${encodeURIComponent(
-                    `Merhaba, ${product.lambriSection.title} hakkında metraj ve fiyat bilgisi almak istiyorum.`
-                  )}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="open-btn open-btn--outline open-btn--md open-lambri-btn-wa"
-                >
-                  <MessageCircle size={18} color="#25D366" />
-                  <span>WhatsApp'tan Sorun</span>
-                </a>
-              </div>
-            </div>
-          </Container>
-        </section>
-      )}
-
-      {/* Lambri Modal (Tam Ekran Büyütme) */}
-      {selectedLambriImg && (
-        <div className="open-lambri-modal" onClick={() => setSelectedLambriImg(null)}>
-          <div className="open-lambri-modal__content" onClick={(e) => e.stopPropagation()}>
-            <button
-              type="button"
-              className="open-lambri-modal__close"
-              onClick={() => setSelectedLambriImg(null)}
-              aria-label="Kapat"
-            >
-              <X size={24} />
-            </button>
-            <div className="open-lambri-modal__img-wrap">
-              <img
-                src={selectedLambriImg.full}
-                alt={selectedLambriImg.title}
-                className="open-lambri-modal__img"
-              />
-            </div>
-            <div className="open-lambri-modal__info">
-              <span className="open-lambri-modal__tag">{selectedLambriImg.tag}</span>
-              <h3>{selectedLambriImg.title}</h3>
-              <p>{selectedLambriImg.desc}</p>
-            </div>
-          </div>
-        </div>
-      )}
+      {/* =========================================================================
+          SIKÇA SORULAN SORULAR (Akordeon)
+          ========================================================================= */}
       {product.faq && product.faq.length > 0 && (
         <section className="open-section open-detail-faq-sec">
           <Container>
